@@ -1,0 +1,3 @@
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Definitions.Legend.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend/Hero/HeroController.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Inc\Legend\HeroController.generated.h

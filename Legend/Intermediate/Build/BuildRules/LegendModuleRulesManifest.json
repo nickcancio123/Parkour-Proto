@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\Owner\\Documents\\Unreal Projects\\Legend-Repo\\Legend\\Source\\Legend\\Legend.Build.cs",
+		"C:\\Users\\Owner\\Documents\\Unreal Projects\\Legend-Repo\\Legend\\Source\\Legend.Target.cs",
+		"C:\\Users\\Owner\\Documents\\Unreal Projects\\Legend-Repo\\Legend\\Source\\LegendEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}
