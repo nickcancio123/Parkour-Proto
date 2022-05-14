@@ -2,7 +2,9 @@
 
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/Hero.h"
+#include "Hero.h"
 
 AHero::AHero()
 {
@@ -25,11 +27,15 @@ void AHero::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	bIsMoveInput = bIsMoveForwardInput || bIsMoveRightInput;
 }
 
 void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AHero::OnSprintInput);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AHero::OnStopSprintInput);
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AHero::OnMoveForwardInput);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AHero::OnMoveRightInput);
@@ -40,6 +46,8 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 #pragma region Basic Locomotion
 void AHero::OnMoveForwardInput(float Axis) {
+	bIsMoveForwardInput = Axis != 0;
+
 	// Get controller forward axis
 	FRotator ControllerYaw = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector ControllerForward = FRotationMatrix(ControllerYaw).GetUnitAxis(EAxis::X);
@@ -48,6 +56,8 @@ void AHero::OnMoveForwardInput(float Axis) {
 }
 
 void AHero::OnMoveRightInput(float Axis) {
+	bIsMoveRightInput = Axis != 0;
+
 	// Get controller right axis
 	FRotator ControllerYaw = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector ControllerRight = FRotationMatrix(ControllerYaw).GetUnitAxis(EAxis::Y);
@@ -61,6 +71,23 @@ void AHero::OnLookUpInput(float Axis) {
 
 void AHero::OnLookRightInput(float Axis) {
 	AddControllerYawInput(Axis);
+}
+
+
+void AHero::OnSprintInput() {
+	if (bIsSprinting)
+		return;
+
+	bIsSprinting = true;
+	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMultiplier;
+}
+
+void AHero::OnStopSprintInput() {
+	if (!bIsSprinting)
+		return;
+
+	bIsSprinting = false;
+	GetCharacterMovement()->MaxWalkSpeed /= SprintSpeedMultiplier;
 }
 
 #pragma endregion

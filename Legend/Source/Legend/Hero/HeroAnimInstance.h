@@ -13,5 +13,5 @@ UCLASS()
 class LEGEND_API UHeroAnimInstance : public UAnimInstance
 {
 	GENERATED_BODY()
-	
+
 };
