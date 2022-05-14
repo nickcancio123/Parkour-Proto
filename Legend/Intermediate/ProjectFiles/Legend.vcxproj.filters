@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{37A3461A-6880-48B3-8FE8-199A395E16E7}</UniqueIdentifier>
+      <UniqueIdentifier>{66B0FF16-5524-4B0A-9597-B9E48EDD341F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{68D02E57-ADB6-47E6-B5C4-EE1B7D1335A8}</UniqueIdentifier>
+      <UniqueIdentifier>{F6B52245-28EB-4358-912F-658EFDAAB69E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -23,8 +23,11 @@
     <None Include="..\..\Config\DefaultGame.ini">
       <Filter>Config</Filter>
     </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{D4BE9A74-A1D9-4F34-8633-DBCC54B12D26}</UniqueIdentifier>
+      <UniqueIdentifier>{7539AE7F-FCE4-4061-850E-369E25FB65B6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -42,12 +45,18 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{F2511840-DBE6-4B45-B733-E3EA2C6FFD46}</UniqueIdentifier>
+      <UniqueIdentifier>{C7D3F8FC-46A8-41F5-81FB-A34F29821378}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\Hero.cpp">
       <Filter>Source\Legend\Hero</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Legend\Hero\Hero.h">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Legend\Hero\HeroAnimInstance.cpp">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Legend\Hero\HeroAnimInstance.h">
       <Filter>Source\Legend\Hero</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Legend\Hero\HeroController.cpp">

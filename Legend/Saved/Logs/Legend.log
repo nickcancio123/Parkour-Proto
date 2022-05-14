@@ -994,3 +994,1425 @@ Would you like to open the Output Log to see more details?
 [2022.05.13-23.39.19:384][253]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
 [2022.05.13-23.39.19:506][253]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0332 seconds. Added 3604 classes and 862 folders.
 [2022.05.13-23.39.19:506][253]Display: HotReload took 65.3s.
+[2022.05.13-23.41.37:737][ 96]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.05.13-23.41.49:750][ 96]LogSlate: Window 'Pick Parent Class' being destroyed
+[2022.05.13-23.41.49:779][ 96]LogContentBrowser: Deferred new asset file creation: NewBlueprint
+[2022.05.13-23.41.49:821][ 96]LogContentBrowser: Creating deferred item: NewBlueprint
+[2022.05.13-23.41.56:000][282]LogContentBrowser: Attempting asset rename: NewBlueprint -> BP_HeroController
+[2022.05.13-23.41.56:042][282]LogContentBrowser: End creating deferred item NewBlueprint
+[2022.05.13-23.42.01:473][423]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.05.13-23.42.01:539][423]LogContentBrowser: Creating deferred item: NewFolder
+[2022.05.13-23.42.03:190][458]LogContentBrowser: Attempting asset rename: NewFolder -> Model
+[2022.05.13-23.42.03:197][458]LogContentBrowser: End creating deferred item NewFolder
+[2022.05.13-23.42.31:441][535]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Hero.fbx)
+[2022.05.13-23.42.31:558][535]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Hero.fbx
+[2022.05.13-23.42.31:858][535]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.13-23.42.47:126][535]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.05.13-23.42.47:269][535]LogFbx: Warning: Not valid bind pose for Pose (skinCluster1) - Node Alpha_Surface : The relative matrices do not match
+[2022.05.13-23.42.47:270][535]LogFbx: Warning: Not valid bind pose for Pose (skinCluster1) - Node Alpha_Joints : The relative matrices do not match
+[2022.05.13-23.42.47:273][535]LogFbx: Warning: Not valid bind pose for Pose (skinCluster2) - Node Alpha_Surface : The relative matrices do not match
+[2022.05.13-23.42.47:274][535]LogFbx: Warning: Not valid bind pose for Pose (skinCluster2) - Node Alpha_Joints : The relative matrices do not match
+[2022.05.13-23.42.47:274][535]LogFbx: Warning: Getting valid bind pose failed. Try to recreate bind pose
+[2022.05.13-23.42.47:280][535]LogFbx: Valid bind pose for Pose (FbxSDKBindPose) - Alpha_Surface
+[2022.05.13-23.42.47:280][535]LogFbx: Warning: Recreating bind pose succeeded.
+[2022.05.13-23.42.47:307][535]LogMaterial: Display: Material /Game/Hero/Model/Alpha_Body_MAT.Alpha_Body_MAT needed to have new flag set bUsedWithSkeletalMesh !
+[2022.05.13-23.42.47:359][535]LogMaterial: Display: Missing cached shader map for material Alpha_Body_MAT, compiling. 
+[2022.05.13-23.42.47:589][535]LogMaterial: Display: Missing cached shader map for material Alpha_Body_MAT, compiling. 
+[2022.05.13-23.42.47:668][535]LogFbx: Triangulating skeletal mesh Alpha_Surface
+[2022.05.13-23.42.52:201][535]LogMaterial: Display: Material /Game/Hero/Model/Alpha_Joints_MAT.Alpha_Joints_MAT needed to have new flag set bUsedWithSkeletalMesh !
+[2022.05.13-23.42.52:220][535]LogMaterial: Display: Missing cached shader map for material Alpha_Joints_MAT, compiling. 
+[2022.05.13-23.42.52:328][535]LogMaterial: Display: Missing cached shader map for material Alpha_Joints_MAT, compiling. 
+[2022.05.13-23.42.52:416][535]LogFbx: Triangulating skeletal mesh Alpha_Joints
+[2022.05.13-23.42.55:320][535]LogFbx: Warning: Bones digested - 67  Depth of hierarchy - 12
+[2022.05.13-23.43.01:759][535]LogSkeletalMesh: Section 0: Material=0, 34480 triangles
+[2022.05.13-23.43.01:759][535]LogSkeletalMesh: Section 1: Material=1, 20840 triangles
+[2022.05.13-23.43.01:817][535]LogSkeletalMesh: Building Skeletal Mesh Hero...
+[2022.05.13-23.43.08:165][535]LogSkeletalMesh: Section 0: Material=0, 34480 triangles
+[2022.05.13-23.43.08:165][535]LogSkeletalMesh: Section 1: Material=1, 20840 triangles
+[2022.05.13-23.43.08:832][535]LogSkeletalMesh: Built Skeletal Mesh [7.03s] /Game/Hero/Model/Hero.Hero
+[2022.05.13-23.43.09:149][535]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2022.05.13-23.43.09:156][535]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.13-23.43.09:498][535]FBXImport: Warning: No smoothing group information was found in this FBX scene.  Please make sure to enable the 'Export Smoothing Groups' option in the FBX Exporter plug-in before exporting the file.  Even for tools that don't support smoothing groups, the FBX Exporter will generate appropriate smoothing data at export-time so that correct vertex normals can be inferred while importing. 
+[2022.05.13-23.43.09:498][535]FBXImport: Warning: The following bones are missing from the bind pose:
+mixamorig:HeadTop_End  
+mixamorig:LeftEye  
+mixamorig:RightEye  
+mixamorig:LeftHandMiddle4  
+mixamorig:LeftHandThumb4  
+mixamorig:LeftHandIndex4  
+mixamorig:LeftHandRing4  
+mixamorig:LeftHandPinky4  
+mixamorig:RightHandMiddle4  
+mixamorig:RightHandThumb4  
+mixamorig:RightHandIndex4  
+mixamorig:RightHandRing4  
+mixamorig:RightHandPinky4  
+mixamorig:RightToe_End  
+mixamorig:LeftToe_End  
+
+This can happen for bones that are not vert weighted. If they are not in the correct orientation after importing,
+please set the "Use T0 as ref pose" option or add them to the bind pose and reimport the skeletal mesh. 
+[2022.05.13-23.43.09:884][535]LogSlate: Took 0.004921 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/DroidSansMono.ttf' (77K)
+[2022.05.13-23.43.28:316][972]LogAssetEditorSubsystem: Opening Asset editor for SkeletalMesh /Game/Hero/Model/Hero.Hero
+[2022.05.13-23.43.28:747][972]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'SkeletonEditor' in 0.0029 seconds. Added 1 classes and 2 folders.
+[2022.05.13-23.43.29:860][972]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_5:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2022.05.13-23.43.29:897][972]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'PinnedCommandList' in 0.0009 seconds. Added 1 classes and 0 folders.
+[2022.05.13-23.43.32:787][973]LogRenderer: Reallocating scene render targets to support 916x520 Format 9 NumSamples 1 (Frame:1).
+[2022.05.13-23.43.35:129][994]LogRenderer: Reallocating scene render targets to support 916x524 Format 9 NumSamples 1 (Frame:25).
+[2022.05.13-23.43.35:385][996]LogRenderer: Reallocating scene render targets to support 916x660 Format 9 NumSamples 1 (Frame:27).
+[2022.05.13-23.43.35:523][998]LogSlate: Window 'Hero' being destroyed
+[2022.05.13-23.44.19:150][669]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.05.13-23.44.19:218][669]LogContentBrowser: Creating deferred item: NewFolder
+[2022.05.13-23.44.21:206][708]LogContentBrowser: Attempting asset rename: NewFolder -> Maps
+[2022.05.13-23.44.21:208][708]LogContentBrowser: End creating deferred item NewFolder
+[2022.05.13-23.44.33:846][950]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.05.13-23.44.33:914][950]LogContentBrowser: Creating deferred item: NewFolder
+[2022.05.13-23.44.35:098][973]LogContentBrowser: Attempting asset rename: NewFolder -> Modes
+[2022.05.13-23.44.35:106][973]LogContentBrowser: End creating deferred item NewFolder
+[2022.05.13-23.44.59:735][475]LogContentBrowser: Attempting asset rename: Maps -> Maps
+[2022.05.13-23.45.03:514][535]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.05.13-23.45.03:589][535]LogContentBrowser: Creating deferred item: NewFolder
+[2022.05.13-23.45.04:708][558]LogContentBrowser: Attempting asset rename: NewFolder -> Modes
+[2022.05.13-23.45.04:710][558]LogContentBrowser: End creating deferred item NewFolder
+[2022.05.13-23.45.15:178][648]LogSlate: Window 'Save Level As' being destroyed
+[2022.05.13-23.45.15:335][648]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/Demo" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.05.13-23.45.15:449][648]LogUObjectHash: Compacting FUObjectHashTables data took   6.18ms
+[2022.05.13-23.45.15:628][648]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Demo47318C754C62274F79437790D4AF729A.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap'
+[2022.05.13-23.45.15:666][648]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/Demo_BuiltData" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo_BuiltData.uasset" SILENT=true
+[2022.05.13-23.45.15:780][648]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Demo_BuiltData6C35ED834A4D730A5FA2608E7BA3EB12.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo_BuiltData.uasset'
+[2022.05.13-23.45.15:833][648]LogFileHelpers: Saving map 'Demo' took 0.611
+[2022.05.13-23.45.15:878][648]AssetCheck: New page: Asset Save: multiple assets
+[2022.05.13-23.45.15:879][648]LogContentValidation: Display: Validating MapBuildDataRegistry /Game/Maps/Demo_BuiltData.Demo_BuiltData
+[2022.05.13-23.45.15:880][648]LogContentValidation: Display: Validating World /Game/Maps/Demo.Demo
+[2022.05.13-23.45.23:320][768]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.05.13-23.45.27:696][768]LogSlate: Window 'Pick Parent Class' being destroyed
+[2022.05.13-23.45.27:731][768]LogContentBrowser: Deferred new asset file creation: NewBlueprint
+[2022.05.13-23.45.27:781][768]LogContentBrowser: Creating deferred item: NewBlueprint
+[2022.05.13-23.45.36:451][937]LogContentBrowser: Attempting asset rename: NewBlueprint -> BP_LegendGameModeBase
+[2022.05.13-23.45.36:488][937]LogContentBrowser: End creating deferred item NewBlueprint
+[2022.05.13-23.45.38:975][983]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Modes/BP_LegendGameModeBase" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Modes/BP_LegendGameModeBase.uasset" SILENT=true
+[2022.05.13-23.45.39:082][983]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_LegendGameModeBase5658E99942FABFF20E7CDBA425A19005.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Modes/BP_LegendGameModeBase.uasset'
+[2022.05.13-23.45.39:173][983]AssetCheck: New page: Asset Save: BP_LegendGameModeBase
+[2022.05.13-23.45.39:173][983]LogContentValidation: Display: Validating Blueprint /Game/Modes/BP_LegendGameModeBase.BP_LegendGameModeBase
+[2022.05.13-23.46.28:245][586]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2022.05.13-23.46.33:972][673]LogEditorViewport: Clicking on Actor (LMB): BP_Sky_Sphere_C (Sky Sphere)
+[2022.05.13-23.46.34:494][676]LogEditorViewport: Clicking on Actor (LMB): SkeletalMeshActor (Hero)
+[2022.05.13-23.46.35:664][688]Cmd: DELETE
+[2022.05.13-23.46.35:665][688]Cmd: ACTOR DELETE
+[2022.05.13-23.46.35:714][688]LogEditorActor: Deleted Actor: SkeletalMeshActor
+[2022.05.13-23.46.35:749][688]LogUObjectHash: Compacting FUObjectHashTables data took   6.61ms
+[2022.05.13-23.46.35:764][688]LogEditorActor: Deleted 1 Actors (0.071 secs)
+[2022.05.13-23.46.40:732][782]LogUObjectHash: Compacting FUObjectHashTables data took   2.51ms
+[2022.05.13-23.46.40:860][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/Demo" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.05.13-23.46.40:887][782]LogUObjectHash: Compacting FUObjectHashTables data took   2.09ms
+[2022.05.13-23.46.40:944][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/DemoEE2EAB264560A1EF581760A57EA353DF.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap'
+[2022.05.13-23.46.40:967][782]LogFileHelpers: Saving map 'Demo' took 0.109
+[2022.05.13-23.46.40:968][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.13-23.46.41:019][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero7C5FCDBA457B8A3EE667C9BB4BFE3554.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.13-23.46.41:028][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_HeroController" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_HeroController.uasset" SILENT=true
+[2022.05.13-23.46.41:074][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_HeroController0D9879BF4840DE3045EFE0908F427157.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_HeroController.uasset'
+[2022.05.13-23.46.41:150][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Model/Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero.uasset" SILENT=true
+[2022.05.13-23.46.41:828][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Hero7ADABA3343EF9EC69D5196944EB4BD2C.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero.uasset'
+[2022.05.13-23.46.41:884][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Model/Alpha_Body_MAT" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Alpha_Body_MAT.uasset" SILENT=true
+[2022.05.13-23.46.41:914][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Alpha_Body_MAT8F50539E40C4FEF05DB1248EAE5BA0D7.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Alpha_Body_MAT.uasset'
+[2022.05.13-23.48.06:349][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Model/Alpha_Joints_MAT" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Alpha_Joints_MAT.uasset" SILENT=true
+[2022.05.13-23.48.06:376][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Alpha_Joints_MATBDC5C3F142AE40283B306CB73B797C13.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Alpha_Joints_MAT.uasset'
+[2022.05.13-23.48.06:381][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Model/Hero_Skeleton" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero_Skeleton.uasset" SILENT=true
+[2022.05.13-23.48.06:393][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Hero_Skeleton39E404634D1D127CCAF64BADA71DCFA1.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero_Skeleton.uasset'
+[2022.05.13-23.48.06:454][782]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Model/Hero_PhysicsAsset" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero_PhysicsAsset.uasset" SILENT=true
+[2022.05.13-23.48.06:488][782]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Hero_PhysicsAsset266B5BBB48EE1F509B8CAF9B87E3D43C.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Model/Hero_PhysicsAsset.uasset'
+[2022.05.13-23.48.06:581][782]AssetCheck: New page: Asset Save: multiple assets
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating World /Game/Maps/Demo.Demo
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_HeroController.BP_HeroController
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating SkeletalMesh /Game/Hero/Model/Hero.Hero
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating Material /Game/Hero/Model/Alpha_Body_MAT.Alpha_Body_MAT
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating Material /Game/Hero/Model/Alpha_Joints_MAT.Alpha_Joints_MAT
+[2022.05.13-23.48.06:582][782]LogContentValidation: Display: Validating Skeleton /Game/Hero/Model/Hero_Skeleton.Hero_Skeleton
+[2022.05.13-23.48.06:583][782]LogContentValidation: Display: Validating PhysicsAsset /Game/Hero/Model/Hero_PhysicsAsset.Hero_PhysicsAsset
+[2022.05.13-23.48.16:499][921]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2022.05.13-23.48.16:500][921]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.13-23.48.23:123][ 62]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.13-23.48.23:808][ 62]LogBlueprintEditor: Perf: 0.5 total seconds to load all 5 blueprint libraries in project. Avoid references to content in blueprint libraries to shorten this time.
+[2022.05.13-23.48.23:808][ 62]LogBlueprintEditor: Perf: 0.2 seconds loading: /Engine/ArtTools/RenderToTexture/Macros/RenderToTextureMacros
+[2022.05.13-23.48.23:808][ 62]LogBlueprintEditor: Perf: 0.2 seconds loading: /Engine/ArtTools/RenderToTexture/Macros/RenderToTextureFunctionLibrary
+[2022.05.13-23.48.24:128][ 62]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0012 seconds. Added 126 classes and 0 folders.
+[2022.05.13-23.48.29:641][ 97]LogSlate: Window 'BP_Hero' being destroyed
+[2022.05.13-23.48.36:992][301]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.05.13-23.48.37:047][301]LogContentBrowser: Creating deferred item: NewFolder
+[2022.05.13-23.48.39:047][352]LogContentBrowser: Attempting asset rename: NewFolder -> Animations
+[2022.05.13-23.48.39:049][352]LogContentBrowser: End creating deferred item NewFolder
+[2022.05.13-23.56.52:710][271]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Run_fwd_stop.fbx)
+[2022.05.13-23.56.52:727][271]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Run_fwd_stop.fbx
+[2022.05.13-23.56.52:791][271]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.13-23.56.58:978][271]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.05.13-23.56.59:010][271]LogFbx: SortedLinks :(0) Hips
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(1) Spine
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(2) Spine1
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(3) Spine2
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(4) Neck
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(5) Head
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(7) LeftEye
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(8) RightEye
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(9) LeftShoulder
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(10) LeftArm
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(11) LeftForeArm
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(12) LeftHand
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(13) LeftHandMiddle1
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(14) LeftHandMiddle2
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(15) LeftHandMiddle3
+[2022.05.13-23.56.59:011][271]LogFbx: SortedLinks :(16) LeftHandMiddle4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(17) LeftHandThumb1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(18) LeftHandThumb2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(19) LeftHandThumb3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(20) LeftHandThumb4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(21) LeftHandIndex1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(22) LeftHandIndex2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(23) LeftHandIndex3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(24) LeftHandIndex4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(25) LeftHandRing1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(26) LeftHandRing2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(27) LeftHandRing3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(28) LeftHandRing4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(29) LeftHandPinky1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(30) LeftHandPinky2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(31) LeftHandPinky3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(32) LeftHandPinky4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(33) RightShoulder
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(34) RightArm
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(35) RightForeArm
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(36) RightHand
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(37) RightHandMiddle1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(38) RightHandMiddle2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(39) RightHandMiddle3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(40) RightHandMiddle4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(41) RightHandThumb1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(42) RightHandThumb2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(43) RightHandThumb3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(44) RightHandThumb4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(45) RightHandIndex1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(46) RightHandIndex2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(47) RightHandIndex3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(48) RightHandIndex4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(49) RightHandRing1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(50) RightHandRing2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(51) RightHandRing3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(52) RightHandRing4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(53) RightHandPinky1
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(54) RightHandPinky2
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(55) RightHandPinky3
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(56) RightHandPinky4
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(57) RightUpLeg
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(58) RightLeg
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(59) RightFoot
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(60) RightToeBase
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(61) RightToe_End
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(62) LeftUpLeg
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(63) LeftLeg
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(64) LeftFoot
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(65) LeftToeBase
+[2022.05.13-23.56.59:012][271]LogFbx: SortedLinks :(66) LeftToe_End
+[2022.05.13-23.56.59:014][271]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.13-23.56.59:612][271]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Run_fwd_stop.Run_fwd_stop
+[2022.05.13-23.56.59:623][271]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Run_fwd_stop.Run_fwd_stop
+[2022.05.13-23.56.59:623][271]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Run_fwd.fbx)
+[2022.05.13-23.56.59:674][271]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Run_fwd.fbx
+[2022.05.13-23.56.59:742][271]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.13-23.56.59:746][271]LogFbx: SortedLinks :(0) Hips
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(1) Spine
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(2) Spine1
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(3) Spine2
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(4) Neck
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(5) Head
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(7) LeftEye
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(8) RightEye
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(9) LeftShoulder
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(10) LeftArm
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(11) LeftForeArm
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(12) LeftHand
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(13) LeftHandMiddle1
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(14) LeftHandMiddle2
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(15) LeftHandMiddle3
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(16) LeftHandMiddle4
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(17) LeftHandThumb1
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(18) LeftHandThumb2
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(19) LeftHandThumb3
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(20) LeftHandThumb4
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(21) LeftHandIndex1
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(22) LeftHandIndex2
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(23) LeftHandIndex3
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(24) LeftHandIndex4
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(25) LeftHandRing1
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(26) LeftHandRing2
+[2022.05.13-23.56.59:747][271]LogFbx: SortedLinks :(27) LeftHandRing3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(28) LeftHandRing4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(29) LeftHandPinky1
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(30) LeftHandPinky2
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(31) LeftHandPinky3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(32) LeftHandPinky4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(33) RightShoulder
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(34) RightArm
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(35) RightForeArm
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(36) RightHand
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(37) RightHandMiddle1
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(38) RightHandMiddle2
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(39) RightHandMiddle3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(40) RightHandMiddle4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(41) RightHandThumb1
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(42) RightHandThumb2
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(43) RightHandThumb3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(44) RightHandThumb4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(45) RightHandIndex1
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(46) RightHandIndex2
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(47) RightHandIndex3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(48) RightHandIndex4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(49) RightHandRing1
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(50) RightHandRing2
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(51) RightHandRing3
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(52) RightHandRing4
+[2022.05.13-23.56.59:748][271]LogFbx: SortedLinks :(53) RightHandPinky1
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(54) RightHandPinky2
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(55) RightHandPinky3
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(56) RightHandPinky4
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(57) RightUpLeg
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(58) RightLeg
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(59) RightFoot
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(60) RightToeBase
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(61) RightToe_End
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(62) LeftUpLeg
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(63) LeftLeg
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(64) LeftFoot
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(65) LeftToeBase
+[2022.05.13-23.56.59:749][271]LogFbx: SortedLinks :(66) LeftToe_End
+[2022.05.13-23.56.59:750][271]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.13-23.57.04:311][271]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Run_fwd.Run_fwd
+[2022.05.13-23.57.04:312][271]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Run_fwd.Run_fwd
+[2022.05.13-23.57.04:313][271]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Walk _fwd.fbx)
+[2022.05.13-23.57.04:370][271]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Walk _fwd.fbx
+[2022.05.13-23.57.04:447][271]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(0) Hips
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(1) Spine
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(2) Spine1
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(3) Spine2
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(4) Neck
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(5) Head
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(7) LeftEye
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(8) RightEye
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(9) LeftShoulder
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(10) LeftArm
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(11) LeftForeArm
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(12) LeftHand
+[2022.05.13-23.57.04:454][271]LogFbx: SortedLinks :(13) LeftHandMiddle1
+[2022.05.13-23.57.04:455][271]LogFbx: SortedLinks :(14) LeftHandMiddle2
+[2022.05.13-23.57.04:455][271]LogFbx: SortedLinks :(15) LeftHandMiddle3
+[2022.05.13-23.57.04:455][271]LogFbx: SortedLinks :(16) LeftHandMiddle4
+[2022.05.13-23.57.04:455][271]LogFbx: SortedLinks :(17) LeftHandThumb1
+[2022.05.13-23.57.04:455][271]LogFbx: SortedLinks :(18) LeftHandThumb2
+[2022.05.13-23.57.04:459][271]LogFbx: SortedLinks :(19) LeftHandThumb3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(20) LeftHandThumb4
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(21) LeftHandIndex1
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(22) LeftHandIndex2
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(23) LeftHandIndex3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(24) LeftHandIndex4
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(25) LeftHandRing1
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(26) LeftHandRing2
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(27) LeftHandRing3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(28) LeftHandRing4
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(29) LeftHandPinky1
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(30) LeftHandPinky2
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(31) LeftHandPinky3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(32) LeftHandPinky4
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(33) RightShoulder
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(34) RightArm
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(35) RightForeArm
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(36) RightHand
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(37) RightHandMiddle1
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(38) RightHandMiddle2
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(39) RightHandMiddle3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(40) RightHandMiddle4
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(41) RightHandThumb1
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(42) RightHandThumb2
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(43) RightHandThumb3
+[2022.05.13-23.57.04:460][271]LogFbx: SortedLinks :(44) RightHandThumb4
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(45) RightHandIndex1
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(46) RightHandIndex2
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(47) RightHandIndex3
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(48) RightHandIndex4
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(49) RightHandRing1
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(50) RightHandRing2
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(51) RightHandRing3
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(52) RightHandRing4
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(53) RightHandPinky1
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(54) RightHandPinky2
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(55) RightHandPinky3
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(56) RightHandPinky4
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(57) RightUpLeg
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(58) RightLeg
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(59) RightFoot
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(60) RightToeBase
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(61) RightToe_End
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(62) LeftUpLeg
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(63) LeftLeg
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(64) LeftFoot
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(65) LeftToeBase
+[2022.05.13-23.57.04:461][271]LogFbx: SortedLinks :(66) LeftToe_End
+[2022.05.13-23.57.04:463][271]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.13-23.57.04:983][271]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Idle.fbx)
+[2022.05.13-23.57.05:013][271]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Idle.fbx
+[2022.05.13-23.57.05:095][271]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(0) Hips
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(1) Spine
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(2) Spine1
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(3) Spine2
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(4) Neck
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(5) Head
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(7) LeftShoulder
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(8) LeftArm
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(9) LeftForeArm
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(10) LeftHand
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(11) LeftHandThumb1
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(12) LeftHandThumb2
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(13) LeftHandThumb3
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(14) LeftHandThumb4
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(15) LeftHandIndex1
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(16) LeftHandIndex2
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(17) LeftHandIndex3
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(18) LeftHandIndex4
+[2022.05.13-23.57.05:100][271]LogFbx: SortedLinks :(19) LeftHandMiddle1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(20) LeftHandMiddle2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(21) LeftHandMiddle3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(22) LeftHandMiddle4
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(23) LeftHandRing1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(24) LeftHandRing2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(25) LeftHandRing3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(26) LeftHandRing4
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(27) LeftHandPinky1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(28) LeftHandPinky2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(29) LeftHandPinky3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(30) LeftHandPinky4
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(31) RightShoulder
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(32) RightArm
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(33) RightForeArm
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(34) RightHand
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(35) RightHandThumb1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(36) RightHandThumb2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(37) RightHandThumb3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(38) RightHandThumb4
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(39) RightHandIndex1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(40) RightHandIndex2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(41) RightHandIndex3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(42) RightHandIndex4
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(43) RightHandMiddle1
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(44) RightHandMiddle2
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(45) RightHandMiddle3
+[2022.05.13-23.57.05:101][271]LogFbx: SortedLinks :(46) RightHandMiddle4
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(47) RightHandRing1
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(48) RightHandRing2
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(49) RightHandRing3
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(50) RightHandRing4
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(51) RightHandPinky1
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(52) RightHandPinky2
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(53) RightHandPinky3
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(54) RightHandPinky4
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(55) LeftUpLeg
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(56) LeftLeg
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(57) LeftFoot
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(58) LeftToeBase
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(59) LeftToe_End
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(60) RightUpLeg
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(61) RightLeg
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(62) RightFoot
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(63) RightToeBase
+[2022.05.13-23.57.05:102][271]LogFbx: SortedLinks :(64) RightToe_End
+[2022.05.13-23.57.05:103][271]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.13-23.57.06:005][272]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Idle.Idle
+[2022.05.13-23.57.06:006][272]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Walk__fwd.Walk__fwd
+[2022.05.14-00.20.03:983][  6]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.05.14-00.20.04:074][  6]LogContentBrowser: Verbose: The majority of assets in the view are of type: Skeleton
+[2022.05.14-00.20.28:263][  6]LogSlate: Window 'Create Animation Blueprint' being destroyed
+[2022.05.14-00.22.20:150][677]Running C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" -game -rocket -progress
+[2022.05.14-00.22.21:421][677]Discovering modules, targets and source code for project...
+[2022.05.14-00.22.25:444][677]Binding IntelliSense data...
+[2022.05.14-00.22.26:957][677]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatching\DistanceMatching.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatching\Public' does not exist.
+[2022.05.14-00.22.26:957][677]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatchingEditor\DistanceMatchingEditor.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatchingEditor\Public' does not exist.
+[2022.05.14-00.22.29:190][677]Binding IntelliSense data... 100%
+[2022.05.14-00.22.29:190][677]Writing project files...
+[2022.05.14-00.22.37:438][677]Writing project files... 100%
+[2022.05.14-00.22.37:960][677]Candidate modules for hot reload:
+[2022.05.14-00.22.37:960][677]  Legend
+[2022.05.14-00.22.37:960][677]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,8621 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.23.09:866][677]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:23:09 PM
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Creating makefile for LegendEditor (no existing makefile)
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.05.14-00.23.09:871][677]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Reflection code generated for LegendEditor in 7.1752346 seconds
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Distributing 8 actions to XGE
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: License is invalid:
+[2022.05.14-00.23.09:871][677]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-00.23.09:871][677]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Build ID: {73AA0551-997C-4C5D-B92E-FDCB2C64529F}
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-00.23.09:871][677]CompilerResultsLog: Hero.cpp (0:07.14 at +0:00)
+[2022.05.14-00.23.09:872][677]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:         with
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:         [
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:         ]
+[2022.05.14-00.23.09:872][677]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.23.09:872][677]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.23.09:872][677]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:         with
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:         [
+[2022.05.14-00.23.09:872][677]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         ]
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         with
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         [
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         ]
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         with
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         [
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:         ]
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: HeroAnimInstance.cpp (0:00.57 at +0:07)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\HeroAnimInstance.cpp(4): fatal error C1083: Cannot open include file: 'Hero/HeroAnimInstance.h': No such file or directory
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Hero.gen.cpp (0:09.14 at +0:07)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: HeroAnimInstance.gen.cpp (0:02.07 at +0:16)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: Legend.init.gen.cpp (0:01.10 at +0:19)
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-00.23.09:873][677]CompilerResultsLog:    - License is invalid
+[2022.05.14-00.23.09:873][677]CompilerResultsLog: 
+[2022.05.14-00.23.09:874][677]LogMainFrame: MainFrame: Module compiling took 31.934 seconds
+[2022.05.14-00.23.09:881][677]Warning: HotReload failed, recompile failed
+[2022.05.14-00.23.09:881][677]Warning: RebindPackages failed because compilation failed.
+[2022.05.14-00.24.04:707][677]LogSlate: Window 'Message' being destroyed
+[2022.05.14-00.24.04:719][677]Message dialog closed, result: No, title: Message, text: Successfully added class 'HeroAnimInstance', however you must recompile the 'Legend' module before it will appear in the Content Browser. Failed to automatically hot reload the 'Legend' module.
+
+Would you like to open the Output Log to see more details?
+[2022.05.14-00.24.04:720][677]LogSlate: Window 'Add C++ Class' being destroyed
+[2022.05.14-00.24.48:801][884]Candidate modules for hot reload:
+[2022.05.14-00.24.48:801][884]  Legend
+[2022.05.14-00.24.48:801][884]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,8965 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.24.48:821][884]Warning: Starting HotReload took  0.1s.
+[2022.05.14-00.24.58:714][197]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:24:58 PM
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: Distributing 5 actions to XGE
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-00.24.58:715][197]CompilerResultsLog: License is invalid:
+[2022.05.14-00.24.58:715][197]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: Build ID: {5E098FF1-64FE-4D83-9057-91158AD4B540}
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: Hero.cpp (0:03.17 at +0:00)
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:         with
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:         [
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:         ]
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.24.58:716][197]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.24.58:716][197]CompilerResultsLog:         with
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         [
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         ]
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         with
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         [
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         ]
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.24.58:717][197]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         with
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         [
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.24.58:717][197]CompilerResultsLog:         ]
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: HeroAnimInstance.cpp (0:01.39 at +0:03)
+[2022.05.14-00.24.58:718][197]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\HeroAnimInstance.cpp(4): fatal error C1083: Cannot open include file: 'Hero/HeroAnimInstance.h': No such file or directory
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:719][197]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-00.24.58:719][197]CompilerResultsLog:    - License is invalid
+[2022.05.14-00.24.58:719][197]CompilerResultsLog: 
+[2022.05.14-00.24.58:719][197]LogMainFrame: MainFrame: Module compiling took 9.923 seconds
+[2022.05.14-00.24.58:719][197]Warning: HotReload failed, recompile failed
+[2022.05.14-00.25.56:172][719]Candidate modules for hot reload:
+[2022.05.14-00.25.56:172][719]  Legend
+[2022.05.14-00.25.56:173][719]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,391 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.25.56:213][719]Warning: Starting HotReload took  0.1s.
+[2022.05.14-00.26.20:783][155]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:26:20 PM
+[2022.05.14-00.26.20:786][155]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.26.20:786][155]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.05.14-00.26.20:786][155]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.05.14-00.26.20:787][155]CompilerResultsLog: Error: C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Source/Legend/Hero/HeroAnimInstance.h(18)  : Error: Expected an include at the top of the header: '#include "HeroAnimInstance.generated.h"'
+[2022.05.14-00.26.20:787][155]LogMainFrame: MainFrame: Module compiling took 24.619 seconds
+[2022.05.14-00.26.20:788][155]Warning: HotReload failed, recompile failed
+[2022.05.14-00.26.55:356][760]Candidate modules for hot reload:
+[2022.05.14-00.26.55:356][760]  Legend
+[2022.05.14-00.26.55:357][760]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,792 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.26.55:379][760]Warning: Starting HotReload took  0.1s.
+[2022.05.14-00.27.38:054][947]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:27:38 PM
+[2022.05.14-00.27.38:058][947]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.27.38:058][947]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.05.14-00.27.38:058][947]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.05.14-00.27.38:058][947]CompilerResultsLog: Reflection code generated for LegendEditor in 14.7969495 seconds
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: License is invalid:
+[2022.05.14-00.27.38:059][947]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-00.27.38:059][947]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-00.27.38:059][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:060][947]CompilerResultsLog: Build ID: {C084E29F-3585-4CFA-AC6B-1CE86856D2AF}
+[2022.05.14-00.27.38:060][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:060][947]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-00.27.38:060][947]CompilerResultsLog: Hero.cpp (0:02.78 at +0:00)
+[2022.05.14-00.27.38:066][947]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.27.38:066][947]CompilerResultsLog:         with
+[2022.05.14-00.27.38:066][947]CompilerResultsLog:         [
+[2022.05.14-00.27.38:066][947]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.27.38:066][947]CompilerResultsLog:         ]
+[2022.05.14-00.27.38:066][947]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(27): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         with
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         [
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         ]
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(28): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         with
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         [
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         ]
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(29): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30) : error C2664: 'FInputAxisBinding &UInputComponent::BindAxis<AHero>(const FName,UserClass *,void (__cdecl AHero::* )(float))': cannot convert argument 3 from 'void (__cdecl AHero::* )(void)' to 'void (__cdecl AHero::* )(float)'
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         with
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:         [
+[2022.05.14-00.27.38:067][947]CompilerResultsLog:             UserClass=AHero
+[2022.05.14-00.27.38:068][947]CompilerResultsLog:         ]
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(30): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Components/InputComponent.h(903): note: see declaration of 'UInputComponent::BindAxis'
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: HeroAnimInstance.cpp (0:10.29 at +0:03)
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: HeroAnimInstance.gen.cpp (0:07.51 at +0:13)
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:068][947]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:068][947]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-00.27.38:069][947]CompilerResultsLog:    - License is invalid
+[2022.05.14-00.27.38:069][947]CompilerResultsLog: 
+[2022.05.14-00.27.38:069][947]LogMainFrame: MainFrame: Module compiling took 42.718 seconds
+[2022.05.14-00.27.38:069][947]Warning: HotReload failed, recompile failed
+[2022.05.14-00.31.26:571][963]Candidate modules for hot reload:
+[2022.05.14-00.31.26:571][963]  Legend
+[2022.05.14-00.31.26:572][963]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,1483 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.31.26:622][963]Warning: Starting HotReload took  0.1s.
+[2022.05.14-00.32.12:079][153]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:32:12 PM
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.05.14-00.32.12:081][153]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Reflection code generated for LegendEditor in 13.3662594 seconds
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Distributing 5 actions to XGE
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: License is invalid:
+[2022.05.14-00.32.12:081][153]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-00.32.12:081][153]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: Build ID: {68AD95F5-6E02-4B24-BF32-A7AFF63A8BCE}
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:081][153]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-00.32.12:082][153]CompilerResultsLog: Hero.cpp (0:18.10 at +0:00)
+[2022.05.14-00.32.12:082][153]CompilerResultsLog: Hero.gen.cpp (0:03.42 at +0:18)
+[2022.05.14-00.32.12:082][153]CompilerResultsLog: UE4Editor-Legend-1483.lib (0:01.18 at +0:21)
+[2022.05.14-00.32.12:082][153]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-1483.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-1483.exp
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: UE4Editor-Legend-1483.dll (0:02.68 at +0:22)
+[2022.05.14-00.32.12:083][153]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-1483.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-1483.suppressed.exp
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: LegendEditor.target (0:01.60 at +0:25)
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:083][153]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-00.32.12:083][153]CompilerResultsLog:    - License is invalid
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: 
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: Total time in XGE executor: 28.31 seconds
+[2022.05.14-00.32.12:083][153]CompilerResultsLog: Total execution time: 44.77 seconds
+[2022.05.14-00.32.12:084][153]LogMainFrame: MainFrame: Module compiling took 45.518 seconds
+[2022.05.14-00.32.13:783][153]LogClass: Could not find existing class HeroAnimInstance in package /Script/Legend for HotReload, assuming new class
+[2022.05.14-00.32.13:955][153]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0049 seconds. Added 4 classes and 3 folders.
+[2022.05.14-00.32.13:970][153]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.05.14-00.32.15:143][153]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.1615 seconds. Added 3606 classes and 864 folders.
+[2022.05.14-00.32.15:147][153]Display: HotReload took 48.6s.
+[2022.05.14-00.32.59:167][422]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-00.32.59:283][422]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-00.32.59:285][422]PIE: New page: PIE session: Demo (May 13, 2022, 4:32:59 PM)
+[2022.05.14-00.32.59:365][422]LogOnline: OSS: Creating online subsystem instance for: NULL
+[2022.05.14-00.32.59:377][422]LogOnline: OSS: TryLoadSubsystemAndSetDefault: Loaded subsystem for module [NULL]
+[2022.05.14-00.32.59:390][422]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-00.32.59:530][422]LogPlayLevel: PIE: StaticDuplicateObject took: (0.135608s)
+[2022.05.14-00.32.59:699][422]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-00.32.59:734][422]LogPlayLevel: PIE: World Init took: (0.203002s)
+[2022.05.14-00.32.59:737][422]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.348959s)
+[2022.05.14-00.33.00:954][422]LogUObjectHash: Compacting FUObjectHashTables data took  10.36ms
+[2022.05.14-00.33.01:354][422]LogAudio: Display: Creating Audio Device:                 Id: 2, Scope: Unique, Realtime: True
+[2022.05.14-00.33.01:357][422]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-00.33.01:357][422]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-00.33.01:357][422]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-00.33.01:357][422]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-00.33.01:357][422]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-00.33.01:358][422]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-00.33.01:358][422]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-00.33.01:359][422]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-00.33.01:368][422]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-00.33.01:368][422]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-00.33.01:398][422]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-00.33.01:398][422]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-00.33.01:477][422]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-00.33.01:498][422]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-00.33.01:498][422]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-00.33.01:500][422]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-00.33.01:514][422]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-00.33.01:514][422]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-00.33.01:514][422]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-00.33.01:590][422]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-00.33.01:590][422]LogInit: FAudioDevice initialized.
+[2022.05.14-00.33.01:591][422]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-00.33.01:591][422]LogAudio: Display: Audio Device (ID: 2) registered with world 'Demo'.
+[2022.05.14-00.33.01:761][422]LogLoad: Game class is 'GameModeBase'
+[2022.05.14-00.33.01:854][422]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-20.33.01
+[2022.05.14-00.33.01:858][422]LogWorld: Bringing up level for play took: 0.067121
+[2022.05.14-00.33.01:873][422]LogOnline: OSS: Creating online subsystem instance for: :Context_9
+[2022.05.14-00.33.02:046][422]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'MovieSceneCapture' in 0.0014 seconds. Added 20 classes and 0 folders.
+[2022.05.14-00.33.02:090][422]PIE: Server logged in
+[2022.05.14-00.33.02:099][422]PIE: Play in editor total start time 2.856 seconds.
+[2022.05.14-00.33.05:332][484]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-00.33.05:333][484]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-00.33.05:349][484]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-00.33.05:359][484]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-00.33.05:431][484]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-00.33.05:452][484]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-00.33.05:549][484]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.14-00.33.05:596][484]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-00.33.05:600][484]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-00.33.05:685][484]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-00.33.05:869][484]LogUObjectHash: Compacting FUObjectHashTables data took  15.59ms
+[2022.05.14-00.33.06:001][485]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2022.05.14-00.33.18:907][837]LogSlate: Warning: Slate: Had to block on waiting for a draw buffer
+[2022.05.14-00.33.18:999][837]LogContentBrowser: Verbose: The majority of assets in the view are of type: Skeleton
+[2022.05.14-00.33.24:734][837]LogContentBrowser: Verbose: The majority of assets in the view are of type: Skeleton
+[2022.05.14-00.33.26:932][837]LogSlate: Window 'Create Animation Blueprint' being destroyed
+[2022.05.14-00.33.26:962][837]LogContentBrowser: Deferred new asset file creation: NewAnimBlueprint
+[2022.05.14-00.33.27:004][837]LogContentBrowser: Creating deferred item: NewAnimBlueprint
+[2022.05.14-00.33.32:214][993]LogContentBrowser: Attempting asset rename: NewAnimBlueprint -> ABP_Hero
+[2022.05.14-00.33.32:403][993]LogContentBrowser: End creating deferred item NewAnimBlueprint
+[2022.05.14-00.36.15:296][783]LogContentBrowser: Attempting asset rename: Walk__fwd -> Walk_fwd
+[2022.05.14-00.36.15:557][783]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Walk_fwd" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Walk_fwd.uasset" SILENT=true
+[2022.05.14-00.36.15:618][783]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Walk_fwd324C95ED471CBABDF2F70B9749910292.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Walk_fwd.uasset'
+[2022.05.14-00.36.15:922][783]LogUObjectHash: Compacting FUObjectHashTables data took  12.90ms
+[2022.05.14-00.36.16:049][783]LogUObjectHash: Compacting FUObjectHashTables data took   7.98ms
+[2022.05.14-00.36.16:115][783]LogUObjectHash: Compacting FUObjectHashTables data took   2.94ms
+[2022.05.14-00.36.16:242][783]AssetCheck: New page: Asset Save: Walk_fwd
+[2022.05.14-00.36.16:242][783]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Walk_fwd.Walk_fwd
+[2022.05.14-00.36.29:988][ 14]LogFactory: FactoryCreateFile: StaticMesh with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Falling.fbx)
+[2022.05.14-00.36.30:084][ 14]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Falling.fbx
+[2022.05.14-00.36.30:169][ 14]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.14-00.36.34:309][ 14]LogSlate: Window 'FBX Import Options' being destroyed
+[2022.05.14-00.36.34:390][ 14]LogFbx: SortedLinks :(0) Hips
+[2022.05.14-00.36.34:390][ 14]LogFbx: SortedLinks :(1) Spine
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(2) Spine1
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(3) Spine2
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(4) Neck
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(5) Head
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(7) LeftEye
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(8) RightEye
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(9) LeftShoulder
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(10) LeftArm
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(11) LeftForeArm
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(12) LeftHand
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(13) LeftHandMiddle1
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(14) LeftHandMiddle2
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(15) LeftHandMiddle3
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(16) LeftHandMiddle4
+[2022.05.14-00.36.34:391][ 14]LogFbx: SortedLinks :(17) LeftHandThumb1
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(18) LeftHandThumb2
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(19) LeftHandThumb3
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(20) LeftHandThumb4
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(21) LeftHandIndex1
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(22) LeftHandIndex2
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(23) LeftHandIndex3
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(24) LeftHandIndex4
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(25) LeftHandRing1
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(26) LeftHandRing2
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(27) LeftHandRing3
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(28) LeftHandRing4
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(29) LeftHandPinky1
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(30) LeftHandPinky2
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(31) LeftHandPinky3
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(32) LeftHandPinky4
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(33) RightShoulder
+[2022.05.14-00.36.34:392][ 14]LogFbx: SortedLinks :(34) RightArm
+[2022.05.14-00.36.34:393][ 14]LogFbx: SortedLinks :(35) RightForeArm
+[2022.05.14-00.36.34:393][ 14]LogFbx: SortedLinks :(36) RightHand
+[2022.05.14-00.36.34:393][ 14]LogFbx: SortedLinks :(37) RightHandMiddle1
+[2022.05.14-00.36.34:394][ 14]LogFbx: SortedLinks :(38) RightHandMiddle2
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(39) RightHandMiddle3
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(40) RightHandMiddle4
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(41) RightHandThumb1
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(42) RightHandThumb2
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(43) RightHandThumb3
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(44) RightHandThumb4
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(45) RightHandIndex1
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(46) RightHandIndex2
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(47) RightHandIndex3
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(48) RightHandIndex4
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(49) RightHandRing1
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(50) RightHandRing2
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(51) RightHandRing3
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(52) RightHandRing4
+[2022.05.14-00.36.34:395][ 14]LogFbx: SortedLinks :(53) RightHandPinky1
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(54) RightHandPinky2
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(55) RightHandPinky3
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(56) RightHandPinky4
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(57) RightUpLeg
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(58) RightLeg
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(59) RightFoot
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(60) RightToeBase
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(61) RightToe_End
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(62) LeftUpLeg
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(63) LeftLeg
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(64) LeftFoot
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(65) LeftToeBase
+[2022.05.14-00.36.34:396][ 14]LogFbx: SortedLinks :(66) LeftToe_End
+[2022.05.14-00.36.34:402][ 14]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.14-00.36.34:769][ 14]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Falling.Falling
+[2022.05.14-00.36.34:769][ 14]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Falling.Falling
+[2022.05.14-00.36.34:776][ 14]LogFactory: FactoryCreateFile: AnimSequence with FbxFactory (0 0 ../../../../../../Users/Owner/Downloads/Jump_start.fbx)
+[2022.05.14-00.36.34:817][ 14]LogFbx: Loading FBX Scene from ../../../../../../Users/Owner/Downloads/Jump_start.fbx
+[2022.05.14-00.36.34:863][ 14]LogFbx: FBX Scene Loaded Succesfully
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(0) Hips
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(1) Spine
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(2) Spine1
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(3) Spine2
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(4) Neck
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(5) Head
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(6) HeadTop_End
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(7) LeftEye
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(8) RightEye
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(9) LeftShoulder
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(10) LeftArm
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(11) LeftForeArm
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(12) LeftHand
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(13) LeftHandMiddle1
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(14) LeftHandMiddle2
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(15) LeftHandMiddle3
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(16) LeftHandMiddle4
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(17) LeftHandThumb1
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(18) LeftHandThumb2
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(19) LeftHandThumb3
+[2022.05.14-00.36.34:866][ 14]LogFbx: SortedLinks :(20) LeftHandThumb4
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(21) LeftHandIndex1
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(22) LeftHandIndex2
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(23) LeftHandIndex3
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(24) LeftHandIndex4
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(25) LeftHandRing1
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(26) LeftHandRing2
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(27) LeftHandRing3
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(28) LeftHandRing4
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(29) LeftHandPinky1
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(30) LeftHandPinky2
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(31) LeftHandPinky3
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(32) LeftHandPinky4
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(33) RightShoulder
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(34) RightArm
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(35) RightForeArm
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(36) RightHand
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(37) RightHandMiddle1
+[2022.05.14-00.36.34:867][ 14]LogFbx: SortedLinks :(38) RightHandMiddle2
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(39) RightHandMiddle3
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(40) RightHandMiddle4
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(41) RightHandThumb1
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(42) RightHandThumb2
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(43) RightHandThumb3
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(44) RightHandThumb4
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(45) RightHandIndex1
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(46) RightHandIndex2
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(47) RightHandIndex3
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(48) RightHandIndex4
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(49) RightHandRing1
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(50) RightHandRing2
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(51) RightHandRing3
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(52) RightHandRing4
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(53) RightHandPinky1
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(54) RightHandPinky2
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(55) RightHandPinky3
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(56) RightHandPinky4
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(57) RightUpLeg
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(58) RightLeg
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(59) RightFoot
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(60) RightToeBase
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(61) RightToe_End
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(62) LeftUpLeg
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(63) LeftLeg
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(64) LeftFoot
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(65) LeftToeBase
+[2022.05.14-00.36.34:868][ 14]LogFbx: SortedLinks :(66) LeftToe_End
+[2022.05.14-00.36.34:869][ 14]LogFbx: Parsing AnimStack mixamo.com
+[2022.05.14-00.36.36:167][ 15]LogAnimationCompression: Building Anim DDC data for AnimSequence /Game/Hero/Animations/Jump_start.Jump_start
+[2022.05.14-00.37.03:003][398]LogRenderer: Reallocating scene render targets to support 1144x660 Format 9 NumSamples 1 (Frame:18633).
+[2022.05.14-00.37.13:378][685]LogSlate: Took 0.003642 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.05.14-00.37.17:310][770]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.05.14-00.43.48:837][730]Candidate modules for hot reload:
+[2022.05.14-00.43.48:837][730]  Legend
+[2022.05.14-00.43.48:837][730]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,9464 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-00.43.48:890][730]Warning: Starting HotReload took  0.1s.
+[2022.05.14-00.44.28:031][528]CompilerResultsLog: New page: Compilation - May 13, 2022, 4:44:28 PM
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: Distributing 4 actions to XGE
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: License is invalid:
+[2022.05.14-00.44.28:032][528]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-00.44.28:032][528]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:032][528]CompilerResultsLog: Build ID: {871251F9-CBCB-4D21-9F45-7165233BFA6C}
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: Hero.cpp (0:27.45 at +0:00)
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: UE4Editor-Legend-9464.lib (0:01.42 at +0:27)
+[2022.05.14-00.44.28:033][528]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9464.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9464.exp
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: UE4Editor-Legend-9464.dll (0:02.65 at +0:29)
+[2022.05.14-00.44.28:033][528]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9464.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9464.suppressed.exp
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: LegendEditor.target (0:01.84 at +0:31)
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:033][528]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-00.44.28:033][528]CompilerResultsLog:    - License is invalid
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: 
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: Total time in XGE executor: 34.87 seconds
+[2022.05.14-00.44.28:033][528]CompilerResultsLog: Total execution time: 38.52 seconds
+[2022.05.14-00.44.28:033][528]LogMainFrame: MainFrame: Module compiling took 39.201 seconds
+[2022.05.14-00.44.28:952][528]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0003 seconds. Added 4 classes and 3 folders.
+[2022.05.14-00.44.28:956][528]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.05.14-00.44.29:069][528]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0101 seconds. Added 3606 classes and 864 folders.
+[2022.05.14-00.44.29:069][528]Display: HotReload took 40.3s.
+[2022.05.14-00.44.43:662][859]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-00.44.43:680][859]BlueprintLog: New page: Pre-Play auto-recompile
+[2022.05.14-00.44.43:687][859]LogPlayLevel: [PlayLevel] Compiling ABP_Hero before play...
+[2022.05.14-00.44.43:833][859]LogUObjectHash: Compacting FUObjectHashTables data took   5.36ms
+[2022.05.14-00.44.43:839][859]LogPlayLevel: PlayLevel: Blueprint regeneration took 158 ms (1 blueprints)
+[2022.05.14-00.44.43:839][859]PIE: New page: PIE session: Demo (May 13, 2022, 4:44:43 PM)
+[2022.05.14-00.44.43:850][859]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-00.44.43:853][859]LogPlayLevel: PIE: StaticDuplicateObject took: (0.002755s)
+[2022.05.14-00.44.43:854][859]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-00.44.43:854][859]LogPlayLevel: PIE: World Init took: (0.001427s)
+[2022.05.14-00.44.43:854][859]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.004385s)
+[2022.05.14-00.44.43:914][859]LogUObjectHash: Compacting FUObjectHashTables data took   3.59ms
+[2022.05.14-00.44.43:916][859]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-00.44.43:917][859]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-00.44.43:917][859]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-00.44.43:917][859]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-00.44.43:924][859]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-00.44.43:924][859]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-00.44.43:950][859]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-00.44.43:951][859]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-00.44.43:951][859]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-00.44.43:951][859]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-00.44.43:953][859]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-00.44.43:953][859]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-00.44.43:953][859]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-00.44.43:977][859]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-00.44.43:977][859]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-00.44.43:977][859]LogInit: FAudioDevice initialized.
+[2022.05.14-00.44.43:977][859]LogAudio: Display: Audio Device (ID: 3) registered with world 'Demo'.
+[2022.05.14-00.44.43:985][859]LogLoad: Game class is 'GameModeBase'
+[2022.05.14-00.44.43:987][859]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-20.44.43
+[2022.05.14-00.44.43:987][859]LogWorld: Bringing up level for play took: 0.000594
+[2022.05.14-00.44.43:988][859]LogOnline: OSS: Creating online subsystem instance for: :Context_11
+[2022.05.14-00.44.43:992][859]PIE: Server logged in
+[2022.05.14-00.44.43:993][859]PIE: Play in editor total start time 0.322 seconds.
+[2022.05.14-00.44.45:973][974]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-00.44.45:973][974]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-00.44.45:974][974]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-00.44.45:974][974]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-00.44.45:987][974]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-00.44.45:995][974]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-00.44.46:022][974]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-00.44.46:022][974]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-00.44.46:023][974]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-00.44.46:056][974]LogUObjectHash: Compacting FUObjectHashTables data took   3.01ms
+[2022.05.14-00.44.46:080][975]LogPlayLevel: Display: Destroying online subsystem :Context_11
+[2022.05.14-00.44.48:819][ 65]LogUObjectHash: Compacting FUObjectHashTables data took   3.05ms
+[2022.05.14-00.44.48:875][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.14-00.44.48:931][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero1E967DE14D2CCD9A1A6ECFBEFA268195.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.14-00.44.48:950][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Run_fwd_stop" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Run_fwd_stop.uasset" SILENT=true
+[2022.05.14-00.44.48:960][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Run_fwd_stopDCC517BC4F9BFD79DDFB4499A25B5A90.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Run_fwd_stop.uasset'
+[2022.05.14-00.44.48:988][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Run_fwd" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Run_fwd.uasset" SILENT=true
+[2022.05.14-00.44.49:009][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Run_fwd347EAD0B4C395D76C839F4A02178E238.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Run_fwd.uasset'
+[2022.05.14-00.44.49:028][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Idle" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Idle.uasset" SILENT=true
+[2022.05.14-00.44.49:040][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Idle64EA099D404E2F2BE756A9A3FE377254.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Idle.uasset'
+[2022.05.14-00.44.49:062][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.05.14-00.44.49:092][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_HeroB88812C048283289535687B176FF5C89.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.05.14-00.44.49:110][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Falling" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Falling.uasset" SILENT=true
+[2022.05.14-00.44.49:118][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Falling140E427F404BD02AF6597AADC4EE0604.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Falling.uasset'
+[2022.05.14-00.44.49:137][ 65]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/Animations/Jump_start" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Jump_start.uasset" SILENT=true
+[2022.05.14-00.44.49:146][ 65]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Jump_startB346D43D4B3DD17684A078BBB12B2DD7.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animations/Jump_start.uasset'
+[2022.05.14-00.44.49:173][ 65]AssetCheck: New page: Asset Save: multiple assets
+[2022.05.14-00.44.49:173][ 65]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Run_fwd_stop.Run_fwd_stop
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Run_fwd.Run_fwd
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Idle.Idle
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Jump_start.Jump_start
+[2022.05.14-00.44.49:174][ 65]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animations/Falling.Falling
+[2022.05.14-03.23.59:332][929]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.05.14-03.24.07:191][293]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Modes/BP_LegendGameModeBase.BP_LegendGameModeBase
+[2022.05.14-03.24.23:971][848]LogUObjectHash: Compacting FUObjectHashTables data took   4.91ms
+[2022.05.14-03.24.23:993][848]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Modes/BP_LegendGameModeBase" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Modes/BP_LegendGameModeBase.uasset" SILENT=true
+[2022.05.14-03.24.24:026][848]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_LegendGameModeBase8EA25BA247707DE2F48691875F42755D.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Modes/BP_LegendGameModeBase.uasset'
+[2022.05.14-03.24.24:042][848]AssetCheck: New page: Asset Save: BP_LegendGameModeBase
+[2022.05.14-03.24.24:042][848]LogContentValidation: Display: Validating Blueprint /Game/Modes/BP_LegendGameModeBase.BP_LegendGameModeBase
+[2022.05.14-03.24.27:952][981]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.24.27:973][981]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.24.27:974][981]PIE: New page: PIE session: Demo (May 13, 2022, 7:24:27 PM)
+[2022.05.14-03.24.28:013][981]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.24.28:019][981]LogPlayLevel: PIE: StaticDuplicateObject took: (0.006092s)
+[2022.05.14-03.24.28:021][981]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.24.28:022][981]LogPlayLevel: PIE: World Init took: (0.003114s)
+[2022.05.14-03.24.28:022][981]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.009614s)
+[2022.05.14-03.24.28:070][981]LogUObjectHash: Compacting FUObjectHashTables data took   4.45ms
+[2022.05.14-03.24.28:072][981]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.24.28:073][981]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.24.28:073][981]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.24.28:074][981]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.24.28:074][981]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.24.28:085][981]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.24.28:085][981]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.24.28:126][981]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.24.28:127][981]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.24.28:127][981]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.24.28:127][981]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.24.28:131][981]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.24.28:131][981]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.24.28:131][981]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.24.28:155][981]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.24.28:155][981]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.24.28:155][981]LogInit: FAudioDevice initialized.
+[2022.05.14-03.24.28:155][981]LogAudio: Display: Audio Device (ID: 4) registered with world 'Demo'.
+[2022.05.14-03.24.28:168][981]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.24.28:170][981]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.24.28
+[2022.05.14-03.24.28:170][981]LogWorld: Bringing up level for play took: 0.000593
+[2022.05.14-03.24.28:171][981]LogOnline: OSS: Creating online subsystem instance for: :Context_14
+[2022.05.14-03.24.28:196][981]PIE: Server logged in
+[2022.05.14-03.24.28:197][981]PIE: Play in editor total start time 0.228 seconds.
+[2022.05.14-03.24.32:881][256]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.24.32:881][256]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.24.32:882][256]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.24.32:882][256]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.24.32:907][256]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.24.32:920][256]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.24.32:966][256]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.24.32:966][256]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.24.32:968][256]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.24.32:995][256]LogUObjectHash: Compacting FUObjectHashTables data took   3.12ms
+[2022.05.14-03.24.33:020][257]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2022.05.14-03.29.43:036][382]Candidate modules for hot reload:
+[2022.05.14-03.29.43:037][382]  Legend
+[2022.05.14-03.29.43:039][382]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,5516 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.05.14-03.29.43:089][382]Warning: Starting HotReload took  0.1s.
+[2022.05.14-03.29.49:353][545]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.29.49:353][545]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.30.31:871][705]CompilerResultsLog: New page: Compilation - May 13, 2022, 7:30:31 PM
+[2022.05.14-03.30.31:880][705]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.05.14-03.30.31:881][705]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: Reflection code generated for LegendEditor in 13.072106 seconds
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: Building LegendEditor...
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.05.14-03.30.31:881][705]CompilerResultsLog: License is invalid:
+[2022.05.14-03.30.31:882][705]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.05.14-03.30.31:882][705]CompilerResultsLog:     This build will run in standalone mode.
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: Build ID: {5C3B37A7-2BBA-4286-9DEB-A7A88B8779DE}
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: Hero.cpp (0:17.04 at +0:00)
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: Hero.gen.cpp (0:04.73 at +0:17)
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: Legend.init.gen.cpp (0:02.68 at +0:21)
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: UE4Editor-Legend-5516.lib (0:00.98 at +0:24)
+[2022.05.14-03.30.31:882][705]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5516.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5516.exp
+[2022.05.14-03.30.31:882][705]CompilerResultsLog: UE4Editor-Legend-5516.dll (0:02.73 at +0:25)
+[2022.05.14-03.30.31:883][705]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5516.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5516.suppressed.exp
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: LegendEditor.target (0:01.09 at +0:28)
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:884][705]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: 1 build system warning(s):
+[2022.05.14-03.30.31:884][705]CompilerResultsLog:    - License is invalid
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: 
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: Total time in XGE executor: 30.52 seconds
+[2022.05.14-03.30.31:884][705]CompilerResultsLog: Total execution time: 47.69 seconds
+[2022.05.14-03.30.31:888][705]LogMainFrame: MainFrame: Module compiling took 48.857 seconds
+[2022.05.14-03.30.32:925][705]LogClass: Could not find existing class Hero in package /Script/Legend for HotReload, assuming new class
+[2022.05.14-03.30.32:973][705]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.05.14-03.30.33:244][705]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0040 seconds. Added 4 classes and 3 folders.
+[2022.05.14-03.30.33:253][705]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.05.14-03.30.33:495][705]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0167 seconds. Added 3606 classes and 864 folders.
+[2022.05.14-03.30.33:496][705]Display: HotReload took 50.5s.
+[2022.05.14-03.30.49:063][796]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.30.49:095][796]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.30.49:095][796]PIE: New page: PIE session: Demo (May 13, 2022, 7:30:49 PM)
+[2022.05.14-03.30.49:097][796]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.30.49:120][796]LogPlayLevel: PIE: StaticDuplicateObject took: (0.023360s)
+[2022.05.14-03.30.49:144][796]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.30.49:150][796]LogPlayLevel: PIE: World Init took: (0.029534s)
+[2022.05.14-03.30.49:150][796]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.053456s)
+[2022.05.14-03.30.49:310][796]LogUObjectHash: Compacting FUObjectHashTables data took  10.37ms
+[2022.05.14-03.30.49:317][796]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2022.05.14-03.30.49:317][796]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.30.49:317][796]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.30.49:318][796]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.30.49:318][796]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.30.49:318][796]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.30.49:318][796]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.30.49:318][796]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.30.49:318][796]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.30.49:319][796]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.30.49:319][796]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.30.49:328][796]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.30.49:328][796]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.30.49:349][796]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.30.49:351][796]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.30.49:351][796]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.30.49:351][796]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.30.49:355][796]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.30.49:355][796]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.30.49:355][796]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.30.49:379][796]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.30.49:379][796]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.30.49:379][796]LogInit: FAudioDevice initialized.
+[2022.05.14-03.30.49:379][796]LogAudio: Display: Audio Device (ID: 5) registered with world 'Demo'.
+[2022.05.14-03.30.49:413][796]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.30.49:419][796]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.30.49
+[2022.05.14-03.30.49:420][796]LogWorld: Bringing up level for play took: 0.001957
+[2022.05.14-03.30.49:425][796]LogOnline: OSS: Creating online subsystem instance for: :Context_15
+[2022.05.14-03.30.49:448][796]PIE: Server logged in
+[2022.05.14-03.30.49:448][796]PIE: Play in editor total start time 0.367 seconds.
+[2022.05.14-03.30.53:487][ 22]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.30.53:487][ 22]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.30.53:490][ 22]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.30.53:491][ 22]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.30.53:523][ 22]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.30.53:535][ 22]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.30.53:589][ 22]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.14-03.30.53:590][ 22]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.30.53:591][ 22]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.30.53:621][ 22]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.30.53:695][ 22]LogUObjectHash: Compacting FUObjectHashTables data took   4.87ms
+[2022.05.14-03.30.53:731][ 23]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2022.05.14-03.31.06:720][437]LogEditorViewport: Clicking on Actor (LMB): StaticMeshActor (Floor)
+[2022.05.14-03.31.14:877][651]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.31.14:903][651]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.31.14:904][651]PIE: New page: PIE session: Demo (May 13, 2022, 7:31:14 PM)
+[2022.05.14-03.31.14:904][651]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.31.14:908][651]LogPlayLevel: PIE: StaticDuplicateObject took: (0.004222s)
+[2022.05.14-03.31.14:910][651]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.31.14:911][651]LogPlayLevel: PIE: World Init took: (0.002698s)
+[2022.05.14-03.31.14:911][651]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.007153s)
+[2022.05.14-03.31.14:960][651]LogUObjectHash: Compacting FUObjectHashTables data took   3.36ms
+[2022.05.14-03.31.14:964][651]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.31.14:964][651]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.31.14:964][651]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.31.14:964][651]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.31.14:965][651]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.31.14:970][651]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.31.14:970][651]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.31.14:993][651]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.31.14:994][651]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.31.14:994][651]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.31.14:994][651]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.31.14:994][651]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.31.14:994][651]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.31.14:994][651]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.31.15:021][651]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.31.15:021][651]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.31.15:021][651]LogInit: FAudioDevice initialized.
+[2022.05.14-03.31.15:021][651]LogAudio: Display: Audio Device (ID: 6) registered with world 'Demo'.
+[2022.05.14-03.31.15:030][651]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.31.15:031][651]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.31.15
+[2022.05.14-03.31.15:032][651]LogWorld: Bringing up level for play took: 0.000695
+[2022.05.14-03.31.15:032][651]LogOnline: OSS: Creating online subsystem instance for: :Context_16
+[2022.05.14-03.31.15:036][651]PIE: Server logged in
+[2022.05.14-03.31.15:037][651]PIE: Play in editor total start time 0.141 seconds.
+[2022.05.14-03.31.16:350][719]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.31.16:350][719]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.31.16:350][719]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.31.16:351][719]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.31.16:364][719]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.31.16:397][719]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.31.16:428][719]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.05.14-03.31.16:428][719]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.31.16:430][719]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.31.16:456][719]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.31.16:460][719]LogUObjectHash: Compacting FUObjectHashTables data took   3.18ms
+[2022.05.14-03.31.16:516][720]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2022.05.14-03.31.19:444][816]LogUObjectHash: Compacting FUObjectHashTables data took   3.78ms
+[2022.05.14-03.31.19:489][816]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Maps/Demo" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2022.05.14-03.31.19:528][816]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2022.05.14-03.31.19:548][816]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Demo1F3322D4428E20A98A068BA51D085E87.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Maps/Demo.umap'
+[2022.05.14-03.31.19:600][816]LogFileHelpers: Saving map 'Demo' took 0.113
+[2022.05.14-03.31.19:629][816]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.14-03.31.19:672][816]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_HeroEA35DA1741A7096AF3C2619E18B2F7EC.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.14-03.31.19:694][816]AssetCheck: New page: Asset Save: multiple assets
+[2022.05.14-03.31.19:694][816]LogContentValidation: Display: Validating World /Game/Maps/Demo.Demo
+[2022.05.14-03.31.19:694][816]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.14-03.31.28:943][107]LogUObjectHash: Compacting FUObjectHashTables data took   4.61ms
+[2022.05.14-03.31.29:040][107]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.14-03.31.29:097][107]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero42A77F5D4A80A95F0C6325A4C0DFD99D.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.14-03.31.29:132][107]AssetCheck: New page: Asset Save: BP_Hero
+[2022.05.14-03.31.29:132][107]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.14-03.31.30:253][143]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.31.30:264][143]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.31.30:264][143]PIE: New page: PIE session: Demo (May 13, 2022, 7:31:30 PM)
+[2022.05.14-03.31.30:264][143]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.31.30:277][143]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012617s)
+[2022.05.14-03.31.30:280][143]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.31.30:280][143]LogPlayLevel: PIE: World Init took: (0.002914s)
+[2022.05.14-03.31.30:280][143]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.015979s)
+[2022.05.14-03.31.30:330][143]LogUObjectHash: Compacting FUObjectHashTables data took   3.44ms
+[2022.05.14-03.31.30:330][143]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2022.05.14-03.31.30:330][143]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.31.30:330][143]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.31.30:330][143]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.31.30:330][143]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.31.30:330][143]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.31.30:331][143]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.31.30:331][143]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.31.30:331][143]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.31.30:331][143]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.31.30:331][143]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.31.30:338][143]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.31.30:338][143]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.31.30:364][143]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.31.30:364][143]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.31.30:365][143]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.31.30:365][143]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.31.30:365][143]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.31.30:365][143]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.31.30:365][143]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.31.30:393][143]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.31.30:393][143]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.31.30:393][143]LogInit: FAudioDevice initialized.
+[2022.05.14-03.31.30:393][143]LogAudio: Display: Audio Device (ID: 7) registered with world 'Demo'.
+[2022.05.14-03.31.30:403][143]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.31.30:404][143]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.31.30
+[2022.05.14-03.31.30:405][143]LogWorld: Bringing up level for play took: 0.000620
+[2022.05.14-03.31.30:405][143]LogOnline: OSS: Creating online subsystem instance for: :Context_17
+[2022.05.14-03.31.30:409][143]PIE: Server logged in
+[2022.05.14-03.31.30:410][143]PIE: Play in editor total start time 0.15 seconds.
+[2022.05.14-03.31.34:861][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.31.34:862][393]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.31.34:862][393]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.31.34:863][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.31.34:882][393]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.31.34:940][393]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.31.34:977][393]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.31.34:977][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.31.34:979][393]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.31.35:012][393]LogUObjectHash: Compacting FUObjectHashTables data took   3.91ms
+[2022.05.14-03.31.35:058][394]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2022.05.14-03.32.00:848][207]LogUObjectHash: Compacting FUObjectHashTables data took   5.14ms
+[2022.05.14-03.32.00:911][207]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.14-03.32.00:942][207]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero2D4848CC400AB9CAE513869D4C7B3D1E.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.14-03.32.00:961][207]AssetCheck: New page: Asset Save: BP_Hero
+[2022.05.14-03.32.00:961][207]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.14-03.32.01:485][226]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.32.01:496][226]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.32.01:496][226]PIE: New page: PIE session: Demo (May 13, 2022, 7:32:01 PM)
+[2022.05.14-03.32.01:497][226]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.32.01:508][226]LogPlayLevel: PIE: StaticDuplicateObject took: (0.011126s)
+[2022.05.14-03.32.01:510][226]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.32.01:511][226]LogPlayLevel: PIE: World Init took: (0.003218s)
+[2022.05.14-03.32.01:511][226]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.014802s)
+[2022.05.14-03.32.01:567][226]LogUObjectHash: Compacting FUObjectHashTables data took   3.59ms
+[2022.05.14-03.32.01:567][226]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.32.01:567][226]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.32.01:567][226]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.32.01:567][226]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.32.01:573][226]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.32.01:574][226]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.32.01:597][226]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.32.01:598][226]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.32.01:598][226]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.32.01:598][226]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.32.01:598][226]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.32.01:598][226]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.32.01:598][226]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.32.01:626][226]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.32.01:626][226]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.32.01:626][226]LogInit: FAudioDevice initialized.
+[2022.05.14-03.32.01:626][226]LogAudio: Display: Audio Device (ID: 8) registered with world 'Demo'.
+[2022.05.14-03.32.01:634][226]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.32.01:636][226]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.32.01
+[2022.05.14-03.32.01:636][226]LogWorld: Bringing up level for play took: 0.000589
+[2022.05.14-03.32.01:637][226]LogOnline: OSS: Creating online subsystem instance for: :Context_18
+[2022.05.14-03.32.01:640][226]PIE: Server logged in
+[2022.05.14-03.32.01:641][226]PIE: Play in editor total start time 0.149 seconds.
+[2022.05.14-03.32.07:011][537]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.32.07:011][537]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.32.07:011][537]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.32.07:012][537]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.32.07:026][537]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.32.07:060][537]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.32.07:090][537]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.32.07:090][537]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.32.07:092][537]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.32.07:123][537]LogUObjectHash: Compacting FUObjectHashTables data took   3.65ms
+[2022.05.14-03.32.07:172][538]LogPlayLevel: Display: Destroying online subsystem :Context_18
+[2022.05.14-03.32.15:529][804]LogUObjectHash: Compacting FUObjectHashTables data took   4.21ms
+[2022.05.14-03.32.15:600][804]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.05.14-03.32.15:631][804]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero24E346C14C8B411E08049BB40497D3C4.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.05.14-03.32.15:654][804]AssetCheck: New page: Asset Save: BP_Hero
+[2022.05.14-03.32.15:654][804]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.05.14-03.32.16:434][827]LogTemp: Repeating last play command: Selected Viewport
+[2022.05.14-03.32.16:448][827]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.05.14-03.32.16:448][827]PIE: New page: PIE session: Demo (May 13, 2022, 7:32:16 PM)
+[2022.05.14-03.32.16:448][827]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.32.16:459][827]LogPlayLevel: PIE: StaticDuplicateObject took: (0.010377s)
+[2022.05.14-03.32.16:462][827]LogAIModule: Creating AISystem for world Demo
+[2022.05.14-03.32.16:463][827]LogPlayLevel: PIE: World Init took: (0.003490s)
+[2022.05.14-03.32.16:463][827]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.014449s)
+[2022.05.14-03.32.16:523][827]LogUObjectHash: Compacting FUObjectHashTables data took   4.49ms
+[2022.05.14-03.32.16:524][827]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.05.14-03.32.16:524][827]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.05.14-03.32.16:524][827]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.05.14-03.32.16:525][827]LogAudio: Display: Using built-in audio occlusion.
+[2022.05.14-03.32.16:525][827]LogAudioMixer: Display: Initializing audio mixer.
+[2022.05.14-03.32.16:533][827]LogAudioMixer: Display: 0: FrontLeft
+[2022.05.14-03.32.16:533][827]LogAudioMixer: Display: 1: FrontRight
+[2022.05.14-03.32.16:560][827]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.05.14-03.32.16:561][827]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.05.14-03.32.16:561][827]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.05.14-03.32.16:561][827]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.05.14-03.32.16:562][827]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.05.14-03.32.16:562][827]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.05.14-03.32.16:562][827]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.05.14-03.32.16:592][827]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.05.14-03.32.16:592][827]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.05.14-03.32.16:592][827]LogInit: FAudioDevice initialized.
+[2022.05.14-03.32.16:592][827]LogAudio: Display: Audio Device (ID: 9) registered with world 'Demo'.
+[2022.05.14-03.32.16:606][827]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.05.14-03.32.16:607][827]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.05.13-23.32.16
+[2022.05.14-03.32.16:608][827]LogWorld: Bringing up level for play took: 0.000736
+[2022.05.14-03.32.16:608][827]LogOnline: OSS: Creating online subsystem instance for: :Context_19
+[2022.05.14-03.32.16:612][827]PIE: Server logged in
+[2022.05.14-03.32.16:613][827]PIE: Play in editor total start time 0.171 seconds.
+[2022.05.14-03.32.46:150][547]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.32.46:150][547]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.05.14-03.32.46:151][547]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.05.14-03.32.46:151][547]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.32.46:178][547]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.05.14-03.32.46:238][547]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.05.14-03.32.46:277][547]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.05.14-03.32.46:277][547]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.32.46:279][547]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.05.14-03.32.46:310][547]LogUObjectHash: Compacting FUObjectHashTables data took   3.32ms
+[2022.05.14-03.32.46:361][548]LogPlayLevel: Display: Destroying online subsystem :Context_19
