@@ -11,7 +11,9 @@ class LEGEND_API AHero : public ACharacter
 {
 	GENERATED_BODY()
 
+////////////
 // VARIABLES
+////////////
 public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 		class USpringArmComponent* CameraBoom;
@@ -27,17 +29,25 @@ public:
 		bool bIsMoveInput;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
-		float SprintSpeedMultiplier = 2;
+		float RunSpeed = 450;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
+		float SprintSpeed = 650;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
+		bool bJumpTrigger = false;
 
 private:
 	class UCharacterMovementComponent* MovementComp;
+	class UHeroAnimInstance* AnimInstance;
 
 	bool bIsMoveForwardInput;
 	bool bIsMoveRightInput;
 
 
-
+//////////
 // METHODS
+//////////
 protected:
 	virtual void BeginPlay() override;
 
@@ -48,7 +58,7 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-
+	// Basic Locomotion Input
 	void OnMoveForwardInput(float Axis);
 	void OnMoveRightInput(float Axis);
 	void OnLookUpInput(float Axis);
@@ -56,4 +66,8 @@ public:
 
 	void OnSprintInput();
 	void OnStopSprintInput();
+
+	// Jump Input
+	void OnJumpInput();
+	void OnJumpStopInput();
 };

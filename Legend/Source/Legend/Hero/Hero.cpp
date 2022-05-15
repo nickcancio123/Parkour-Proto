@@ -3,6 +3,8 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Components/SkeletalMeshComponent.h"
+#include "Legend/Hero/HeroAnimInstance.h"
 #include "Legend/Hero/Hero.h"
 #include "Hero.h"
 
@@ -15,6 +17,10 @@ AHero::AHero()
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>("Follow Camera");
 	FollowCamera->SetupAttachment(CameraBoom);
+	
+	AnimInstance = Cast<UHeroAnimInstance>(GetMesh()->GetAnimInstance());
+	if (!AnimInstance)
+		UE_LOG(LogTemp, Warning, TEXT("NO ANIMINSTANCE"));
 }
 
 void AHero::BeginPlay()
@@ -34,19 +40,28 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AHero::OnSprintInput);
-	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AHero::OnStopSprintInput);
-
+	//Basic locomotion input
 	PlayerInputComponent->BindAxis("MoveForward", this, &AHero::OnMoveForwardInput);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AHero::OnMoveRightInput);
 	PlayerInputComponent->BindAxis("LookUp", this, &AHero::OnLookUpInput);
 	PlayerInputComponent->BindAxis("LookRight", this, &AHero::OnLookRightInput);
+
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &AHero::OnSprintInput);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &AHero::OnStopSprintInput);
+
+	// Jump input
+	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AHero::OnJumpInput);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AHero::OnJumpStopInput);
+
 }
 
 
 #pragma region Basic Locomotion
 void AHero::OnMoveForwardInput(float Axis) {
 	bIsMoveForwardInput = Axis != 0;
+
+	if (Axis == 0)
+		return;
 
 	// Get controller forward axis
 	FRotator ControllerYaw = FRotator(0, GetControlRotation().Yaw, 0);
@@ -58,6 +73,9 @@ void AHero::OnMoveForwardInput(float Axis) {
 void AHero::OnMoveRightInput(float Axis) {
 	bIsMoveRightInput = Axis != 0;
 
+	if (Axis == 0)
+		return;
+
 	// Get controller right axis
 	FRotator ControllerYaw = FRotator(0, GetControlRotation().Yaw, 0);
 	FVector ControllerRight = FRotationMatrix(ControllerYaw).GetUnitAxis(EAxis::Y);
@@ -66,20 +84,25 @@ void AHero::OnMoveRightInput(float Axis) {
 }
 
 void AHero::OnLookUpInput(float Axis) {
+	if (Axis == 0)
+		return;
+
 	AddControllerPitchInput(Axis);
 }
 
 void AHero::OnLookRightInput(float Axis) {
+	if (Axis == 0)
+		return;
+
 	AddControllerYawInput(Axis);
 }
-
 
 void AHero::OnSprintInput() {
 	if (bIsSprinting)
 		return;
 
 	bIsSprinting = true;
-	GetCharacterMovement()->MaxWalkSpeed *= SprintSpeedMultiplier;
+	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
 }
 
 void AHero::OnStopSprintInput() {
@@ -87,8 +110,23 @@ void AHero::OnStopSprintInput() {
 		return;
 
 	bIsSprinting = false;
-	GetCharacterMovement()->MaxWalkSpeed /= SprintSpeedMultiplier;
+	GetCharacterMovement()->MaxWalkSpeed = RunSpeed;
 }
 
 #pragma endregion
 
+
+void AHero::OnJumpInput() {
+	if (bJumpTrigger)
+		return;
+
+	bJumpTrigger = true;
+	Jump();
+}
+
+void AHero::OnJumpStopInput() {
+	if (!bJumpTrigger)
+		return;
+
+	bJumpTrigger = false;
+}
