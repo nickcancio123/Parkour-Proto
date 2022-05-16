@@ -58,6 +58,7 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+private:
 	// Basic Locomotion Input
 	void OnMoveForwardInput(float Axis);
 	void OnMoveRightInput(float Axis);
@@ -70,4 +71,7 @@ public:
 	// Jump Input
 	void OnJumpInput();
 	void OnJumpStopInput();
+
+public:
+	void ResetJumpTrigger();
 };

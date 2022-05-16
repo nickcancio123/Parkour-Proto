@@ -128,5 +128,9 @@ void AHero::OnJumpStopInput() {
 	if (!bJumpTrigger)
 		return;
 
+	ResetJumpTrigger();
+}
+
+void AHero::ResetJumpTrigger() {
 	bJumpTrigger = false;
 }
