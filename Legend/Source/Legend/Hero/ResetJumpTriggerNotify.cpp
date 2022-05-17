@@ -4,10 +4,12 @@
 #include "Legend/Hero/ResetJumpTriggerNotify.h"
 
 void UResetJumpTriggerNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) {
-
 	AHero* HeroChar = Cast<AHero>(MeshComp->GetOwner());
-	HeroChar->ResetJumpTrigger();
-	UE_LOG(LogTemp, Warning, TEXT("Notify called"));
 
+	// Protects against running in the editor
+	if (!HeroChar) 
+		return;
+
+	HeroChar->ResetJumpTrigger();
 	return;
 }

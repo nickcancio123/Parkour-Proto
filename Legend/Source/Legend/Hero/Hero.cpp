@@ -17,10 +17,8 @@ AHero::AHero()
 
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>("Follow Camera");
 	FollowCamera->SetupAttachment(CameraBoom);
-	
-	AnimInstance = Cast<UHeroAnimInstance>(GetMesh()->GetAnimInstance());
-	if (!AnimInstance)
-		UE_LOG(LogTemp, Warning, TEXT("NO ANIMINSTANCE"));
+
+	MovementComp = GetCharacterMovement();
 }
 
 void AHero::BeginPlay()
@@ -102,7 +100,7 @@ void AHero::OnSprintInput() {
 		return;
 
 	bIsSprinting = true;
-	GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
+	MovementComp->MaxWalkSpeed = SprintSpeed;
 }
 
 void AHero::OnStopSprintInput() {
@@ -110,7 +108,7 @@ void AHero::OnStopSprintInput() {
 		return;
 
 	bIsSprinting = false;
-	GetCharacterMovement()->MaxWalkSpeed = RunSpeed;
+	MovementComp->MaxWalkSpeed = RunSpeed;
 }
 
 #pragma endregion
@@ -118,6 +116,10 @@ void AHero::OnStopSprintInput() {
 
 void AHero::OnJumpInput() {
 	if (bJumpTrigger)
+		return;
+
+	// Jump not allowed while in the air
+	if (MovementComp->IsFalling())
 		return;
 
 	bJumpTrigger = true;
