@@ -21,6 +21,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Camera")
 		class UCameraComponent* FollowCamera;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Climbing")
+		class UClimbComponent* ClimbComp;
+
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		bool bIsSprinting;
@@ -39,7 +42,6 @@ public:
 
 private:
 	class UCharacterMovementComponent* MovementComp;
-	class UHeroAnimInstance* AnimInstance;
 
 	bool bIsMoveForwardInput;
 	bool bIsMoveRightInput;
