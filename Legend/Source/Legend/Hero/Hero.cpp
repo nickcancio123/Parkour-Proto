@@ -4,7 +4,6 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Components/SkeletalMeshComponent.h"
-#include "Legend/Hero/HeroAnimInstance.h"
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/ClimbComponent.h"
 #include "Hero.h"
@@ -29,13 +28,7 @@ void AHero::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	ClimbComp = FindComponentByClass<UClimbComponent>();
-	if (!ClimbComp) {
-		UE_LOG(LogTemp, Warning, TEXT("NO CLIMB COMP"));
-	} else
-		UE_LOG(LogTemp, Warning, TEXT("YES CLIMB COMP"));
-
-	
+	ClimbComp = FindComponentByClass<UClimbComponent>();	
 }
 
 void AHero::Tick(float DeltaTime)
