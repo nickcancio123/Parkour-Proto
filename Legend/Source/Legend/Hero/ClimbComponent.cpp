@@ -2,6 +2,7 @@
 
 #include "DrawDebugHelpers.h"
 #include "Components/CapsuleComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/ClimbComponent.h"
 
 UClimbComponent::UClimbComponent()
@@ -18,8 +19,7 @@ void UClimbComponent::BeginPlay()
 	TraceCollisionParams.AddIgnoredActor(Owner);
 
 	Collider = Owner->FindComponentByClass<UCapsuleComponent>();
-	if (!Collider)
-		UE_LOG(LogTemp, Warning, TEXT("Couldnt find collider"));
+	CharacterMovement = Owner->FindComponentByClass<UCharacterMovementComponent>();
 }
 
 
@@ -41,18 +41,10 @@ void UClimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 	bool bCanVault = CanVault();
 
-	if (bCanVault) {
-		UE_LOG(LogTemp, Warning, TEXT("Can Vault"));
-	
+	if (bCanVault)
 		Vault();
-	} 
 }
 
-void UClimbComponent::StopVault() {
-	bVaultTrigger = false;
-
-	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-}
 
 void UClimbComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult) {
 	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
@@ -117,8 +109,20 @@ void UClimbComponent::Vault() {
 
 	// Temporarily deactivate collider
 	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
 }
 
+void UClimbComponent::StopVault() {
+	bVaultTrigger = false;
+	bIsBusy = false;
+
+	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
+}
 
 // DEBUG
 void UClimbComponent::DebugTrace(FHitResult TraceResult) {

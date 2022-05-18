@@ -40,6 +40,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		bool bJumpTrigger = false;
 
+
 private:
 	class UCharacterMovementComponent* MovementComp;
 

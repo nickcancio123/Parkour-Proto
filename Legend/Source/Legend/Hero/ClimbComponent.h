@@ -70,6 +70,7 @@ public:
 private:
 	AActor* Owner;
 	class UCapsuleComponent* Collider;
+	class UCharacterMovementComponent* CharacterMovement;
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
 

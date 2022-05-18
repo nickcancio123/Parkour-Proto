@@ -1,0 +1,5 @@
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Definitions.Legend.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend/Hero/ResetVaultNotify.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Inc\Legend\ResetVaultNotify.generated.h
