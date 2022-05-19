@@ -61,6 +61,7 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 #pragma region Basic Locomotion
 void AHero::OnMoveForwardInput(float Axis) {
 	bIsMoveForwardInput = Axis != 0;
+	MoveInput.X = Axis;
 
 	if (Axis == 0)
 		return;
@@ -74,6 +75,7 @@ void AHero::OnMoveForwardInput(float Axis) {
 
 void AHero::OnMoveRightInput(float Axis) {
 	bIsMoveRightInput = Axis != 0;
+	MoveInput.Y = Axis;
 
 	if (Axis == 0)
 		return;
@@ -119,7 +121,8 @@ void AHero::OnStopSprintInput() {
 
 
 void AHero::OnJumpInput() {
-	if (bJumpTrigger)
+	bool bCanClimb = ClimbComp->TryToClimb();
+	if (bCanClimb)
 		return;
 
 	// Jump not allowed while in the air
@@ -139,4 +142,8 @@ void AHero::OnJumpStopInput() {
 
 void AHero::ResetJumpTrigger() {
 	bJumpTrigger = false;
+}
+
+FVector AHero::GetMoveInput() {
+	return MoveInput;
 }

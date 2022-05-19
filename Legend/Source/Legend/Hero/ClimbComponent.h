@@ -25,26 +25,21 @@ public:
 
 #pragma region TRACES
 
+	// The trace range for low, mid, and high forward traces
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
+		float ClimbTraceRange;
+
 	// Low Trace: searches for obstacles present ahead at waist height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
 		float LowTraceHeight;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float LowTraceRange;
 
 	// Mid Trace: searches for obstacles present ahead at face height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
 		float MidTraceHeight;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float MidTraceRange;
-
 	// High Trace: searches for obstacles present ahead at above face height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
 		float HighTraceHeight;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float HighTraceRange;
 
 	// Depth Trace: checks the depth of the object ahead of actor (goes downward)
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
@@ -71,6 +66,7 @@ private:
 	AActor* Owner;
 	class UCapsuleComponent* Collider;
 	class UCharacterMovementComponent* CharacterMovement;
+
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
 
@@ -90,14 +86,22 @@ public:
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	// The public interface to climb. Returns true if can climb, false if cannot. 
+	// Climb refers to vaulting and climbing
+	bool TryToClimb();
+
+	// Callback used by notify to reset after vault
 	void StopVault();
 
+
 private:
+	void CheckForShortObstacles(bool& bCanVault, bool& bCanHalfClimb);
+	void StartVault();
+
+
+	// UTILITY
 	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
 
-	bool CanVault();
-	void Vault();
-
-	//DEBUG
-	void DebugTrace(FHitResult TraceResult);
+	// DEBUG
+	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
 };

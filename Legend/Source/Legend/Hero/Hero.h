@@ -47,6 +47,9 @@ private:
 	bool bIsMoveForwardInput;
 	bool bIsMoveRightInput;
 
+	// Every frame, stores forward and backward move input
+	FVector MoveInput;
+
 
 //////////
 // METHODS
@@ -77,4 +80,6 @@ private:
 
 public:
 	void ResetJumpTrigger();
+
+	FVector GetMoveInput();
 };
