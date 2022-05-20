@@ -7,7 +7,7 @@
 
 UClimbComponent::UClimbComponent()
 {
-	PrimaryComponentTick.bCanEverTick = true;
+	PrimaryComponentTick.bCanEverTick = false;
 }
 
 
@@ -17,7 +17,6 @@ void UClimbComponent::BeginPlay()
 
 	Owner = GetOwner();
 	TraceCollisionParams.AddIgnoredActor(Owner);
-
 	Collider = Owner->FindComponentByClass<UCapsuleComponent>();
 	CharacterMovement = Owner->FindComponentByClass<UCharacterMovementComponent>();
 }
@@ -26,9 +25,6 @@ void UClimbComponent::BeginPlay()
 void UClimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	if (CharacterMovement->IsFalling())
-		TryToClimb();
 }
 
 
@@ -45,7 +41,7 @@ bool UClimbComponent::TryToClimb() {
 	// DEBUG
 	DebugTrace(LowTraceResult);
 	DebugTrace(MidTraceResult);
-	//DebugTrace(HighTraceResult);
+	DebugTrace(HighTraceResult);
 
 	// Check short objects
 	bool bCanVault, bCanShortClimb;
@@ -55,7 +51,6 @@ bool UClimbComponent::TryToClimb() {
 		StartVault();
 	}
 
-	// Check tall objects
 
 	return false;
 }
@@ -178,17 +173,6 @@ void UClimbComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitRe
 }
 
 EVaultType UClimbComponent::GetVaultType(float ObstacleHeight) {
-
-	if (CharacterMovement->IsFalling()) {
-		if (ObstacleHeight < ShortVaultMaxHeight) {
-			UE_LOG(LogTemp, Warning, TEXT("Short falling"));
-			return EVaultType::Short_Falling;
-		}
-		else if (ObstacleHeight < TallVaultMaxHeight) {
-			UE_LOG(LogTemp, Warning, TEXT("Tall falling"));
-			return EVaultType::Tall_Falling;
-		}
-	}
 
 	if (ObstacleHeight < ShortVaultMaxHeight)
 		return EVaultType::Short;

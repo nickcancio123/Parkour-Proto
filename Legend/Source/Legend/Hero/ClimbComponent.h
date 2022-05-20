@@ -6,14 +6,12 @@
 #include "Components/ActorComponent.h"
 #include "ClimbComponent.generated.h"
 
-
+// Enum type used to determine which vault animation to play
 UENUM()
 enum EVaultType
 {
 	Short     UMETA(DisplayName = "Short"),
-	Tall      UMETA(DisplayName = "Tall"),
-	Short_Falling   UMETA(DisplayName = "Short_Falling"),
-	Tall_Falling   UMETA(DisplayName = "Tall_Falling"),
+	Tall      UMETA(DisplayName = "Tall")
 };
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -21,14 +19,13 @@ class LEGEND_API UClimbComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-	////////////
+	//==========
 	// VARIABLES
-	////////////
+	//==========
 public:
 	// DEBUG
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
 		bool bUseDebug = true;
-
 
 	// GENERAL
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
@@ -37,16 +34,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
 
-
 	// Vaulting
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
 		TEnumAsByte<EVaultType> VaultType;
 
-	// For when vaulting over short object. Should be above low trace height
+		// For when vaulting over short object. Should be above low trace height
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
 		float ShortVaultMaxHeight;
 
-	// For when vaulting over taller object. Should be above low trace height
+		// For when vaulting over taller object. Should be above low trace height
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
 		float TallVaultMaxHeight;
 
@@ -97,16 +93,16 @@ private:
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
 
-	// Traces
 	FHitResult LowTraceResult;	
 	FHitResult MidTraceResult;
 	FHitResult HighTraceResult;
 
 	float LastObstacleHeight;
 
-	//////////
+
+	//========
 	// METHODS
-	//////////
+	//========
 protected:
 	virtual void BeginPlay() override;
 

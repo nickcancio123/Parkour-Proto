@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		return EVaultType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EVaultType(EVaultType_StaticEnum, TEXT("/Script/Legend"), TEXT("EVaultType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Legend_EVaultType_Hash() { return 2191275414U; }
+	uint32 Get_Z_Construct_UEnum_Legend_EVaultType_Hash() { return 1395878461U; }
 	UEnum* Z_Construct_UEnum_Legend_EVaultType()
 	{
 #if WITH_HOT_RELOAD
@@ -47,20 +47,14 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
 				{ "Short", (int64)Short },
 				{ "Tall", (int64)Tall },
-				{ "Short_Falling", (int64)Short_Falling },
-				{ "Tall_Falling", (int64)Tall_Falling },
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
 				{ "Short.DisplayName", "Short" },
 				{ "Short.Name", "Short" },
-				{ "Short_Falling.DisplayName", "Short_Falling" },
-				{ "Short_Falling.Name", "Short_Falling" },
 				{ "Tall.DisplayName", "Tall" },
 				{ "Tall.Name", "Tall" },
-				{ "Tall_Falling.DisplayName", "Tall_Falling" },
-				{ "Tall_Falling.Name", "Tall_Falling" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {

@@ -121,12 +121,12 @@ void AHero::OnStopSprintInput() {
 
 
 void AHero::OnJumpInput() {
-	bool bCanClimb = ClimbComp->TryToClimb();
-	if (bCanClimb)
-		return;
-
 	// Jump not allowed while in the air
 	if (MovementComp->IsFalling())
+		return;
+	
+	bool bCanClimb = ClimbComp->TryToClimb();
+	if (bCanClimb)
 		return;
 
 	bJumpTrigger = true;
