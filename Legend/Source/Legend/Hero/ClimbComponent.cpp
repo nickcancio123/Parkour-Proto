@@ -7,7 +7,7 @@
 
 UClimbComponent::UClimbComponent()
 {
-	PrimaryComponentTick.bCanEverTick = false;
+	PrimaryComponentTick.bCanEverTick = true;
 }
 
 
@@ -26,6 +26,9 @@ void UClimbComponent::BeginPlay()
 void UClimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	if (CharacterMovement->IsFalling())
+		TryToClimb();
 }
 
 
@@ -42,11 +45,11 @@ bool UClimbComponent::TryToClimb() {
 	// DEBUG
 	DebugTrace(LowTraceResult);
 	DebugTrace(MidTraceResult);
-	DebugTrace(HighTraceResult);
+	//DebugTrace(HighTraceResult);
 
 	// Check short objects
 	bool bCanVault, bCanShortClimb;
-	CheckForShortObstacles(bCanVault, bCanShortClimb);
+	CanVaultOrShortClimb(bCanVault, bCanShortClimb);
 
 	if (bCanVault) {
 		StartVault();
@@ -58,7 +61,7 @@ bool UClimbComponent::TryToClimb() {
 }
 
 
-void UClimbComponent::CheckForShortObstacles(bool& bCanVault, bool& bCanShortClimb) {
+void UClimbComponent::CanVaultOrShortClimb(bool& bCanVault, bool& bCanShortClimb) {
 
 	bCanVault = false;
 	bCanShortClimb = false;
@@ -73,25 +76,49 @@ void UClimbComponent::CheckForShortObstacles(bool& bCanVault, bool& bCanShortCli
 	// Check for depth of object, if short then vault, if long, then half-climb
 	FVector VaultDirection = -LowTraceResult.ImpactNormal;
 
-	FVector TraceStart = 
+	FVector DepthTraceStart = 
 		LowTraceResult.ImpactPoint + // start here
 		FVector::DownVector *  LowTraceHeight +	// go to floor
 		FVector::UpVector * ActorHeight +  // go to head height
 		VaultDirection * DepthTraceDistance;	// go in direction of normal
 
-	FVector TraceEnd = TraceStart + FVector::DownVector * DepthTraceRange;
+	FVector DepthTraceEnd = DepthTraceStart + FVector::DownVector * DepthTraceRange;
 	FHitResult DepthTraceResult;
 
 	bool bDepthHit = GetWorld()->LineTraceSingleByChannel(
 		DepthTraceResult,
-		TraceStart,
-		TraceEnd,
+		DepthTraceStart,
+		DepthTraceEnd,
 		ECollisionChannel::ECC_WorldStatic,
 		TraceCollisionParams
 	);
 
 	// DEBUG
 	DebugTrace(DepthTraceResult);
+
+
+
+	// Check height of object
+	FVector HeightTraceStart =
+		LowTraceResult.ImpactPoint + // start here
+		FVector::UpVector * (MidTraceHeight - LowTraceHeight) + // go up to height of mid trace
+		VaultDirection * 10;	// go in direction of normal
+
+	FVector HeightTraceEnd = HeightTraceStart + FVector::DownVector * (MidTraceHeight - LowTraceHeight);
+	FHitResult HeightTraceResult;
+
+	bool bHeightTraceHit = GetWorld()->LineTraceSingleByChannel(
+		HeightTraceResult,
+		HeightTraceStart,
+		HeightTraceEnd,
+		ECollisionChannel::ECC_WorldStatic,
+		TraceCollisionParams
+	);
+
+	HeightTraceEnd = bHeightTraceHit ? HeightTraceResult.ImpactPoint : HeightTraceEnd;
+	LastObstacleHeight = HeightTraceEnd.Z - ActorFeet.Z;
+
+
 
 	// Account for if trace started in object
 	bDepthHit = bDepthHit || DepthTraceResult.bStartPenetrating;
@@ -109,6 +136,9 @@ void UClimbComponent::StartVault() {
 
 	bIsBusy = true;
 	bVaultTrigger = true;
+
+	// Set vault animation type based on height of obstacle
+	VaultType = GetVaultType(LastObstacleHeight);
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
@@ -147,9 +177,33 @@ void UClimbComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitRe
 	);
 }
 
+EVaultType UClimbComponent::GetVaultType(float ObstacleHeight) {
+
+	if (CharacterMovement->IsFalling()) {
+		if (ObstacleHeight < ShortVaultMaxHeight) {
+			UE_LOG(LogTemp, Warning, TEXT("Short falling"));
+			return EVaultType::Short_Falling;
+		}
+		else if (ObstacleHeight < TallVaultMaxHeight) {
+			UE_LOG(LogTemp, Warning, TEXT("Tall falling"));
+			return EVaultType::Tall_Falling;
+		}
+	}
+
+	if (ObstacleHeight < ShortVaultMaxHeight)
+		return EVaultType::Short;
+	else if (ObstacleHeight < TallVaultMaxHeight)
+		return EVaultType::Tall;
+
+	return EVaultType::Tall;
+}
+
 
 // DEBUG
 void UClimbComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float LifeTime) {
+
+	if (!bUseDebug)
+		return;
 
 	bool bHit = TraceResult.bBlockingHit;
 	

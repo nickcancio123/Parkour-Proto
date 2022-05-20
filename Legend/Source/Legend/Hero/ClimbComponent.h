@@ -7,6 +7,15 @@
 #include "ClimbComponent.generated.h"
 
 
+UENUM()
+enum EVaultType
+{
+	Short     UMETA(DisplayName = "Short"),
+	Tall      UMETA(DisplayName = "Tall"),
+	Short_Falling   UMETA(DisplayName = "Short_Falling"),
+	Tall_Falling   UMETA(DisplayName = "Tall_Falling"),
+};
+
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class LEGEND_API UClimbComponent : public UActorComponent
 {
@@ -16,12 +25,30 @@ class LEGEND_API UClimbComponent : public UActorComponent
 	// VARIABLES
 	////////////
 public:
+	// DEBUG
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
+		bool bUseDebug = true;
+
+
 	// GENERAL
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 150;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
+
+
+	// Vaulting
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		TEnumAsByte<EVaultType> VaultType;
+
+	// For when vaulting over short object. Should be above low trace height
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		float ShortVaultMaxHeight;
+
+	// For when vaulting over taller object. Should be above low trace height
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		float TallVaultMaxHeight;
 
 #pragma region TRACES
 
@@ -75,6 +102,8 @@ private:
 	FHitResult MidTraceResult;
 	FHitResult HighTraceResult;
 
+	float LastObstacleHeight;
+
 	//////////
 	// METHODS
 	//////////
@@ -95,12 +124,14 @@ public:
 
 
 private:
-	void CheckForShortObstacles(bool& bCanVault, bool& bCanHalfClimb);
+	void CanVaultOrShortClimb(bool& bCanVault, bool& bCanHalfClimb);
 	void StartVault();
 
 
 	// UTILITY
 	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
+
+	EVaultType GetVaultType(float ObstacleHeight);
 
 	// DEBUG
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);

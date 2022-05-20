@@ -13,11 +13,73 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 // Cross Module References
+	LEGEND_API UEnum* Z_Construct_UEnum_Legend_EVaultType();
+	UPackage* Z_Construct_UPackage__Script_Legend();
 	LEGEND_API UClass* Z_Construct_UClass_UClimbComponent_NoRegister();
 	LEGEND_API UClass* Z_Construct_UClass_UClimbComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
-	UPackage* Z_Construct_UPackage__Script_Legend();
 // End Cross Module References
+	static UEnum* EVaultType_StaticEnum()
+	{
+		static UEnum* Singleton = nullptr;
+		if (!Singleton)
+		{
+			Singleton = GetStaticEnum(Z_Construct_UEnum_Legend_EVaultType, Z_Construct_UPackage__Script_Legend(), TEXT("EVaultType"));
+		}
+		return Singleton;
+	}
+	template<> LEGEND_API UEnum* StaticEnum<EVaultType>()
+	{
+		return EVaultType_StaticEnum();
+	}
+	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EVaultType(EVaultType_StaticEnum, TEXT("/Script/Legend"), TEXT("EVaultType"), false, nullptr, nullptr);
+	uint32 Get_Z_Construct_UEnum_Legend_EVaultType_Hash() { return 2191275414U; }
+	UEnum* Z_Construct_UEnum_Legend_EVaultType()
+	{
+#if WITH_HOT_RELOAD
+		UPackage* Outer = Z_Construct_UPackage__Script_Legend();
+		static UEnum* ReturnEnum = FindExistingEnumIfHotReloadOrDynamic(Outer, TEXT("EVaultType"), 0, Get_Z_Construct_UEnum_Legend_EVaultType_Hash(), false);
+#else
+		static UEnum* ReturnEnum = nullptr;
+#endif // WITH_HOT_RELOAD
+		if (!ReturnEnum)
+		{
+			static const UE4CodeGen_Private::FEnumeratorParam Enumerators[] = {
+				{ "Short", (int64)Short },
+				{ "Tall", (int64)Tall },
+				{ "Short_Falling", (int64)Short_Falling },
+				{ "Tall_Falling", (int64)Tall_Falling },
+			};
+#if WITH_METADATA
+			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+				{ "Short.DisplayName", "Short" },
+				{ "Short.Name", "Short" },
+				{ "Short_Falling.DisplayName", "Short_Falling" },
+				{ "Short_Falling.Name", "Short_Falling" },
+				{ "Tall.DisplayName", "Tall" },
+				{ "Tall.Name", "Tall" },
+				{ "Tall_Falling.DisplayName", "Tall_Falling" },
+				{ "Tall_Falling.Name", "Tall_Falling" },
+			};
+#endif
+			static const UE4CodeGen_Private::FEnumParams EnumParams = {
+				(UObject*(*)())Z_Construct_UPackage__Script_Legend,
+				nullptr,
+				"EVaultType",
+				"EVaultType",
+				Enumerators,
+				UE_ARRAY_COUNT(Enumerators),
+				RF_Public|RF_Transient|RF_MarkAsNative,
+				EEnumFlags::None,
+				UE4CodeGen_Private::EDynamicType::NotDynamic,
+				(uint8)UEnum::ECppForm::Regular,
+				METADATA_PARAMS(Enum_MetaDataParams, UE_ARRAY_COUNT(Enum_MetaDataParams))
+			};
+			UE4CodeGen_Private::ConstructUEnum(ReturnEnum, EnumParams);
+		}
+		return ReturnEnum;
+	}
 	void UClimbComponent::StaticRegisterNativesUClimbComponent()
 	{
 	}
@@ -32,6 +94,11 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseDebug_MetaData[];
+#endif
+		static void NewProp_bUseDebug_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseDebug;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActorHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ActorHeight;
@@ -39,6 +106,18 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RootHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RootHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_VaultType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShortVaultMaxHeight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ShortVaultMaxHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TallVaultMaxHeight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TallVaultMaxHeight;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbTraceRange_MetaData[];
 #endif
@@ -89,6 +168,19 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	};
 #endif
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_MetaData[] = {
+		{ "Category", "Debug" },
+		{ "Comment", "// DEBUG\n" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ToolTip", "DEBUG" },
+	};
+#endif
+	void Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_SetBit(void* Obj)
+	{
+		((UClimbComponent*)Obj)->bUseDebug = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug = { "bUseDebug", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UClimbComponent), &Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_SetBit, METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight_MetaData[] = {
 		{ "Category", "General" },
 		{ "Comment", "// GENERAL\n" },
@@ -104,6 +196,33 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight = { "RootHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, RootHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "Comment", "// Vaulting\n" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ToolTip", "Vaulting" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType = { "VaultType", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, VaultType), Z_Construct_UEnum_Legend_EVaultType, METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "Comment", "// For when vaulting over short object. Should be above low trace height\n" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ToolTip", "For when vaulting over short object. Should be above low trace height" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight = { "ShortVaultMaxHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, ShortVaultMaxHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "Comment", "// For when vaulting over taller object. Should be above low trace height\n" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ToolTip", "For when vaulting over taller object. Should be above low trace height" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight = { "TallVaultMaxHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, TallVaultMaxHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClimbTraceRange_MetaData[] = {
 		{ "Category", "Traces" },
@@ -181,8 +300,12 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_bVaultTrigger = { "bVaultTrigger", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UClimbComponent), &Z_Construct_UClass_UClimbComponent_Statics::NewProp_bVaultTrigger_SetBit, METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bVaultTrigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bVaultTrigger_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UClimbComponent_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClimbTraceRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_LowTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_MidTraceHeight,
@@ -219,7 +342,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UClimbComponent, 2540251762);
+	IMPLEMENT_CLASS(UClimbComponent, 2302869972);
 	template<> LEGEND_API UClass* StaticClass<UClimbComponent>()
 	{
 		return UClimbComponent::StaticClass();
