@@ -18,6 +18,5 @@ void UResetVaultNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 
 	ClimbComp->StopVault();
 
-
 	return;
 }

@@ -40,15 +40,15 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		bool bJumpTrigger = false;
 
+	// Every frame, stores forward and backward move input
+	FVector MoveInput;
+
 
 private:
 	class UCharacterMovementComponent* MovementComp;
 
 	bool bIsMoveForwardInput;
 	bool bIsMoveRightInput;
-
-	// Every frame, stores forward and backward move input
-	FVector MoveInput;
 
 
 //////////

@@ -3,6 +3,7 @@
 #include "DrawDebugHelpers.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Legend/Hero/Hero.h"
 #include "Legend/Hero/ClimbComponent.h"
 
 UClimbComponent::UClimbComponent()
@@ -16,6 +17,7 @@ void UClimbComponent::BeginPlay()
 	Super::BeginPlay();
 
 	Owner = GetOwner();
+	Hero = Cast<AHero>(Owner);
 	TraceCollisionParams.AddIgnoredActor(Owner);
 	Collider = Owner->FindComponentByClass<UCapsuleComponent>();
 	CharacterMovement = Owner->FindComponentByClass<UCharacterMovementComponent>();
@@ -50,7 +52,6 @@ bool UClimbComponent::TryToClimb() {
 	if (bCanVault) {
 		StartVault();
 	}
-
 
 	return false;
 }
@@ -152,8 +153,31 @@ void UClimbComponent::StopVault() {
 
 	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 
-	if (CharacterMovement)
+	if (CharacterMovement) {
+		// Reset movement mode
 		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
+
+		// If player wants to keep moving in direction of vault, provide impulse in that direction
+		FVector MoveInput = Hero->MoveInput;
+		FRotator ControllerYaw = FRotator(0, Hero->GetControlRotation().Yaw, 0);
+		FVector ControllerForward = FRotationMatrix(ControllerYaw).GetUnitAxis(EAxis::X);
+		FVector ControllerRight = FRotationMatrix(ControllerYaw).GetUnitAxis(EAxis::X);
+		FVector WorldMoveInput = (ControllerForward * MoveInput.X) + (ControllerRight * MoveInput.Y);
+
+		float DotProduct = FVector::DotProduct(WorldMoveInput, Owner->GetActorForwardVector());
+
+		// If dot product is positive, angle is less than 90 degrees
+		if (DotProduct > 0)
+			bDoPostVaultImpulse = true;
+	}
+}
+
+void UClimbComponent::PostVaultImpulse() {
+	if (!bDoPostVaultImpulse)
+		return;
+
+	bDoPostVaultImpulse = false;
+	Hero->LaunchCharacter(Owner->GetActorForwardVector() * PostVaultImpulseStrength, false, false);
 }
 
 

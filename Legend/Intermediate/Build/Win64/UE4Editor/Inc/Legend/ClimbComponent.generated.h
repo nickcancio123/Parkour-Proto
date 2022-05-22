@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define LEGEND_ClimbComponent_generated_h
 
 #define Legend_Source_Legend_Hero_ClimbComponent_h_20_SPARSE_DATA
-#define Legend_Source_Legend_Hero_ClimbComponent_h_20_RPC_WRAPPERS
-#define Legend_Source_Legend_Hero_ClimbComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS
+#define Legend_Source_Legend_Hero_ClimbComponent_h_20_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execPostVaultImpulse);
+
+
+#define Legend_Source_Legend_Hero_ClimbComponent_h_20_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execPostVaultImpulse);
+
+
 #define Legend_Source_Legend_Hero_ClimbComponent_h_20_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUClimbComponent(); \

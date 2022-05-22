@@ -46,6 +46,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
 		float TallVaultMaxHeight;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		float PostVaultImpulseStrength;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		bool bDoPostVaultImpulse = false;
+
 #pragma region TRACES
 
 	// The trace range for low, mid, and high forward traces
@@ -87,6 +93,7 @@ public:
 
 private:
 	AActor* Owner;
+	class AHero* Hero;
 	class UCapsuleComponent* Collider;
 	class UCharacterMovementComponent* CharacterMovement;
 
@@ -98,6 +105,7 @@ private:
 	FHitResult HighTraceResult;
 
 	float LastObstacleHeight;
+
 
 
 	//========
@@ -117,6 +125,9 @@ public:
 
 	// Callback used by notify to reset after vault
 	void StopVault();
+
+	UFUNCTION(BlueprintCallable, Category = "Vaulting")
+		void PostVaultImpulse();
 
 
 private:

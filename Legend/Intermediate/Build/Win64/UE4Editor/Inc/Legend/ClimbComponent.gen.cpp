@@ -33,7 +33,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		return EVaultType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EVaultType(EVaultType_StaticEnum, TEXT("/Script/Legend"), TEXT("EVaultType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Legend_EVaultType_Hash() { return 1395878461U; }
+	uint32 Get_Z_Construct_UEnum_Legend_EVaultType_Hash() { return 2239294606U; }
 	UEnum* Z_Construct_UEnum_Legend_EVaultType()
 	{
 #if WITH_HOT_RELOAD
@@ -50,11 +50,13 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 			};
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
+				{ "Comment", "// Enum type used to determine which vault animation to play\n" },
 				{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
 				{ "Short.DisplayName", "Short" },
 				{ "Short.Name", "Short" },
 				{ "Tall.DisplayName", "Tall" },
 				{ "Tall.Name", "Tall" },
+				{ "ToolTip", "Enum type used to determine which vault animation to play" },
 			};
 #endif
 			static const UE4CodeGen_Private::FEnumParams EnumParams = {
@@ -74,8 +76,43 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		}
 		return ReturnEnum;
 	}
+	DEFINE_FUNCTION(UClimbComponent::execPostVaultImpulse)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->PostVaultImpulse();
+		P_NATIVE_END;
+	}
 	void UClimbComponent::StaticRegisterNativesUClimbComponent()
 	{
+		UClass* Class = UClimbComponent::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "PostVaultImpulse", &UClimbComponent::execPostVaultImpulse },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics::Function_MetaDataParams[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UClimbComponent, nullptr, "PostVaultImpulse", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UClimbComponent_PostVaultImpulse()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UClimbComponent_PostVaultImpulse_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UClimbComponent_NoRegister()
 	{
@@ -84,6 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	struct Z_Construct_UClass_UClimbComponent_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -112,6 +150,15 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TallVaultMaxHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TallVaultMaxHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_PostVaultImpulseStrength_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_PostVaultImpulseStrength;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bDoPostVaultImpulse_MetaData[];
+#endif
+		static void NewProp_bDoPostVaultImpulse_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bDoPostVaultImpulse;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbTraceRange_MetaData[];
 #endif
@@ -152,6 +199,9 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	UObject* (*const Z_Construct_UClass_UClimbComponent_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UActorComponent,
 		(UObject* (*)())Z_Construct_UPackage__Script_Legend,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UClimbComponent_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UClimbComponent_PostVaultImpulse, "PostVaultImpulse" }, // 2166377208
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::Class_MetaDataParams[] = {
@@ -217,6 +267,24 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight = { "TallVaultMaxHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, TallVaultMaxHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_PostVaultImpulseStrength_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_PostVaultImpulseStrength = { "PostVaultImpulseStrength", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, PostVaultImpulseStrength), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_PostVaultImpulseStrength_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_PostVaultImpulseStrength_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+	};
+#endif
+	void Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse_SetBit(void* Obj)
+	{
+		((UClimbComponent*)Obj)->bDoPostVaultImpulse = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse = { "bDoPostVaultImpulse", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UClimbComponent), &Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse_SetBit, METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClimbTraceRange_MetaData[] = {
 		{ "Category", "Traces" },
@@ -300,6 +368,8 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_VaultType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_ShortVaultMaxHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_TallVaultMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_PostVaultImpulseStrength,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_bDoPostVaultImpulse,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClimbTraceRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_LowTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UClimbComponent_Statics::NewProp_MidTraceHeight,
@@ -317,11 +387,11 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_UClimbComponent_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::PropPointers),
 		0,
 		0x00B000A4u,
@@ -336,7 +406,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UClimbComponent, 2302869972);
+	IMPLEMENT_CLASS(UClimbComponent, 1616271424);
 	template<> LEGEND_API UClass* StaticClass<UClimbComponent>()
 	{
 		return UClimbComponent::StaticClass();
