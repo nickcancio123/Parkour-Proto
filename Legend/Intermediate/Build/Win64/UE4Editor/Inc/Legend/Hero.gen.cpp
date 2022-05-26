@@ -52,6 +52,14 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_VaultComp;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintSpeed_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bIsSprinting_MetaData[];
 #endif
 		static void NewProp_bIsSprinting_SetBit(void* Obj);
@@ -61,14 +69,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 #endif
 		static void NewProp_bIsMoveInput_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bIsMoveInput;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_RunSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RunSpeed;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_SprintSpeed_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SprintSpeed;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bJumpTrigger_MetaData[];
 #endif
@@ -122,28 +122,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_VaultComp = { "VaultComp", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHero, VaultComp), Z_Construct_UClass_UVaultComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_VaultComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_VaultComp_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData[] = {
-		{ "Category", "Locomotion" },
-		{ "ModuleRelativePath", "Hero/Hero.h" },
-	};
-#endif
-	void Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_SetBit(void* Obj)
-	{
-		((AHero*)Obj)->bIsSprinting = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting = { "bIsSprinting", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData[] = {
-		{ "Category", "Locomotion" },
-		{ "ModuleRelativePath", "Hero/Hero.h" },
-	};
-#endif
-	void Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_SetBit(void* Obj)
-	{
-		((AHero*)Obj)->bIsMoveInput = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput = { "bIsMoveInput", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_RunSpeed_MetaData[] = {
 		{ "Category", "Locomotion" },
 		{ "ModuleRelativePath", "Hero/Hero.h" },
@@ -158,6 +136,28 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHero, SprintSpeed), METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_SprintSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_SprintSpeed_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData[] = {
+		{ "Category", "Locomotion" },
+		{ "ModuleRelativePath", "Hero/Hero.h" },
+	};
+#endif
+	void Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_SetBit(void* Obj)
+	{
+		((AHero*)Obj)->bIsSprinting = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting = { "bIsSprinting", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData[] = {
+		{ "Category", "Locomotion" },
+		{ "ModuleRelativePath", "Hero/Hero.h" },
+	};
+#endif
+	void Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_SetBit(void* Obj)
+	{
+		((AHero*)Obj)->bIsMoveInput = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput = { "bIsMoveInput", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_MetaData[] = {
 		{ "Category", "Locomotion" },
 		{ "ModuleRelativePath", "Hero/Hero.h" },
@@ -167,16 +167,16 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 	{
 		((AHero*)Obj)->bJumpTrigger = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger = { "bJumpTrigger", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger = { "bJumpTrigger", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AHero), &Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_SetBit, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHero_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_FollowCamera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_VaultComp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_RunSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_SprintSpeed,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_bIsSprinting,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_bIsMoveInput,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_bJumpTrigger,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AHero_Statics::StaticCppClassTypeInfo = {
@@ -206,7 +206,7 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHero, 355032200);
+	IMPLEMENT_CLASS(AHero, 741623527);
 	template<> LEGEND_API UClass* StaticClass<AHero>()
 	{
 		return AHero::StaticClass();

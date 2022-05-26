@@ -1,10 +1,10 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
   Parsing headers for LegendEditor
     Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for LegendEditor in 6.5699854 seconds
+  Reflection code generated for LegendEditor in 8.4510481 seconds
   Building LegendEditor...
-  Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Distributing 7 actions to XGE
+  Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Distributing 8 actions to XGE
   --------------------Build System Warning---------------------------------------
   License is invalid:
       License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
@@ -12,22 +12,25 @@
   
   -------------------------------------------------------------------------------
   
-  Build ID: {8318A1CC-6A2A-4D6E-9861-68F76D1E685A}
+  Build ID: {17652782-F42C-40A9-BDF7-8E1A2E604E7A}
   
   --------------------Project: Default-------------------------------------------
-  ClimbComponent.cpp (0:05.59 at +0:00)
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ClimbComponent.cpp(57): error C2561: 'UClimbComponent::CanVault': function must return a value
-  C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ClimbComponent.cpp(53): note: see declaration of 'UClimbComponent::CanVault'
-  
-  Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
-  Hero.cpp (0:12.15 at +0:05)
-  ClimbComponent.gen.cpp (0:03.71 at +0:17)
-  Legend.init.gen.cpp (0:02.09 at +0:21)
+  Hero.cpp (0:15.65 at +0:00)
+  ResetVaultNotify.cpp (0:02.59 at +0:15)
+  VaultComponent.cpp (0:03.32 at +0:18)
+  Legend.init.gen.cpp (0:02.73 at +0:21)
+  VaultComponent.gen.cpp (0:02.42 at +0:24)
+  UE4Editor-Legend-0107.lib (0:00.70 at +0:26)
+     Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0107.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0107.exp
+  UE4Editor-Legend-0107.dll (0:02.23 at +0:27)
+     Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0107.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0107.suppressed.exp
+  LegendEditor.target (0:00.95 at +0:29)
   ---------------------- Done ----------------------
   
-      Rebuild All: 0 succeeded, 1 failed, 0 skipped
+      Rebuild All: 1 succeeded, 0 failed, 0 skipped
   
   1 build system warning(s):
      - License is invalid
   
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.MakeFile.Targets(45,5): error MSB3073: The command ""C:\Program Files\Epic Games\UE_4.26\Engine\Build\BatchFiles\Build.bat" LegendEditor Win64 Development -Project="C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" -WaitMutex -FromMsBuild" exited with code 6.
+  Total time in XGE executor: 31.71 seconds
+  Total execution time: 42.44 seconds

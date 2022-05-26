@@ -14,6 +14,9 @@ enum EVaultType
 	Tall      UMETA(DisplayName = "Tall")
 };
 
+
+// The vault component handles character traversal of short objects.
+// This means allowing the character to jump over or on top of shorter objects.
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class LEGEND_API UVaultComponent : public UActorComponent
 {
@@ -23,83 +26,79 @@ class LEGEND_API UVaultComponent : public UActorComponent
 // VARIABLES
 //==========
 public:
-	// DEBUG
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
-		bool bUseDebug = true;
 
-	// GENERAL
+	// General
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 150;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
 
-	// Vaulting
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		TEnumAsByte<EVaultType> VaultType;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug")
+		bool bUseDebug = true;
 
+
+	// Vaulting 
 	// For when vaulting over short object. Should be above low trace height
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float ShortVaultMaxHeight;
+		float ShortVaultMaxHeight = 70;
 
 	// For when vaulting over taller object. Should be above low trace height
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float TallVaultMaxHeight;
+		float TallVaultMaxHeight = 105;
+
+
+	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
+		TEnumAsByte<EVaultType> VaultType;
+
+	// Used to trigger vault animation
+	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
+		bool bVaultTrigger = false;
+
 
 #pragma region TRACES
-
 	// The trace range for low, mid, and high forward traces
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float VaultTraceRange;
+		float VaultTraceRange = 90;
 
 	// Low Trace: searches for obstacles present ahead at waist height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float LowTraceHeight;
+		float LowTraceHeight = 40;
 
 	// Mid Trace: searches for obstacles present ahead at face height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float MidTraceHeight;
-
-	// High Trace: searches for obstacles present ahead at above face height
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float HighTraceHeight;
+		float MidTraceHeight = 105;
 
 	// Depth Trace: checks the depth of the object ahead of actor (goes downward)
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceHeight;
+		float DepthTraceHeight = 150;
 
 	// How far down the trace should go from starting point
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceRange;
+		float DepthTraceRange = 110;
 
 	// How far from obstacle impact point should the traced start from
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceDistance;
+		float DepthTraceDistance = 100;
 
 #pragma endregion 
 
-	// Used to trigger vault animation
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		bool bVaultTrigger = false;
 
-	// Is true when actor is busy vaulting or climbing
+	// Is true when actor is busy vaulting over or onto
 	bool bIsBusy = false;
 
 
 private:
-	AActor* Owner;
 	class AHero* Hero;
 	class UCapsuleComponent* Collider;
 	class UCharacterMovementComponent* CharacterMovement;
 
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
+	float LastObstacleHeight;
 
 	FHitResult LowTraceResult;
 	FHitResult MidTraceResult;
-	FHitResult HighTraceResult;
-
-	float LastObstacleHeight;
 
 
 //========
@@ -111,26 +110,21 @@ protected:
 public:
 	UVaultComponent();
 
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	// The public interface for vaulting system. Handles vaulting over and onto small objects.  
+	bool QueryVaultSystem();
 
-	// The public interface to climb. Returns true if can climb, false if cannot. 
-	// Climb refers to vaulting and climbing
-	bool TryToClimb();
-
-	// Callback used by notify to reset after vault
-	void StopVault();
-
+	// Callback used by notify to reset vault-over
+	void StopVaultOver();
 
 private:
-	void CanVaultOrShortClimb(bool& bCanVault, bool& bCanHalfClimb);
-	void StartVault();
-
+	bool CanVaultOver(FHitResult DepthTraceResult);
+	void StartVaultOver();
 
 	// UTILITY
 	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
-
 	EVaultType GetVaultType(float ObstacleHeight);
-
-	// DEBUG
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
+
+	bool DepthTrace(FHitResult& DepthTraceResult, FVector VaultDirection);
+	float GetLastObstacleHeight(FVector VaultDirection);
 };

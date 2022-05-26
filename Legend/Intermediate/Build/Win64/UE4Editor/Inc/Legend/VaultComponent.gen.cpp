@@ -90,11 +90,6 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseDebug_MetaData[];
-#endif
-		static void NewProp_bUseDebug_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseDebug;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ActorHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ActorHeight;
@@ -103,9 +98,10 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_RootHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultType_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseDebug_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FBytePropertyParams NewProp_VaultType;
+		static void NewProp_bUseDebug_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseDebug;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShortVaultMaxHeight_MetaData[];
 #endif
@@ -114,6 +110,15 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TallVaultMaxHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TallVaultMaxHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultType_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FBytePropertyParams NewProp_VaultType;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bVaultTrigger_MetaData[];
+#endif
+		static void NewProp_bVaultTrigger_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bVaultTrigger;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultTraceRange_MetaData[];
 #endif
@@ -127,10 +132,6 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MidTraceHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HighTraceHeight_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_HighTraceHeight;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DepthTraceHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DepthTraceHeight;
@@ -142,11 +143,6 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DepthTraceDistance_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DepthTraceDistance;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bVaultTrigger_MetaData[];
-#endif
-		static void NewProp_bVaultTrigger_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bVaultTrigger;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -159,29 +155,18 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
+		{ "Comment", "// The vault component handles character traversal of short objects.\n// This means allowing the character to jump over or on top of shorter objects.\n" },
 		{ "IncludePath", "Hero/VaultComponent.h" },
 		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ToolTip", "The vault component handles character traversal of short objects.\nThis means allowing the character to jump over or on top of shorter objects." },
 	};
 #endif
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData[] = {
-		{ "Category", "Debug" },
-		{ "Comment", "// DEBUG\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "DEBUG" },
-	};
-#endif
-	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_SetBit(void* Obj)
-	{
-		((UVaultComponent*)Obj)->bUseDebug = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug = { "bUseDebug", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UVaultComponent), &Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_SetBit, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData[] = {
 		{ "Category", "General" },
-		{ "Comment", "// GENERAL\n" },
+		{ "Comment", "// General\n" },
 		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "GENERAL" },
+		{ "ToolTip", "General" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight = { "ActorHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, ActorHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData)) };
@@ -193,20 +178,22 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight = { "RootHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, RootHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData[] = {
-		{ "Category", "Vaulting" },
-		{ "Comment", "// Vaulting\n" },
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData[] = {
+		{ "Category", "Debug" },
 		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "Vaulting" },
 	};
 #endif
-	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType = { "VaultType", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VaultType), Z_Construct_UEnum_Legend_EVaultType, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData)) };
+	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_SetBit(void* Obj)
+	{
+		((UVaultComponent*)Obj)->bUseDebug = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug = { "bUseDebug", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UVaultComponent), &Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_SetBit, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData[] = {
 		{ "Category", "Vaulting" },
-		{ "Comment", "// For when vaulting over short object. Should be above low trace height\n" },
+		{ "Comment", "// Vaulting \n// For when vaulting over short object. Should be above low trace height\n" },
 		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "For when vaulting over short object. Should be above low trace height" },
+		{ "ToolTip", "Vaulting\nFor when vaulting over short object. Should be above low trace height" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_ShortVaultMaxHeight = { "ShortVaultMaxHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, ShortVaultMaxHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ShortVaultMaxHeight_MetaData)) };
@@ -219,6 +206,26 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_TallVaultMaxHeight = { "TallVaultMaxHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, TallVaultMaxHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_TallVaultMaxHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_TallVaultMaxHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType = { "VaultType", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VaultType), Z_Construct_UEnum_Legend_EVaultType, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "Comment", "// Used to trigger vault animation\n" },
+		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ToolTip", "Used to trigger vault animation" },
+	};
+#endif
+	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_SetBit(void* Obj)
+	{
+		((UVaultComponent*)Obj)->bVaultTrigger = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger = { "bVaultTrigger", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UVaultComponent), &Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_SetBit, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultTraceRange_MetaData[] = {
 		{ "Category", "Traces" },
@@ -247,15 +254,6 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_MidTraceHeight = { "MidTraceHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, MidTraceHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_MidTraceHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_MidTraceHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_HighTraceHeight_MetaData[] = {
-		{ "Category", "Traces" },
-		{ "Comment", "// High Trace: searches for obstacles present ahead at above face height\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "High Trace: searches for obstacles present ahead at above face height" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_HighTraceHeight = { "HighTraceHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, HighTraceHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_HighTraceHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_HighTraceHeight_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceHeight_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// Depth Trace: checks the depth of the object ahead of actor (goes downward)\n" },
@@ -282,34 +280,20 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceDistance = { "DepthTraceDistance", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, DepthTraceDistance), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceDistance_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceDistance_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData[] = {
-		{ "Category", "Vaulting" },
-		{ "Comment", "// Used to trigger vault animation\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
-		{ "ToolTip", "Used to trigger vault animation" },
-	};
-#endif
-	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_SetBit(void* Obj)
-	{
-		((UVaultComponent*)Obj)->bVaultTrigger = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger = { "bVaultTrigger", nullptr, (EPropertyFlags)0x0010000000020015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UVaultComponent), &Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_SetBit, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UVaultComponent_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_ShortVaultMaxHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_TallVaultMaxHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultType,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultTraceRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_LowTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_MidTraceHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_HighTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceDistance,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultTrigger,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UVaultComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UVaultComponent>::IsAbstract,
@@ -338,7 +322,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UVaultComponent, 548551007);
+	IMPLEMENT_CLASS(UVaultComponent, 3149164242);
 	template<> LEGEND_API UClass* StaticClass<UVaultComponent>()
 	{
 		return UVaultComponent::StaticClass();

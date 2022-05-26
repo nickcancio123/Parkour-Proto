@@ -131,8 +131,8 @@ void AHero::OnJumpInput() {
 	if (MovementComp->IsFalling())
 		return;
 	
-	bool bCanClimb = VaultComp->TryToClimb();
-	if (bCanClimb)
+	bool bCanVault = VaultComp->QueryVaultSystem();
+	if (bCanVault)
 		return;
 
 	bJumpTrigger = true;
@@ -149,6 +149,7 @@ void AHero::OnJumpStopInput() {
 void AHero::ResetJumpTrigger() {
 	bJumpTrigger = false;
 }
+
 
 FVector AHero::GetMoveInput() {
 	return MoveInput;

@@ -16,7 +16,7 @@ void UResetVaultNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 	if (!VaultComp)
 		return;
 
-	VaultComp->StopVault();
+	VaultComp->StopVaultOver();
 
 	return;
 }

@@ -28,20 +28,20 @@ public:
 		class UVaultComponent* VaultComp;
 
 
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locomotion")
-		bool bIsSprinting;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locomotion")
-		bool bIsMoveInput;
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		float RunSpeed = 450;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		float SprintSpeed = 650;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
+
+	UPROPERTY(BlueprintReadOnly, Category = "Locomotion")
+		bool bIsSprinting;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Locomotion")
+		bool bIsMoveInput;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Locomotion")
 		bool bJumpTrigger = false;
 
 	// Every frame, stores forward and backward move input

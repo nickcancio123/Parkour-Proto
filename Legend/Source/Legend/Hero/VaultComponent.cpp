@@ -10,64 +10,54 @@ UVaultComponent::UVaultComponent() {
 	PrimaryComponentTick.bCanEverTick = false;
 }
 
-
 void UVaultComponent::BeginPlay() {
 	Super::BeginPlay();
 
-	Owner = GetOwner();
-	Hero = Cast<AHero>(Owner);
-	TraceCollisionParams.AddIgnoredActor(Owner);
-	Collider = Owner->FindComponentByClass<UCapsuleComponent>();
-	CharacterMovement = Owner->FindComponentByClass<UCharacterMovementComponent>();
+	Hero = Cast<AHero>(GetOwner());
+	if (!Hero) {
+		UE_LOG(LogTemp, Error, TEXT("No hero ref"));
+		return;
+	}
+
+	TraceCollisionParams.AddIgnoredActor(Hero);
+	Collider = Hero->FindComponentByClass<UCapsuleComponent>();
+	CharacterMovement = Hero->FindComponentByClass<UCharacterMovementComponent>();
 }
 
 
-void UVaultComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-}
+#pragma region Query Vault
+bool UVaultComponent::QueryVaultSystem() {
 
-
-// Survey area ahead of actor, using traces, to determine if vaulting/climbing is possible
-bool UVaultComponent::TryToClimb() {
-
-	ActorFeet = Owner->GetActorLocation() + FVector::DownVector * RootHeight;
+	ActorFeet = Hero->GetActorLocation() + FVector::DownVector * RootHeight;
 
 	// Get data from space ahead of actor
 	TraceFromActor(LowTraceHeight, VaultTraceRange, LowTraceResult);
 	TraceFromActor(MidTraceHeight, VaultTraceRange, MidTraceResult);
-	TraceFromActor(HighTraceHeight, VaultTraceRange, HighTraceResult);
+
+	// Only consider short objects
+	if (!LowTraceResult.bBlockingHit || MidTraceResult.bBlockingHit)
+		return false;
+
+	FVector VaultDirection = -LowTraceResult.ImpactNormal;
+
+	// Get information about depth of object ahead
+	FHitResult DepthTraceResult;
+	bool bDepthHit = DepthTrace(DepthTraceResult, VaultDirection);
+	LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
 
 	// DEBUG
 	DebugTrace(LowTraceResult);
 	DebugTrace(MidTraceResult);
-	DebugTrace(HighTraceResult);
+	DebugTrace(DepthTraceResult);
 
-	// Check short objects
-	bool bCanVault, bCanShortClimb;
-	CanVaultOrShortClimb(bCanVault, bCanShortClimb);
-
-	if (bCanVault) {
-		StartVault();
-	}
+	if (CanVaultOver(DepthTraceResult))
+		StartVaultOver();
 
 	return false;
 }
 
-
-void UVaultComponent::CanVaultOrShortClimb(bool& bCanVault, bool& bCanShortClimb) {
-
-	bCanVault = false;
-	bCanShortClimb = false;
-
-	// Only consider short objects
-	if (!LowTraceResult.bBlockingHit)
-		return;
-
-	if (MidTraceResult.bBlockingHit)
-		return;
-
+bool UVaultComponent::DepthTrace(FHitResult& DepthTraceResult, FVector VaultDirection) {
 	// Check for depth of object, if short then vault, if long, then half-climb
-	FVector VaultDirection = -LowTraceResult.ImpactNormal;
 
 	FVector DepthTraceStart =
 		LowTraceResult.ImpactPoint + // start here
@@ -76,20 +66,17 @@ void UVaultComponent::CanVaultOrShortClimb(bool& bCanVault, bool& bCanShortClimb
 		VaultDirection * DepthTraceDistance;	// go in direction of normal
 
 	FVector DepthTraceEnd = DepthTraceStart + FVector::DownVector * DepthTraceRange;
-	FHitResult DepthTraceResult;
 
-	bool bDepthHit = GetWorld()->LineTraceSingleByChannel(
+	return GetWorld()->LineTraceSingleByChannel(
 		DepthTraceResult,
 		DepthTraceStart,
 		DepthTraceEnd,
 		ECollisionChannel::ECC_WorldStatic,
 		TraceCollisionParams
 	);
+}
 
-	// DEBUG
-	DebugTrace(DepthTraceResult);
-
-
+float UVaultComponent::GetLastObstacleHeight(FVector VaultDirection) {
 
 	// Check height of object
 	FVector HeightTraceStart =
@@ -109,66 +96,10 @@ void UVaultComponent::CanVaultOrShortClimb(bool& bCanVault, bool& bCanShortClimb
 	);
 
 	HeightTraceEnd = bHeightTraceHit ? HeightTraceResult.ImpactPoint : HeightTraceEnd;
-	LastObstacleHeight = HeightTraceEnd.Z - ActorFeet.Z;
+	
+	DebugTrace(HeightTraceResult);
 
-
-
-	// Account for if trace started in object
-	bDepthHit = bDepthHit || DepthTraceResult.bStartPenetrating;
-
-	bCanVault = !bDepthHit;
-	bCanShortClimb = bDepthHit;
-
-	return;
-}
-
-
-void UVaultComponent::StartVault() {
-	if (bIsBusy)
-		return;
-
-	bIsBusy = true;
-	bVaultTrigger = true;
-
-	// Set vault animation type based on height of obstacle
-	VaultType = GetVaultType(LastObstacleHeight);
-
-	// Snap actor rotation to obstacle's
-	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
-	Owner->SetActorRotation(TargetRotation);
-
-	// Temporarily deactivate collider
-	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
-	if (CharacterMovement)
-		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
-}
-
-void UVaultComponent::StopVault() {
-	bVaultTrigger = false;
-	bIsBusy = false;
-
-	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
-
-	// Reset movement mode
-	if (CharacterMovement) {
-		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
-	}
-}
-
-
-// UTILITY
-void UVaultComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult) {
-	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
-	FVector TraceEnd = TraceStart + Owner->GetActorForwardVector() * TraceRange;
-
-	GetWorld()->LineTraceSingleByChannel(
-		TraceResult,
-		TraceStart,
-		TraceEnd,
-		ECollisionChannel::ECC_WorldStatic,
-		TraceCollisionParams
-	);
+	return HeightTraceEnd.Z - ActorFeet.Z;
 }
 
 EVaultType UVaultComponent::GetVaultType(float ObstacleHeight) {
@@ -180,9 +111,69 @@ EVaultType UVaultComponent::GetVaultType(float ObstacleHeight) {
 
 	return EVaultType::Tall;
 }
+#pragma endregion
 
 
-// DEBUG
+#pragma region Vault Over
+bool UVaultComponent::CanVaultOver(FHitResult DepthTraceResult) {
+	bool bDepthHit = DepthTraceResult.bBlockingHit || DepthTraceResult.bStartPenetrating;
+	return !bDepthHit;
+}
+
+void UVaultComponent::StartVaultOver() {
+	if (bIsBusy)
+		return;
+
+	bIsBusy = true;
+	bVaultTrigger = true;
+
+	// Set vault animation type based on height of obstacle
+	VaultType = GetVaultType(LastObstacleHeight);
+
+	// Snap actor rotation to obstacle's
+	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
+	Hero->SetActorRotation(TargetRotation);
+
+	// Temporarily deactivate collider
+	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+}
+
+void UVaultComponent::StopVaultOver() {
+	bVaultTrigger = false;
+	bIsBusy = false;
+
+	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+
+	// Reset movement mode
+	if (CharacterMovement) {
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
+	}
+}
+#pragma endregion
+
+
+#pragma region Vault Onto
+
+#pragma endregion
+
+
+#pragma region Utility
+void UVaultComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult) {
+	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
+	FVector TraceEnd = TraceStart + Hero->GetActorForwardVector() * TraceRange;
+
+	GetWorld()->LineTraceSingleByChannel(
+		TraceResult,
+		TraceStart,
+		TraceEnd,
+		ECollisionChannel::ECC_WorldStatic,
+		TraceCollisionParams
+	);
+}
+
 void UVaultComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float LifeTime) {
 
 	if (!bUseDebug)
@@ -198,4 +189,6 @@ void UVaultComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float Li
 	if (bHit)
 		DrawDebugSphere(GetWorld(), TraceEnd, 10, 10, Color, bPersist, LifeTime);
 }
+#pragma endregion
+
 
