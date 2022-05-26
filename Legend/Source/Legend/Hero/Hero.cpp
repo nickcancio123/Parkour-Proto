@@ -3,9 +3,9 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
-#include "Components/SkeletalMeshComponent.h"
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/ClimbComponent.h"
+#include "Legend/Hero/VaultComponent.h"
 #include "Hero.h"
 
 AHero::AHero()
@@ -22,6 +22,9 @@ AHero::AHero()
 
 	ClimbComp = CreateDefaultSubobject<UClimbComponent>("Climb Component");
 	this->AddOwnedComponent(ClimbComp);
+
+	VaultComp = CreateDefaultSubobject<UVaultComponent>("Vault Component");
+	this->AddOwnedComponent(VaultComp);
 }
 
 void AHero::BeginPlay()
@@ -29,6 +32,7 @@ void AHero::BeginPlay()
 	Super::BeginPlay();
 	
 	ClimbComp = FindComponentByClass<UClimbComponent>();	
+	VaultComp = FindComponentByClass<UVaultComponent>();	
 }
 
 void AHero::Tick(float DeltaTime)
@@ -87,6 +91,7 @@ void AHero::OnMoveRightInput(float Axis) {
 	AddMovementInput(ControllerRight, Axis);
 }
 
+
 void AHero::OnLookUpInput(float Axis) {
 	if (Axis == 0)
 		return;
@@ -100,6 +105,7 @@ void AHero::OnLookRightInput(float Axis) {
 
 	AddControllerYawInput(Axis);
 }
+
 
 void AHero::OnSprintInput() {
 	if (bIsSprinting)
@@ -125,7 +131,7 @@ void AHero::OnJumpInput() {
 	if (MovementComp->IsFalling())
 		return;
 	
-	bool bCanClimb = ClimbComp->TryToClimb();
+	bool bCanClimb = VaultComp->TryToClimb();
 	if (bCanClimb)
 		return;
 

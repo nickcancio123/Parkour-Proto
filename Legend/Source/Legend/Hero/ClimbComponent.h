@@ -6,14 +6,6 @@
 #include "Components/ActorComponent.h"
 #include "ClimbComponent.generated.h"
 
-// Enum type used to determine which vault animation to play
-UENUM()
-enum EVaultType
-{
-	Short     UMETA(DisplayName = "Short"),
-	Tall      UMETA(DisplayName = "Tall")
-};
-
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class LEGEND_API UClimbComponent : public UActorComponent
 {
@@ -33,24 +25,6 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
-
-	// Vaulting
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		TEnumAsByte<EVaultType> VaultType;
-
-		// For when vaulting over short object. Should be above low trace height
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float ShortVaultMaxHeight;
-
-		// For when vaulting over taller object. Should be above low trace height
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float TallVaultMaxHeight;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float PostVaultImpulseStrength;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		bool bDoPostVaultImpulse = false;
 
 #pragma region TRACES
 
@@ -106,8 +80,6 @@ private:
 
 	float LastObstacleHeight;
 
-
-
 	//========
 	// METHODS
 	//========
@@ -119,26 +91,9 @@ public:
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	// The public interface to climb. Returns true if can climb, false if cannot. 
-	// Climb refers to vaulting and climbing
-	bool TryToClimb();
-
-	// Callback used by notify to reset after vault
-	void StopVault();
-
-	UFUNCTION(BlueprintCallable, Category = "Vaulting")
-		void PostVaultImpulse();
-
-
 private:
-	void CanVaultOrShortClimb(bool& bCanVault, bool& bCanHalfClimb);
-	void StartVault();
-
-
 	// UTILITY
 	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
-
-	EVaultType GetVaultType(float ObstacleHeight);
 
 	// DEBUG
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);

@@ -1,7 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #include "Legend/Hero/Hero.h"
-#include "Legend/Hero/ClimbComponent.h"
+#include "Legend/Hero/VaultComponent.h"
 #include "Legend/Hero/ResetVaultNotify.h"
 
 void UResetVaultNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) {
@@ -11,12 +11,12 @@ void UResetVaultNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 	if (!HeroChar)
 		return;
 
-	UClimbComponent* ClimbComp = HeroChar->FindComponentByClass<UClimbComponent>();
+	UVaultComponent* VaultComp = HeroChar->FindComponentByClass<UVaultComponent>();
 
-	if (!ClimbComp)
+	if (!VaultComp)
 		return;
 
-	ClimbComp->StopVault();
+	VaultComp->StopVault();
 
 	return;
 }

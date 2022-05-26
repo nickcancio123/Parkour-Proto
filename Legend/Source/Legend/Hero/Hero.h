@@ -24,6 +24,10 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Climbing")
 		class UClimbComponent* ClimbComp;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		class UVaultComponent* VaultComp;
+
+
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		bool bIsSprinting;

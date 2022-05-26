@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A211C642-9E98-4EF8-BBED-87CA7ED2EBEF}</UniqueIdentifier>
+      <UniqueIdentifier>{4FAE55A7-4913-4ECF-8FC4-879E109BF4FB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{1D094B97-4C50-4E4E-AC8E-8A689E229BCC}</UniqueIdentifier>
+      <UniqueIdentifier>{DCE2312A-6351-43B2-A09C-607F7A33735A}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{B6354CC9-9E85-42A6-AFA6-134316AD3D06}</UniqueIdentifier>
+      <UniqueIdentifier>{D7C3FB78-24AA-474C-B84A-9F85D0F7944E}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{66689DEB-270E-4434-B08B-85EECB455BF7}</UniqueIdentifier>
+      <UniqueIdentifier>{744B7FEE-CAC5-4B27-8EDB-79370219CE09}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\ClimbComponent.cpp">
       <Filter>Source\Legend\Hero</Filter>
@@ -81,6 +81,12 @@
       <Filter>Source\Legend\Hero</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Legend\Hero\ResetVaultNotify.h">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Legend\Hero\VaultComponent.cpp">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Legend\Hero\VaultComponent.h">
       <Filter>Source\Legend\Hero</Filter>
     </ClInclude>
   </ItemGroup>
