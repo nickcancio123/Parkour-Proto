@@ -34,8 +34,8 @@ bool UVaultComponent::QueryVaultSystem() {
 	ActorFeet = Hero->GetActorLocation() + FVector::DownVector * RootHeight;
 
 	// Get data from space ahead of actor
-	TraceForwardFromActor(LowTraceHeight, VaultTraceRange, LowTraceResult);
-	TraceForwardFromActor(MidTraceHeight, VaultTraceRange, MidTraceResult);
+	TraceForwardFromActor(MinVaultHeight, VaultTraceRange, LowTraceResult);
+	TraceForwardFromActor(MaxVaultHeight, VaultTraceRange, MidTraceResult);
 
 	// Only consider short objects
 	if (!LowTraceResult.bBlockingHit || MidTraceResult.bBlockingHit)
@@ -45,8 +45,7 @@ bool UVaultComponent::QueryVaultSystem() {
 
 	// Get information about depth of object ahead
 	bool bDepthHit = DepthTrace(VaultDirection);
-	float LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
-	VaultType = GetVaultType(LastObstacleHeight);
+	LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
 
 	// DEBUG
 	DebugTrace(LowTraceResult);
@@ -59,7 +58,7 @@ bool UVaultComponent::QueryVaultSystem() {
 	if (bCanVaultOver)
 		StartVaultOver();
 	else if (bCanVaultOnto)
-		StartVaultOnto(VaultDirection);
+		StartVaultOnto();
 
 	return bCanVaultOver || bCanVaultOnto;
 }
@@ -69,7 +68,7 @@ bool UVaultComponent::DepthTrace(FVector VaultDirection) {
 
 	FVector DepthTraceStart =
 		LowTraceResult.ImpactPoint + // start here
-		FVector::DownVector * LowTraceHeight +	// go to floor
+		FVector::DownVector * MinVaultHeight +	// go to floor
 		FVector::UpVector * ActorHeight +  // go to head height
 		VaultDirection * DepthTraceDistance;	// go in direction of normal
 
@@ -89,10 +88,10 @@ float UVaultComponent::GetLastObstacleHeight(FVector VaultDirection) {
 	// Check height of object
 	FVector HeightTraceStart =
 		LowTraceResult.ImpactPoint + // start here
-		FVector::UpVector * (MidTraceHeight - LowTraceHeight) + // go up to height of mid trace
+		FVector::UpVector * (MaxVaultHeight - MinVaultHeight) + // go up to height of mid trace
 		VaultDirection * 10;	// go in direction of normal
 
-	FVector HeightTraceEnd = HeightTraceStart + FVector::DownVector * (MidTraceHeight - LowTraceHeight);
+	FVector HeightTraceEnd = HeightTraceStart + FVector::DownVector * (MaxVaultHeight - MinVaultHeight);
 	FHitResult HeightTraceResult;
 
 	bool bHeightTraceHit = GetWorld()->LineTraceSingleByChannel(
@@ -110,15 +109,6 @@ float UVaultComponent::GetLastObstacleHeight(FVector VaultDirection) {
 	return HeightTraceEnd.Z - ActorFeet.Z;
 }
 
-EVaultType UVaultComponent::GetVaultType(float ObstacleHeight) {
-
-	if (ObstacleHeight < ShortVaultMaxHeight)
-		return EVaultType::Short;
-	else if (ObstacleHeight < TallVaultMaxHeight)
-		return EVaultType::Tall;
-
-	return EVaultType::Tall;
-}
 #pragma endregion
 
 
@@ -132,6 +122,8 @@ void UVaultComponent::StartVaultOver() {
 
 	bIsBusy = true;
 	bVaultOverTrigger = true;
+
+	VaultOverType = GetVaultOverType(LastObstacleHeight);
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
@@ -155,6 +147,18 @@ void UVaultComponent::StopVaultOver() {
 		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
 	}
 }
+
+EVaultOverType UVaultComponent::GetVaultOverType(float ObstacleHeight) {
+
+	if (ObstacleHeight < VAULT_OVER_SHORT_MAX_HEIGHT) {
+		return EVaultOverType::Over_Short;
+	}
+	else if (ObstacleHeight < VAULT_OVER_TALL_MAX_HEIGHT) {
+		return EVaultOverType::Over_Tall;
+	}
+
+	return EVaultOverType::Over_Tall;
+}
 #pragma endregion
 
 
@@ -164,10 +168,12 @@ bool UVaultComponent::CanVaultOnto() {
 	return bDepthHit;
 }
 
-void UVaultComponent::StartVaultOnto(FVector VaultDirection) {
+void UVaultComponent::StartVaultOnto() {
 
 	bIsBusy = true;
 	bVaultOntoTrigger = true;
+
+	VaultOntoType = GetVaultOntoType(LastObstacleHeight);
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
@@ -175,12 +181,6 @@ void UVaultComponent::StartVaultOnto(FVector VaultDirection) {
 
 	// Temporarily deactivate collider
 	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-
-	// Calculate post-vault location
-	PostVaultTargetLocation = 
-		DepthTraceResult.ImpactPoint + 
-		VaultDirection * (VaultOntoDistance - DepthTraceDistance) + 
-		FVector::UpVector * 1;	// Ground clearance buffer
 
 	// DEBUG
 	if (bUseDebug)
@@ -200,9 +200,18 @@ void UVaultComponent::StopVaultOnto() {
 	if (CharacterMovement) {
 		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
 	}
+}
 
-	// Set location
-	Hero->SetActorLocation(PostVaultTargetLocation);
+EVaultOntoType UVaultComponent::GetVaultOntoType(float ObstacleHeight) {
+	if (ObstacleHeight < VAULT_ONTO_SHORT_MAX_HEIGHT) {
+		return EVaultOntoType::Onto_Short;
+	} else if (ObstacleHeight < VAULT_ONTO_MID_MAX_HEIGHT) {
+		return EVaultOntoType::Onto_Mid;
+	} else if (ObstacleHeight < VAULT_ONTO_TALL_MAX_HEIGHT) {
+		return EVaultOntoType::Onto_Tall;
+	}
+
+	return EVaultOntoType::Onto_Tall;
 }
 #pragma endregion
 

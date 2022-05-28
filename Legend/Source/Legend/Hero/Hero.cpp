@@ -6,6 +6,7 @@
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/ClimbComponent.h"
 #include "Legend/Hero/VaultComponent.h"
+#include "DrawDebugHelpers.h"
 #include "Hero.h"
 
 AHero::AHero()

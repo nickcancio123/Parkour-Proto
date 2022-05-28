@@ -6,12 +6,21 @@
 #include "Components/ActorComponent.h"
 #include "VaultComponent.generated.h"
 
-// Enum type used to determine which vault animation to play
+// Enum type used to determine which vault-over animation to play
 UENUM()
-enum EVaultType
+enum EVaultOverType
 {
-	Short     UMETA(DisplayName = "Short"),
-	Tall      UMETA(DisplayName = "Tall")
+	Over_Short     UMETA(DisplayName = "Short"),
+	Over_Tall      UMETA(DisplayName = "Tall")
+};
+
+// Enum type used to determine which vault-onto animation to play
+UENUM()
+enum EVaultOntoType
+{
+	Onto_Short     UMETA(DisplayName = "Short"),
+	Onto_Mid     UMETA(DisplayName = "Mid"),
+	Onto_Tall      UMETA(DisplayName = "Tall")
 };
 
 
@@ -22,59 +31,32 @@ class LEGEND_API UVaultComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-//==========
-// VARIABLES
-//==========
-public:
 
-	// General
+#pragma region General
+
+// Variables
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 150;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Debug")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "General")
 		bool bUseDebug = true;
-
-
-	// Vaulting 
-	// For when vaulting over short object. Should be above low trace height
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float ShortVaultMaxHeight = 70;
-
-	// For when vaulting over taller object. Should be above low trace height
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
-		float TallVaultMaxHeight = 105;
-
-	// Specificies the post-vault-onto distance
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		float VaultOntoDistance = 45;
-
-
-	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
-		TEnumAsByte<EVaultType> VaultType;
-
-	// Used to trigger vault animation
-	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
-		bool bVaultOverTrigger = false;
-
-	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
-		bool bVaultOntoTrigger = false;
-
-
+	
 #pragma region TRACES
-	// The trace range for low, mid, and high forward traces
+	// The trace range for low and mid forward traces
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
 		float VaultTraceRange = 90;
 
 	// Low Trace: searches for obstacles present ahead at waist height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float LowTraceHeight = 40;
+		float MinVaultHeight = 40;
 
 	// Mid Trace: searches for obstacles present ahead at face height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float MidTraceHeight = 105;
+		float MaxVaultHeight = 105;
 
 	// Depth Trace: checks the depth of the object ahead of actor (goes downward)
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
@@ -89,7 +71,6 @@ public:
 		float DepthTraceDistance = 100;
 
 #pragma endregion 
-
 
 	// Is true when actor is busy vaulting over or onto
 	bool bIsBusy = false;
@@ -110,10 +91,10 @@ private:
 	// Location to set after vaulting onto object
 	FVector PostVaultTargetLocation;
 
+	float LastObstacleHeight;
 
-//========
-// METHODS
-//========
+
+// Methods
 protected:
 	virtual void BeginPlay() override;
 
@@ -124,24 +105,85 @@ public:
 	// Returns true if can vault, false if cannot vault
 	bool QueryVaultSystem();
 
-	// Callback used by notify to reset vault-over
+private:
+	bool DepthTrace(FVector VaultDirection);
+	float GetLastObstacleHeight(FVector VaultDirection);
+
+#pragma endregion
+
+
+
+#pragma region Vault Over
+
+// Variables
+public:
+	// For when vaulting over short object. Should be above low trace height
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Over")
+		float VAULT_OVER_SHORT_MAX_HEIGHT = 70;
+
+	// For when vaulting over taller object. Should be above low trace height
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Over")
+		float VAULT_OVER_TALL_MAX_HEIGHT = 105;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Vault Over")
+		TEnumAsByte<EVaultOverType> VaultOverType;
+
+	// Used to trigger vault animation
+	UPROPERTY(BlueprintReadOnly, Category = "Vault Over")
+		bool bVaultOverTrigger = false;
+
+
+// Methods
+public:
 	void StopVaultOver();
 
+private:
+	bool CanVaultOver();
+	void StartVaultOver();
+	EVaultOverType GetVaultOverType(float ObstacleHeight);
+
+#pragma endregion
+
+
+
+#pragma region Vault Onto
+
+// Variables
+public:
+	// The thresholds for various vault-onto heights, which dictate animations
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
+		float VAULT_ONTO_SHORT_MAX_HEIGHT = 55;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
+		float VAULT_ONTO_MID_MAX_HEIGHT = 80;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
+		float VAULT_ONTO_TALL_MAX_HEIGHT = 105;
+
+
+	UPROPERTY(BlueprintReadOnly, Category = "Vault Onto")
+		TEnumAsByte<EVaultOntoType> VaultOntoType;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Vault Onto")
+		bool bVaultOntoTrigger = false;
+
+
+// Methods
+public:
 	void StopVaultOnto();
 
 private:
-	EVaultType GetVaultType(float ObstacleHeight);
-
-	bool CanVaultOver();
-	void StartVaultOver();
-
 	bool CanVaultOnto();
-	void StartVaultOnto(FVector VaultDirection);
+	void StartVaultOnto();
+	EVaultOntoType GetVaultOntoType(float ObstacleHeight);
 
-	// UTILITY
+#pragma endregion
+
+
+
+#pragma region Utility
 	void TraceForwardFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
+#pragma endregion
 
-	bool DepthTrace(FVector VaultDirection);
-	float GetLastObstacleHeight(FVector VaultDirection);
 };
