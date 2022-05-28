@@ -47,13 +47,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
 		float TallVaultMaxHeight = 105;
 
+	// Specificies the post-vault-onto distance
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		float VaultOntoDistance = 45;
+
 
 	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
 		TEnumAsByte<EVaultType> VaultType;
 
 	// Used to trigger vault animation
 	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
-		bool bVaultTrigger = false;
+		bool bVaultOverTrigger = false;
+
+	UPROPERTY(BlueprintReadOnly, Category = "Vaulting")
+		bool bVaultOntoTrigger = false;
 
 
 #pragma region TRACES
@@ -95,10 +102,13 @@ private:
 
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
-	float LastObstacleHeight;
 
 	FHitResult LowTraceResult;
 	FHitResult MidTraceResult;
+	FHitResult DepthTraceResult;
+
+	// Location to set after vaulting onto object
+	FVector PostVaultTargetLocation;
 
 
 //========
@@ -110,21 +120,28 @@ protected:
 public:
 	UVaultComponent();
 
-	// The public interface for vaulting system. Handles vaulting over and onto small objects.  
+	// The public interface for vaulting system. Handles vaulting over and onto small objects. 
+	// Returns true if can vault, false if cannot vault
 	bool QueryVaultSystem();
 
 	// Callback used by notify to reset vault-over
 	void StopVaultOver();
 
+	void StopVaultOnto();
+
 private:
-	bool CanVaultOver(FHitResult DepthTraceResult);
+	EVaultType GetVaultType(float ObstacleHeight);
+
+	bool CanVaultOver();
 	void StartVaultOver();
 
+	bool CanVaultOnto();
+	void StartVaultOnto(FVector VaultDirection);
+
 	// UTILITY
-	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
-	EVaultType GetVaultType(float ObstacleHeight);
+	void TraceForwardFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
 
-	bool DepthTrace(FHitResult& DepthTraceResult, FVector VaultDirection);
+	bool DepthTrace(FVector VaultDirection);
 	float GetLastObstacleHeight(FVector VaultDirection);
 };

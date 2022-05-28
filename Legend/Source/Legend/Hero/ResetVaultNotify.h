@@ -15,4 +15,9 @@ class LEGEND_API UResetVaultNotify : public UAnimNotify
 	GENERATED_BODY()
 	
 	virtual void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) override;
+
+public:
+	// If true, vault type is "over". If false, vault type is "onto"
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vaulting")
+		bool bIsVaultOver;
 };

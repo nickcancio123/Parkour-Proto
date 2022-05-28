@@ -12,13 +12,10 @@ AHero::AHero()
 {
 	PrimaryActorTick.bCanEverTick = true;
 
-	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("Camera Boom");
-	CameraBoom->SetupAttachment(RootComponent);
-
-	FollowCamera = CreateDefaultSubobject<UCameraComponent>("Follow Camera");
-	FollowCamera->SetupAttachment(CameraBoom);
+	SetupCamera();
 
 	MovementComp = GetCharacterMovement();
+	MovementComp->bOrientRotationToMovement = true;
 
 	ClimbComp = CreateDefaultSubobject<UClimbComponent>("Climb Component");
 	this->AddOwnedComponent(ClimbComp);
@@ -60,6 +57,31 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AHero::OnJumpStopInput);
 
 }
+
+
+#pragma region Camera
+void AHero::SetupCamera() {
+	CameraBoom = CreateDefaultSubobject<USpringArmComponent>("Camera Boom");
+	CameraBoom->SetupAttachment(RootComponent);
+
+	CameraBoom->bUsePawnControlRotation = true;
+	CameraBoom->bInheritPitch = true;
+	CameraBoom->bInheritYaw = true;
+	CameraBoom->bInheritRoll = false;
+
+	FVector FollowOffset = FVector(0, 0, 60);
+	CameraBoom->SetRelativeLocation(FollowOffset);
+	CameraBoom->TargetArmLength = 400;
+
+	CameraBoom->bEnableCameraLag = true;
+	CameraBoom->bEnableCameraRotationLag = true;
+	CameraBoom->CameraLagSpeed = 25;
+	CameraBoom->CameraRotationLagSpeed = 30;
+
+	FollowCamera = CreateDefaultSubobject<UCameraComponent>("Follow Camera");
+	FollowCamera->SetupAttachment(CameraBoom);
+}
+#pragma endregion
 
 
 #pragma region Basic Locomotion

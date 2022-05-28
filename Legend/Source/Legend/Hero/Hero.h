@@ -82,6 +82,8 @@ private:
 	void OnJumpInput();
 	void OnJumpStopInput();
 
+	void SetupCamera();
+
 public:
 	void ResetJumpTrigger();
 

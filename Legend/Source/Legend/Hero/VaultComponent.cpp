@@ -28,11 +28,14 @@ void UVaultComponent::BeginPlay() {
 #pragma region Query Vault
 bool UVaultComponent::QueryVaultSystem() {
 
+	if (bIsBusy)
+		return false;
+
 	ActorFeet = Hero->GetActorLocation() + FVector::DownVector * RootHeight;
 
 	// Get data from space ahead of actor
-	TraceFromActor(LowTraceHeight, VaultTraceRange, LowTraceResult);
-	TraceFromActor(MidTraceHeight, VaultTraceRange, MidTraceResult);
+	TraceForwardFromActor(LowTraceHeight, VaultTraceRange, LowTraceResult);
+	TraceForwardFromActor(MidTraceHeight, VaultTraceRange, MidTraceResult);
 
 	// Only consider short objects
 	if (!LowTraceResult.bBlockingHit || MidTraceResult.bBlockingHit)
@@ -41,22 +44,27 @@ bool UVaultComponent::QueryVaultSystem() {
 	FVector VaultDirection = -LowTraceResult.ImpactNormal;
 
 	// Get information about depth of object ahead
-	FHitResult DepthTraceResult;
-	bool bDepthHit = DepthTrace(DepthTraceResult, VaultDirection);
-	LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
+	bool bDepthHit = DepthTrace(VaultDirection);
+	float LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
+	VaultType = GetVaultType(LastObstacleHeight);
 
 	// DEBUG
 	DebugTrace(LowTraceResult);
 	DebugTrace(MidTraceResult);
 	DebugTrace(DepthTraceResult);
 
-	if (CanVaultOver(DepthTraceResult))
-		StartVaultOver();
+	bool bCanVaultOver = CanVaultOver();
+	bool bCanVaultOnto = CanVaultOnto();
 
-	return false;
+	if (bCanVaultOver)
+		StartVaultOver();
+	else if (bCanVaultOnto)
+		StartVaultOnto(VaultDirection);
+
+	return bCanVaultOver || bCanVaultOnto;
 }
 
-bool UVaultComponent::DepthTrace(FHitResult& DepthTraceResult, FVector VaultDirection) {
+bool UVaultComponent::DepthTrace(FVector VaultDirection) {
 	// Check for depth of object, if short then vault, if long, then half-climb
 
 	FVector DepthTraceStart =
@@ -115,20 +123,15 @@ EVaultType UVaultComponent::GetVaultType(float ObstacleHeight) {
 
 
 #pragma region Vault Over
-bool UVaultComponent::CanVaultOver(FHitResult DepthTraceResult) {
+bool UVaultComponent::CanVaultOver() {
 	bool bDepthHit = DepthTraceResult.bBlockingHit || DepthTraceResult.bStartPenetrating;
 	return !bDepthHit;
 }
 
 void UVaultComponent::StartVaultOver() {
-	if (bIsBusy)
-		return;
 
 	bIsBusy = true;
-	bVaultTrigger = true;
-
-	// Set vault animation type based on height of obstacle
-	VaultType = GetVaultType(LastObstacleHeight);
+	bVaultOverTrigger = true;
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
@@ -142,7 +145,7 @@ void UVaultComponent::StartVaultOver() {
 }
 
 void UVaultComponent::StopVaultOver() {
-	bVaultTrigger = false;
+	bVaultOverTrigger = false;
 	bIsBusy = false;
 
 	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
@@ -156,12 +159,56 @@ void UVaultComponent::StopVaultOver() {
 
 
 #pragma region Vault Onto
+bool UVaultComponent::CanVaultOnto() {
+	bool bDepthHit = DepthTraceResult.bBlockingHit && !DepthTraceResult.bStartPenetrating;
+	return bDepthHit;
+}
 
+void UVaultComponent::StartVaultOnto(FVector VaultDirection) {
+
+	bIsBusy = true;
+	bVaultOntoTrigger = true;
+
+	// Snap actor rotation to obstacle's
+	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
+	Hero->SetActorRotation(TargetRotation);
+
+	// Temporarily deactivate collider
+	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	// Calculate post-vault location
+	PostVaultTargetLocation = 
+		DepthTraceResult.ImpactPoint + 
+		VaultDirection * (VaultOntoDistance - DepthTraceDistance) + 
+		FVector::UpVector * 1;	// Ground clearance buffer
+
+	// DEBUG
+	if (bUseDebug)
+		DrawDebugSphere(GetWorld(), PostVaultTargetLocation, 10, 10, FColor::Cyan, true, 2);
+
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+}
+
+void UVaultComponent::StopVaultOnto() {
+	bVaultOntoTrigger = false;
+	bIsBusy = false;
+
+	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+
+	// Reset movement mode
+	if (CharacterMovement) {
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
+	}
+
+	// Set location
+	Hero->SetActorLocation(PostVaultTargetLocation);
+}
 #pragma endregion
 
 
 #pragma region Utility
-void UVaultComponent::TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult) {
+void UVaultComponent::TraceForwardFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult) {
 	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
 	FVector TraceEnd = TraceStart + Hero->GetActorForwardVector() * TraceRange;
 
