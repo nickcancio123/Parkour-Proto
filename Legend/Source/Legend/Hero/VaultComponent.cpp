@@ -108,7 +108,6 @@ float UVaultComponent::GetLastObstacleHeight(FVector VaultDirection) {
 
 	return HeightTraceEnd.Z - ActorFeet.Z;
 }
-
 #pragma endregion
 
 

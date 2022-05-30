@@ -185,5 +185,4 @@ private:
 	void TraceForwardFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
 #pragma endregion
-
 };

@@ -11,62 +11,20 @@ class LEGEND_API UClimbComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
-	//==========
-	// VARIABLES
-	//==========
-public:
-	// DEBUG
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Debug")
-		bool bUseDebug = true;
 
-	// GENERAL
+#pragma region General
+// Variables
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 150;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
 
-#pragma region TRACES
-
-	// The trace range for low, mid, and high forward traces
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float ClimbTraceRange;
-
-	// Low Trace: searches for obstacles present ahead at waist height
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float LowTraceHeight;
-
-	// Mid Trace: searches for obstacles present ahead at face height
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float MidTraceHeight;
-
-	// High Trace: searches for obstacles present ahead at above face height
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float HighTraceHeight;
-
-	// Depth Trace: checks the depth of the object ahead of actor (goes downward)
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceHeight;
-
-		// How far down the trace should go from starting point
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceRange;
-		
-		// How far from obstacle impact point should the traced start from
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float DepthTraceDistance;
-
-#pragma endregion 
-
-	// Used to trigger vault animation
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Climbing")
-		bool bVaultTrigger = false;
-
-	// Is true when actor is busy vaulting or climbing
-	bool bIsBusy = false;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
+		bool bUseDebug = true;
 
 private:
-	AActor* Owner;
 	class AHero* Hero;
 	class UCapsuleComponent* Collider;
 	class UCharacterMovementComponent* CharacterMovement;
@@ -74,27 +32,69 @@ private:
 	FCollisionQueryParams TraceCollisionParams;
 	FVector ActorFeet;
 
-	FHitResult LowTraceResult;	
-	FHitResult MidTraceResult;
-	FHitResult HighTraceResult;
 
-	float LastObstacleHeight;
-
-	//========
-	// METHODS
-	//========
+// Methods
 protected:
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	UClimbComponent();
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+#pragma endregion
+
+
+
+#pragma region Climbing
+public:
+//Variables:
+	// The trace range for low, mid, and high forward traces
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float ClimbTraceRange = 90;
+
+	// Wall Trace: looking for wall at just below where hands would go
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float WallTraceHeight = 190;
+
+	// Clearance Trace: looking for wall at just above where hands would go
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float ClearanceTraceHeight = 200;
+
+
+	// The offset from the ledge that the hero is snapped to prior to climbinh
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		FVector HeroLedgeOffset;
+
+	// Used to trigger climb animation
+	UPROPERTY(BlueprintReadOnly, Category = "Climbing")
+		bool bClimbTrigger = false;
+
+	// Is true when hero is busy climbing
+	bool bIsBusy = false;
 
 private:
-	// UTILITY
-	void TraceFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
+	FHitResult WallTraceResult;	
+	FHitResult ClearanceTraceResult;
 
-	// DEBUG
+
+// Methods
+public:
+	// The public interface for climbing system. Handles climbing into tall (above head) objects. 
+	// Returns true if can climb, false if cannot climb
+	bool QueryClimbSystem();
+	void StopClimb();
+	
+private:
+	bool CanClimb();
+	void StartClimb();
+	FVector GetLedgePosition();
+#pragma endregion 
+
+
+
+#pragma region Utility
+	void TraceForwardFromActor(float TraceHeight, float TraceRange, FHitResult& TraceResult);
+
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
+#pragma endregion
 };

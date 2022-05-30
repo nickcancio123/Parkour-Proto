@@ -158,6 +158,10 @@ void AHero::OnJumpInput() {
 	if (bCanVault)
 		return;
 
+	bool bCanClimb = ClimbComp->QueryClimbSystem();
+	if (bCanClimb)
+		return;
+
 	bJumpTrigger = true;
 	Jump();
 }

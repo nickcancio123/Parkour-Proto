@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4FAE55A7-4913-4ECF-8FC4-879E109BF4FB}</UniqueIdentifier>
+      <UniqueIdentifier>{DCCBD91D-04B1-49BE-BDDB-D5601D2E5305}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{DCE2312A-6351-43B2-A09C-607F7A33735A}</UniqueIdentifier>
+      <UniqueIdentifier>{BE2D3EA7-2F8D-43BE-8DD5-FB024785AEC1}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{D7C3FB78-24AA-474C-B84A-9F85D0F7944E}</UniqueIdentifier>
+      <UniqueIdentifier>{0CF7D41C-218B-4C7D-8904-522B9E8963DE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{744B7FEE-CAC5-4B27-8EDB-79370219CE09}</UniqueIdentifier>
+      <UniqueIdentifier>{2E7173AD-A0F1-4D95-AA30-9DF657495AF8}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\ClimbComponent.cpp">
       <Filter>Source\Legend\Hero</Filter>
@@ -69,6 +69,12 @@
       <Filter>Source\Legend\Hero</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Legend\Hero\HeroController.h">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Legend\Hero\ResetClimbNotify.cpp">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Legend\Hero\ResetClimbNotify.h">
       <Filter>Source\Legend\Hero</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Legend\Hero\ResetJumpTriggerNotify.cpp">
