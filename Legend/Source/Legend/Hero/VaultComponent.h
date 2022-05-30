@@ -48,7 +48,7 @@ public:
 #pragma region TRACES
 	// The trace range for low and mid forward traces
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
-		float VaultTraceRange = 90;
+		float VaultTraceRange = 80;
 
 	// Low Trace: searches for obstacles present ahead at waist height
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Traces")
@@ -152,10 +152,10 @@ private:
 public:
 	// The thresholds for various vault-onto heights, which dictate animations
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
-		float VAULT_ONTO_SHORT_MAX_HEIGHT = 55;
+		float VAULT_ONTO_SHORT_MAX_HEIGHT = 50;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
-		float VAULT_ONTO_MID_MAX_HEIGHT = 80;
+		float VAULT_ONTO_MID_MAX_HEIGHT = 75;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
 		float VAULT_ONTO_TALL_MAX_HEIGHT = 105;
