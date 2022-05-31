@@ -41,12 +41,16 @@ bool UClimbComponent::QueryClimbSystem() {
 	ActorFeet = Hero->GetActorLocation() + FVector::DownVector * RootHeight;
 
 	// Get data from space above and ahead of actor
-	TraceForwardFromActor(WallTraceHeight, ClimbTraceRange, WallTraceResult);
-	TraceForwardFromActor(ClearanceTraceHeight, ClimbTraceRange, ClearanceTraceResult);
+	float FallingOffset = 0;
+	if (CharacterMovement->IsFalling())
+		FallingOffset = FallingTraceHeightOffset;
+
+	TraceForwardFromActor(WallTraceHeight + FallingOffset, ClimbTraceRange, WallTraceResult);
+	TraceForwardFromActor(ClearanceTraceHeight + FallingOffset, ClimbTraceRange, ClearanceTraceResult);
 
 	// Debug
-	DebugTrace(WallTraceResult);
-	DebugTrace(ClearanceTraceResult);
+	DebugTrace(WallTraceResult, false, -1);
+	DebugTrace(ClearanceTraceResult, false, -1);
 
 
 	bool bCanClimb = CanClimb();
@@ -75,6 +79,14 @@ void UClimbComponent::StartClimb() {
 	// Snap actor to correct climbing position
 	FVector LedgePosition = GetLedgePosition();
 
+	FVector TargetPosition = GetLedgePosition() +
+		Hero->GetActorForwardVector() * HeroLedgeOffset.X +
+		Hero->GetActorRightVector() * HeroLedgeOffset.Y +
+		Hero->GetActorUpVector() * HeroLedgeOffset.Z;
+
+	Hero->SetActorLocation(TargetPosition, false, nullptr, ETeleportType::ResetPhysics);
+
+	// Temporarily et movement mode to flying
 	if (CharacterMovement)
 		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
 }
@@ -112,8 +124,6 @@ FVector UClimbComponent::GetLedgePosition() {
 
 	FVector LedgePosition =
 		FVector(WallTraceResult.ImpactPoint.X, WallTraceResult.ImpactPoint.Y, HeightTraceEnd.Z);
-
-	DrawDebugSphere(GetWorld(), LedgePosition, 10, 10, FColor::Magenta, true, 5);
 
 	return LedgePosition;
 }

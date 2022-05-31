@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DCCBD91D-04B1-49BE-BDDB-D5601D2E5305}</UniqueIdentifier>
+      <UniqueIdentifier>{DB9E2A17-2F5E-4810-8E97-9CCCB7D1C880}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{BE2D3EA7-2F8D-43BE-8DD5-FB024785AEC1}</UniqueIdentifier>
+      <UniqueIdentifier>{3AD4B4D1-C54F-424D-95C6-21514AC1CF67}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{0CF7D41C-218B-4C7D-8904-522B9E8963DE}</UniqueIdentifier>
+      <UniqueIdentifier>{2DE7B3F0-4F47-4796-BA51-CF3282B25011}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{2E7173AD-A0F1-4D95-AA30-9DF657495AF8}</UniqueIdentifier>
+      <UniqueIdentifier>{23854246-2BDE-41C3-9038-A045A0722AC7}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\ClimbComponent.cpp">
       <Filter>Source\Legend\Hero</Filter>

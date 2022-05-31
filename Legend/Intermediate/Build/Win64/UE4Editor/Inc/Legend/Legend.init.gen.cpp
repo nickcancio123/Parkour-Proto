@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeLegend_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x50A2DD7D,
+				0xFFD40B9C,
 				0x68A43E9A,
 				METADATA_PARAMS(nullptr, 0)
 			};

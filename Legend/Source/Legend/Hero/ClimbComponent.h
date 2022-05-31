@@ -60,6 +60,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
 		float ClearanceTraceHeight = 200;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float FallingTraceHeightOffset = -20;
+
 
 	// The offset from the ledge that the hero is snapped to prior to climbinh
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
