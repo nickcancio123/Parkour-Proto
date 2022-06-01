@@ -6,6 +6,7 @@
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/VaultComponent.h"
 
+#pragma region General
 UVaultComponent::UVaultComponent() {
 	PrimaryComponentTick.bCanEverTick = false;
 }
@@ -24,8 +25,6 @@ void UVaultComponent::BeginPlay() {
 	CharacterMovement = Hero->FindComponentByClass<UCharacterMovementComponent>();
 }
 
-
-#pragma region Query Vault
 bool UVaultComponent::QueryVaultSystem() {
 
 	if (bIsBusy)
@@ -234,7 +233,6 @@ FVector UVaultComponent::GetLedgePosition() {
 
 	return FVector(LowTraceResult.ImpactPoint.X, LowTraceResult.ImpactPoint.Y, HeightTraceEnd.Z);
 }
-#pragma endregion
 #pragma endregion
 
 
