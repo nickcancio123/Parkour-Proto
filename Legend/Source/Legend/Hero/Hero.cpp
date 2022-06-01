@@ -153,13 +153,13 @@ void AHero::OnJumpInput() {
 	// Jump not allowed while in the air
 	if (MovementComp->IsFalling())
 		return;
-	
-	bool bCanVault = VaultComp->QueryVaultSystem();
-	if (bCanVault)
-		return;
 
 	bool bCanClimb = ClimbComp->QueryClimbSystem();
 	if (bCanClimb)
+		return;
+	
+	bool bCanVault = VaultComp->QueryVaultSystem();
+	if (bCanVault)
 		return;
 
 	bJumpTrigger = true;

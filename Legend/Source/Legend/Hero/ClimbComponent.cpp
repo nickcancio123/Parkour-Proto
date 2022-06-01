@@ -48,14 +48,8 @@ bool UClimbComponent::QueryClimbSystem() {
 	TraceForwardFromActor(WallTraceHeight + FallingOffset, ClimbTraceRange, WallTraceResult);
 	TraceForwardFromActor(ClearanceTraceHeight + FallingOffset, ClimbTraceRange, ClearanceTraceResult);
 
-	// Debug
-	DebugTrace(WallTraceResult, false, -1);
-	DebugTrace(ClearanceTraceResult, false, -1);
-
-
 	bool bCanClimb = CanClimb();
-
-	if (bCanClimb)
+	if (bCanClimb) 
 		StartClimb();
 
 	return bCanClimb;
@@ -69,8 +63,16 @@ void UClimbComponent::StartClimb() {
 	bIsBusy = true;
 	bClimbTrigger = true;
 
+	// Debug
+	DebugTrace(WallTraceResult, false, 5);
+	DebugTrace(ClearanceTraceResult, false, 5);
+
 	// Temporarily deactivate collider
 	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+
+	// Temporarily et movement mode to flying
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-WallTraceResult.ImpactNormal).ToOrientationQuat();
@@ -78,17 +80,14 @@ void UClimbComponent::StartClimb() {
 
 	// Snap actor to correct climbing position
 	FVector LedgePosition = GetLedgePosition();
-
 	FVector TargetPosition = GetLedgePosition() +
 		Hero->GetActorForwardVector() * HeroLedgeOffset.X +
 		Hero->GetActorRightVector() * HeroLedgeOffset.Y +
 		Hero->GetActorUpVector() * HeroLedgeOffset.Z;
-
 	Hero->SetActorLocation(TargetPosition, false, nullptr, ETeleportType::ResetPhysics);
 
-	// Temporarily et movement mode to flying
-	if (CharacterMovement)
-		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+	if (bUseDebug)
+		DrawDebugSphere(GetWorld(), LedgePosition, 10, 10, FColor::Yellow, false, 5);
 }
 
 void UClimbComponent::StopClimb() {
@@ -106,7 +105,11 @@ void UClimbComponent::StopClimb() {
 FVector UClimbComponent::GetLedgePosition() {
 
 	// Check height of object
-	FVector HeightTraceStart = ClearanceTraceResult.TraceEnd;
+	FVector TraceDirection = (ClearanceTraceResult.TraceEnd - WallTraceResult.ImpactPoint).GetSafeNormal();
+	TraceDirection = FVector(TraceDirection.X, TraceDirection.Y, 0);
+
+	FVector HeightTraceStart = WallTraceResult.ImpactPoint + TraceDirection * 20;
+	HeightTraceStart = FVector(HeightTraceStart.X, HeightTraceStart.Y, ClearanceTraceResult.TraceEnd.Z);
 
 	FVector HeightTraceEnd = 
 		HeightTraceStart + FVector::DownVector * (ClearanceTraceHeight - WallTraceHeight);
@@ -119,6 +122,9 @@ FVector UClimbComponent::GetLedgePosition() {
 		ECollisionChannel::ECC_WorldStatic,
 		TraceCollisionParams
 	);
+
+	if (bUseDebug)
+		DebugTrace(HeightTraceResult, false, 5);
 
 	HeightTraceEnd = bHeightTraceHit ? HeightTraceResult.ImpactPoint : HeightTraceEnd;
 
