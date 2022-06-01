@@ -148,9 +148,9 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_HeroLedgeOffset_MetaData[] = {
 		{ "Category", "Climbing" },
-		{ "Comment", "// The offset from the ledge that the hero is snapped to prior to climbinh\n" },
+		{ "Comment", "// The offset from the ledge that the hero is snapped to prior to climbing\n" },
 		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
-		{ "ToolTip", "The offset from the ledge that the hero is snapped to prior to climbinh" },
+		{ "ToolTip", "The offset from the ledge that the hero is snapped to prior to climbing" },
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_HeroLedgeOffset = { "HeroLedgeOffset", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, HeroLedgeOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_HeroLedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_HeroLedgeOffset_MetaData)) };
@@ -205,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UClimbComponent, 1523878183);
+	IMPLEMENT_CLASS(UClimbComponent, 3668417392);
 	template<> LEGEND_API UClass* StaticClass<UClimbComponent>()
 	{
 		return UClimbComponent::StaticClass();

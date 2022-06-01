@@ -88,11 +88,7 @@ private:
 	FHitResult MidTraceResult;
 	FHitResult DepthTraceResult;
 
-	// Location to set after vaulting onto object
-	FVector PostVaultTargetLocation;
-
-	float LastObstacleHeight;
-
+	float ObstacleHeight;
 
 // Methods
 protected:
@@ -107,7 +103,7 @@ public:
 
 private:
 	bool DepthTrace(FVector VaultDirection);
-	float GetLastObstacleHeight(FVector VaultDirection);
+	float GetObstacleHeight();
 
 #pragma endregion
 
@@ -140,7 +136,7 @@ public:
 private:
 	bool CanVaultOver();
 	void StartVaultOver();
-	EVaultOverType GetVaultOverType(float ObstacleHeight);
+	EVaultOverType GetVaultOverType();
 
 #pragma endregion
 
@@ -160,6 +156,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Vault Onto")
 		float VAULT_ONTO_TALL_MAX_HEIGHT = 105;
 
+	// The offset from the ledge that the hero is snapped to prior to vaulting onto
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		FVector HeroLedgeOffset;
+
 
 	UPROPERTY(BlueprintReadOnly, Category = "Vault Onto")
 		TEnumAsByte<EVaultOntoType> VaultOntoType;
@@ -167,6 +167,8 @@ public:
 	UPROPERTY(BlueprintReadOnly, Category = "Vault Onto")
 		bool bVaultOntoTrigger = false;
 
+private:
+	FVector LedgePosition;
 
 // Methods
 public:
@@ -175,7 +177,8 @@ public:
 private:
 	bool CanVaultOnto();
 	void StartVaultOnto();
-	EVaultOntoType GetVaultOntoType(float ObstacleHeight);
+	EVaultOntoType GetVaultOntoType();
+	FVector GetLedgePosition();
 
 #pragma endregion
 

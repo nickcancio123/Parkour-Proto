@@ -19,6 +19,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	LEGEND_API UClass* Z_Construct_UClass_UVaultComponent_NoRegister();
 	LEGEND_API UClass* Z_Construct_UClass_UVaultComponent();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 // End Cross Module References
 	static UEnum* EVaultOntoType_StaticEnum()
 	{
@@ -217,6 +218,10 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_VAULT_ONTO_TALL_MAX_HEIGHT;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroLedgeOffset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HeroLedgeOffset;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultOntoType_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_VaultOntoType;
@@ -384,6 +389,15 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT = { "VAULT_ONTO_TALL_MAX_HEIGHT", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VAULT_ONTO_TALL_MAX_HEIGHT), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset_MetaData[] = {
+		{ "Category", "Climbing" },
+		{ "Comment", "// The offset from the ledge that the hero is snapped to prior to vaulting onto\n" },
+		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ToolTip", "The offset from the ledge that the hero is snapped to prior to vaulting onto" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset = { "HeroLedgeOffset", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, HeroLedgeOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType_MetaData[] = {
 		{ "Category", "Vault Onto" },
 		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
@@ -418,6 +432,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_SHORT_MAX_HEIGHT,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_MID_MAX_HEIGHT,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultOntoTrigger,
 	};
@@ -448,7 +463,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UVaultComponent, 4143196843);
+	IMPLEMENT_CLASS(UVaultComponent, 1643479240);
 	template<> LEGEND_API UClass* StaticClass<UVaultComponent>()
 	{
 		return UVaultComponent::StaticClass();

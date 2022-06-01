@@ -16,7 +16,7 @@ class LEGEND_API UClimbComponent : public UActorComponent
 // Variables
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
-		float ActorHeight = 150;
+		float ActorHeight = 170;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float RootHeight = 90;
@@ -54,19 +54,19 @@ public:
 
 	// Wall Trace: looking for wall at just below where hands would go
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		float WallTraceHeight = 190;
+		float WallTraceHeight = 140;
 
 	// Clearance Trace: looking for wall at just above where hands would go
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		float ClearanceTraceHeight = 200;
+		float ClearanceTraceHeight = 230;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		float FallingTraceHeightOffset = -20;
+		float FallingTraceHeightOffset = -25;
 
 
-	// The offset from the ledge that the hero is snapped to prior to climbinh
+	// The offset from the ledge that the hero is snapped to prior to climbing
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		FVector HeroLedgeOffset;
+		FVector HeroLedgeOffset = FVector(-50, 0, -70);
 
 	// Used to trigger climb animation
 	UPROPERTY(BlueprintReadOnly, Category = "Climbing")

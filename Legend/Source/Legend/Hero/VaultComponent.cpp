@@ -45,7 +45,7 @@ bool UVaultComponent::QueryVaultSystem() {
 
 	// Get information about depth of object ahead
 	bool bDepthHit = DepthTrace(VaultDirection);
-	LastObstacleHeight = GetLastObstacleHeight(VaultDirection);
+	ObstacleHeight = GetObstacleHeight();
 
 	// DEBUG
 	DebugTrace(LowTraceResult);
@@ -83,30 +83,10 @@ bool UVaultComponent::DepthTrace(FVector VaultDirection) {
 	);
 }
 
-float UVaultComponent::GetLastObstacleHeight(FVector VaultDirection) {
+float UVaultComponent::GetObstacleHeight() {
 
-	// Check height of object
-	FVector HeightTraceStart =
-		LowTraceResult.ImpactPoint + // start here
-		FVector::UpVector * (MaxVaultHeight - MinVaultHeight) + // go up to height of mid trace
-		VaultDirection * 10;	// go in direction of normal
-
-	FVector HeightTraceEnd = HeightTraceStart + FVector::DownVector * (MaxVaultHeight - MinVaultHeight);
-	FHitResult HeightTraceResult;
-
-	bool bHeightTraceHit = GetWorld()->LineTraceSingleByChannel(
-		HeightTraceResult,
-		HeightTraceStart,
-		HeightTraceEnd,
-		ECollisionChannel::ECC_WorldStatic,
-		TraceCollisionParams
-	);
-
-	HeightTraceEnd = bHeightTraceHit ? HeightTraceResult.ImpactPoint : HeightTraceEnd;
-	
-	DebugTrace(HeightTraceResult);
-
-	return HeightTraceEnd.Z - ActorFeet.Z;
+	LedgePosition = GetLedgePosition();
+	return LedgePosition.Z - ActorFeet.Z;
 }
 #pragma endregion
 
@@ -122,7 +102,7 @@ void UVaultComponent::StartVaultOver() {
 	bIsBusy = true;
 	bVaultOverTrigger = true;
 
-	VaultOverType = GetVaultOverType(LastObstacleHeight);
+	VaultOverType = GetVaultOverType();
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
@@ -147,7 +127,7 @@ void UVaultComponent::StopVaultOver() {
 	}
 }
 
-EVaultOverType UVaultComponent::GetVaultOverType(float ObstacleHeight) {
+EVaultOverType UVaultComponent::GetVaultOverType() {
 
 	if (ObstacleHeight < VAULT_OVER_SHORT_MAX_HEIGHT) {
 		return EVaultOverType::Over_Short;
@@ -158,6 +138,7 @@ EVaultOverType UVaultComponent::GetVaultOverType(float ObstacleHeight) {
 
 	return EVaultOverType::Over_Tall;
 }
+
 #pragma endregion
 
 
@@ -172,21 +153,33 @@ void UVaultComponent::StartVaultOnto() {
 	bIsBusy = true;
 	bVaultOntoTrigger = true;
 
-	VaultOntoType = GetVaultOntoType(LastObstacleHeight);
+	VaultOntoType = GetVaultOntoType();
+
+	// Temporarily set movement mode to flying
+	if (CharacterMovement)
+		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+
+	// Temporarily deactivate collider
+	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 
 	// Snap actor rotation to obstacle's
 	FQuat TargetRotation = (-LowTraceResult.ImpactNormal).ToOrientationQuat();
 	Hero->SetActorRotation(TargetRotation);
 
-	// Temporarily deactivate collider
-	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	// Snap actor to correct climbing position
+	if (VaultOntoType == EVaultOntoType::Onto_Tall) {
+		FVector TargetPosition = GetLedgePosition() +
+			Hero->GetActorForwardVector() * HeroLedgeOffset.X +
+			Hero->GetActorRightVector() * HeroLedgeOffset.Y +
+			Hero->GetActorUpVector() * HeroLedgeOffset.Z;
+		Hero->SetActorLocation(TargetPosition, false, nullptr, ETeleportType::ResetPhysics);
 
-	// DEBUG
-	if (bUseDebug)
-		DrawDebugSphere(GetWorld(), PostVaultTargetLocation, 10, 10, FColor::Cyan, true, 2);
+		if (bUseDebug)
+			DrawDebugSphere(GetWorld(), LedgePosition, 10, 10, FColor::Yellow, false, 5);
 
-	if (CharacterMovement)
-		CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+		if (bUseDebug)
+			DrawDebugSphere(GetWorld(), TargetPosition, 10, 10, FColor::Magenta, false, 5);
+	}
 }
 
 void UVaultComponent::StopVaultOnto() {
@@ -201,7 +194,7 @@ void UVaultComponent::StopVaultOnto() {
 	}
 }
 
-EVaultOntoType UVaultComponent::GetVaultOntoType(float ObstacleHeight) {
+EVaultOntoType UVaultComponent::GetVaultOntoType() {
 	if (ObstacleHeight < VAULT_ONTO_SHORT_MAX_HEIGHT) {
 		return EVaultOntoType::Onto_Short;
 	} else if (ObstacleHeight < VAULT_ONTO_MID_MAX_HEIGHT) {
@@ -212,6 +205,36 @@ EVaultOntoType UVaultComponent::GetVaultOntoType(float ObstacleHeight) {
 
 	return EVaultOntoType::Onto_Tall;
 }
+
+FVector UVaultComponent::GetLedgePosition() {
+
+	// Check height of object
+	FVector TraceDirection = (MidTraceResult.TraceEnd - LowTraceResult.ImpactPoint).GetSafeNormal();
+	TraceDirection = FVector(TraceDirection.X, TraceDirection.Y, 0);
+
+	FVector HeightTraceStart = LowTraceResult.ImpactPoint + TraceDirection * 20;
+	HeightTraceStart = FVector(HeightTraceStart.X, HeightTraceStart.Y, MidTraceResult.TraceEnd.Z);
+
+	FVector HeightTraceEnd =
+		HeightTraceStart + FVector::DownVector * (MaxVaultHeight - MinVaultHeight);
+	FHitResult HeightTraceResult;
+
+	bool bHeightTraceHit = GetWorld()->LineTraceSingleByChannel(
+		HeightTraceResult,
+		HeightTraceStart,
+		HeightTraceEnd,
+		ECollisionChannel::ECC_WorldStatic,
+		TraceCollisionParams
+	);
+
+	if (bUseDebug)
+		DebugTrace(HeightTraceResult, false, 5);
+
+	HeightTraceEnd = bHeightTraceHit ? HeightTraceResult.ImpactPoint : HeightTraceEnd;
+
+	return FVector(LowTraceResult.ImpactPoint.X, LowTraceResult.ImpactPoint.Y, HeightTraceEnd.Z);
+}
+#pragma endregion
 #pragma endregion
 
 
