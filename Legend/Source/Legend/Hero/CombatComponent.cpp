@@ -21,3 +21,32 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
+bool UCombatComponent::TryAttack() {
+
+	UE_LOG(LogTemp, Warning, TEXT("Try attack"));
+
+	if (!bWeaponEquipped) {
+		EquipWeapon();
+		return false;
+	}
+
+	return false;
+}
+
+void UCombatComponent::ToggleEquipped() {
+	if (bWeaponEquipped)
+		UnequipWeapon();
+	else
+		EquipWeapon();
+}
+
+void UCombatComponent::EquipWeapon() {
+	UE_LOG(LogTemp, Warning, TEXT("Equipped"));
+	bWeaponEquipped = true;
+}
+
+void UCombatComponent::UnequipWeapon() {
+	UE_LOG(LogTemp, Warning, TEXT("Unequipped"));
+	bWeaponEquipped = false;
+}
+

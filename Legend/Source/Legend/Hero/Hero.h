@@ -85,7 +85,12 @@ private:
 	void OnJumpInput();
 	void OnJumpStopInput();
 
+	// Camera
 	void SetupCamera();
+
+	// Combat Input
+	void OnAttackInput();
+	void OnToggleEquippedInput();
 
 public:
 	void ResetJumpTrigger();

@@ -10,6 +10,7 @@
 #include "DrawDebugHelpers.h"
 #include "Hero.h"
 
+
 #pragma region General
 AHero::AHero()
 {
@@ -36,6 +37,7 @@ void AHero::BeginPlay()
 	
 	ClimbComp = FindComponentByClass<UClimbComponent>();	
 	VaultComp = FindComponentByClass<UVaultComponent>();	
+	CombatComp = FindComponentByClass<UCombatComponent>();	
 }
 
 void AHero::Tick(float DeltaTime)
@@ -62,6 +64,10 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &AHero::OnJumpInput);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &AHero::OnJumpStopInput);
 
+	// Combat
+	PlayerInputComponent->BindAction("Attack", IE_Pressed, this, &AHero::OnAttackInput);
+	PlayerInputComponent->BindAction("ToggleEquipped", IE_Pressed, this, &AHero::OnToggleEquippedInput);
+	
 }
 
 #pragma endregion
@@ -190,6 +196,15 @@ void AHero::ResetJumpTrigger() {
 #pragma endregion
 
 
+#pragma region Combat
+void AHero::OnAttackInput() {
+	bool bAttacked = CombatComp->TryAttack();
+}
+
+void AHero::OnToggleEquippedInput() {
+	CombatComp->ToggleEquipped();
+}
+#pragma endregion
 
 FVector AHero::GetMoveInput() {
 	return MoveInput;

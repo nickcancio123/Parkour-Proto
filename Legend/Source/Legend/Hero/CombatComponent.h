@@ -15,7 +15,14 @@ class LEGEND_API UCombatComponent : public UActorComponent
 // Variables
 public:
 	UPROPERTY(BlueprintReadOnly, Category = "Combat")
-		bool bEquipped = false;
+		bool bWeaponEquipped = false;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
+		float WalkSpeed = 150;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
+		float SprintSpeed = 450;
 
 // Methods
 protected:
@@ -26,5 +33,11 @@ public:
 
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-		
+	// Hero interface for attacking. Returns true if attacked, false if did not attack
+	bool TryAttack();
+
+	void ToggleEquipped();
+
+	void EquipWeapon();
+	void UnequipWeapon();
 };
