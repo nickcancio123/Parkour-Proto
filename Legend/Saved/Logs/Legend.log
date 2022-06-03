@@ -2326,3 +2326,270 @@ LogConfig: Setting CVar [[r.setres:1280x720]]
 [2022.06.03-19.44.25:951][621]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_ArmedLocomotion10363E334007260C843D5384F304E718.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Ground_Locomotion/Armed/BS_ArmedLocomotion.uasset'
 [2022.06.03-19.44.25:980][621]AssetCheck: New page: Asset Save: BS_ArmedLocomotion
 [2022.06.03-19.44.25:981][621]LogContentValidation: Display: Validating BlendSpace /Game/Hero/Animation/Ground_Locomotion/Armed/BS_ArmedLocomotion.BS_ArmedLocomotion
+[2022.06.03-20.10.29:324][689]Running C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" -game -rocket -progress
+[2022.06.03-20.10.30:801][689]Discovering modules, targets and source code for project...
+[2022.06.03-20.10.34:420][689]Binding IntelliSense data...
+[2022.06.03-20.10.36:030][689]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatching\DistanceMatching.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatching\Public' does not exist.
+[2022.06.03-20.10.36:030][689]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatchingEditor\DistanceMatchingEditor.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatchingEditor\Public' does not exist.
+[2022.06.03-20.10.37:644][689]Binding IntelliSense data... 100%
+[2022.06.03-20.10.37:746][689]Writing project files...
+[2022.06.03-20.10.45:089][689]Writing project files... 100%
+[2022.06.03-20.10.45:657][689]Candidate modules for hot reload:
+[2022.06.03-20.10.45:657][689]  Legend
+[2022.06.03-20.10.45:658][689]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,1162 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.03-20.11.13:363][689]CompilerResultsLog: New page: Compilation - Jun 3, 2022, 12:11:13 PM
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Creating makefile for LegendEditor (no existing makefile)
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.03-20.11.13:367][689]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Reflection code generated for LegendEditor in 7.1700416 seconds
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ClimbComponent.cpp(1) : error: Expected ClimbComponent.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(1) : error: Expected Hero.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\HeroAnimInstance.cpp(1) : error: Expected HeroAnimInstance.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ResetClimbNotify.cpp(1) : error: Expected ResetClimbNotify.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ResetJumpTriggerNotify.cpp(1) : error: Expected ResetJumpTriggerNotify.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ResetVaultNotify.cpp(1) : error: Expected ResetVaultNotify.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\VaultComponent.cpp(1) : error: Expected VaultComponent.h to be first header included.
+[2022.06.03-20.11.13:367][689]CompilerResultsLog: Building LegendEditor...
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: License is invalid:
+[2022.06.03-20.11.13:368][689]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.03-20.11.13:368][689]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: Build ID: {C3F24428-8626-4DA7-A716-075F8D1AEF10}
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: CombatComponent.cpp (0:02.12 at +0:00)
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\CombatComponent.cpp(4): fatal error C1083: Cannot open include file: 'Hero/CombatComponent.h': No such file or directory
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: CombatComponent.gen.cpp (0:11.29 at +0:02)
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: Legend.init.gen.cpp (0:02.59 at +0:13)
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 1 build system warning(s):
+[2022.06.03-20.11.13:368][689]CompilerResultsLog:    - License is invalid
+[2022.06.03-20.11.13:368][689]CompilerResultsLog: 
+[2022.06.03-20.11.13:369][689]LogMainFrame: MainFrame: Module compiling took 27.814 seconds
+[2022.06.03-20.11.13:382][689]Warning: HotReload failed, recompile failed
+[2022.06.03-20.11.13:382][689]Warning: RebindPackages failed because compilation failed.
+[2022.06.03-20.25.08:219][689]LogSlate: Window 'Message' being destroyed
+[2022.06.03-20.25.08:227][689]Message dialog closed, result: No, title: Message, text: Successfully added class 'CombatComponent', however you must recompile the 'Legend' module before it will appear in the Content Browser. Failed to automatically hot reload the 'Legend' module.
+
+Would you like to open the Output Log to see more details?
+[2022.06.03-20.25.08:227][689]LogSlate: Window 'Add C++ Class' being destroyed
+[2022.06.03-20.27.40:283][188]Candidate modules for hot reload:
+[2022.06.03-20.27.40:284][188]  Legend
+[2022.06.03-20.27.40:285][188]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,210 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.03-20.27.40:354][188]Warning: Starting HotReload took  0.1s.
+[2022.06.03-20.28.41:171][377]CompilerResultsLog: New page: Compilation - Jun 3, 2022, 12:28:41 PM
+[2022.06.03-20.28.41:179][377]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.03-20.28.41:180][377]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.03-20.28.41:180][377]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.03-20.28.41:180][377]CompilerResultsLog: Reflection code generated for LegendEditor in 18.6058243 seconds
+[2022.06.03-20.28.41:180][377]CompilerResultsLog: Building LegendEditor...
+[2022.06.03-20.28.41:180][377]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: License is invalid:
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: Build ID: {F27343C4-7A10-4B88-9633-1FD3AF99FE2E}
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: CombatComponent.cpp (0:24.73 at +0:00)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: CombatComponent.gen.cpp (0:06.07 at +0:25)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: Legend.init.gen.cpp (0:02.48 at +0:31)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: UE4Editor-Legend-0210.lib (0:00.68 at +0:33)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0210.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0210.exp
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: UE4Editor-Legend-0210.dll (0:02.23 at +0:34)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0210.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-0210.suppressed.exp
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: LegendEditor.target (0:00.98 at +0:36)
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 1 build system warning(s):
+[2022.06.03-20.28.41:182][377]CompilerResultsLog:    - License is invalid
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: 
+[2022.06.03-20.28.41:182][377]CompilerResultsLog: Total time in XGE executor: 38.81 seconds
+[2022.06.03-20.28.41:183][377]CompilerResultsLog: Total execution time: 59.84 seconds
+[2022.06.03-20.28.41:183][377]LogMainFrame: MainFrame: Module compiling took 60.918 seconds
+[2022.06.03-20.28.41:764][377]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.2613 seconds. Added 3611 classes and 864 folders.
+[2022.06.03-20.28.41:768][377]Display: HotReload took 61.6s.
+[2022.06.03-20.29.44:481][708]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.06.03-20.29.45:502][708]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'BlueprintGraph' in 0.0030 seconds. Added 126 classes and 0 folders.
+[2022.06.03-20.29.59:311][806]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2022.06.03-20.29.59:315][806]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.03-20.29.59:467][806]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.06.03-20.30.04:902][864]LogSlate: Took 0.002675 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Italic.ttf' (157K)
+[2022.06.03-20.36.35:542][726]Candidate modules for hot reload:
+[2022.06.03-20.36.35:543][726]  Legend
+[2022.06.03-20.36.35:547][726]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,6543 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.03-20.36.35:625][726]Warning: Starting HotReload took  0.2s.
+[2022.06.03-20.38.03:280][182]CompilerResultsLog: New page: Compilation - Jun 3, 2022, 12:38:03 PM
+[2022.06.03-20.38.03:283][182]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.03-20.38.03:283][182]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.03-20.38.03:283][182]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.03-20.38.03:283][182]CompilerResultsLog: Reflection code generated for LegendEditor in 12.1926153 seconds
+[2022.06.03-20.38.03:283][182]CompilerResultsLog: Building LegendEditor...
+[2022.06.03-20.38.03:283][182]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: Distributing 12 actions to XGE
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: License is invalid:
+[2022.06.03-20.38.03:284][182]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.03-20.38.03:284][182]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: Build ID: {120FACEB-0A91-4459-B454-54288314A823}
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:284][182]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: ClimbComponent.cpp (0:27.11 at +0:00)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: Hero.cpp (0:08.43 at +0:27)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: HeroAnimInstance.cpp (0:05.01 at +0:35)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: ResetClimbNotify.cpp (0:03.01 at +0:40)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: ResetJumpTriggerNotify.cpp (0:03.18 at +0:43)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: ResetVaultNotify.cpp (0:03.12 at +0:46)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: VaultComponent.cpp (0:04.07 at +0:50)
+[2022.06.03-20.38.03:285][182]CompilerResultsLog: Hero.gen.cpp (0:05.29 at +0:54)
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: Legend.init.gen.cpp (0:02.64 at +0:59)
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: UE4Editor-Legend-6543.lib (0:01.54 at +1:02)
+[2022.06.03-20.38.03:286][182]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6543.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6543.exp
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: UE4Editor-Legend-6543.dll (0:03.18 at +1:03)
+[2022.06.03-20.38.03:286][182]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6543.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6543.suppressed.exp
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: LegendEditor.target (0:01.95 at +1:06)
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:286][182]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: 1 build system warning(s):
+[2022.06.03-20.38.03:286][182]CompilerResultsLog:    - License is invalid
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: 
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: Total time in XGE executor: 70.18 seconds
+[2022.06.03-20.38.03:286][182]CompilerResultsLog: Total execution time: 86.61 seconds
+[2022.06.03-20.38.03:287][182]LogMainFrame: MainFrame: Module compiling took 87.761 seconds
+[2022.06.03-20.38.04:561][182]LogClass: Could not find existing class CombatComponent in package /Script/Legend for HotReload, assuming new class
+[2022.06.03-20.38.04:564][182]LogClass: Could not find existing class Hero in package /Script/Legend for HotReload, assuming new class
+[2022.06.03-20.38.04:588][182]LogClass: EVaultOntoType HotReload.
+[2022.06.03-20.38.04:588][182]LogClass: EVaultOverType HotReload.
+[2022.06.03-20.38.04:641][182]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.06.03-20.38.04:778][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:780][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:780][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:789][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:789][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:789][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:794][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:794][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:794][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:797][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:797][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:797][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:940][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:940][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:941][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:941][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_11:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:943][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:943][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:943][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.04:965][182]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0601
+[2022.06.03-20.38.04:965][182]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0635
+[2022.06.03-20.38.04:965][182]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.BP_Hero_C_1.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:03EB
+[2022.06.03-20.38.05:002][182]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0078 seconds. Added 10 classes and 3 folders.
+[2022.06.03-20.38.05:006][182]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.03-20.38.05:287][182]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0339 seconds. Added 3612 classes and 864 folders.
+[2022.06.03-20.38.05:288][182]Display: HotReload took 89.8s.
+[2022.06.03-20.50.16:301][843]Candidate modules for hot reload:
+[2022.06.03-20.50.16:302][843]  Legend
+[2022.06.03-20.50.16:302][843]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,6987 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.03-20.50.16:321][843]Warning: Starting HotReload took  0.1s.
+[2022.06.03-20.50.24:801][886]CompilerResultsLog: New page: Compilation - Jun 3, 2022, 12:50:24 PM
+[2022.06.03-20.50.24:801][886]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.03-20.50.24:801][886]CompilerResultsLog: Building LegendEditor...
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: Distributing 3 actions to XGE
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: License is invalid:
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: Build ID: {96A3EC1C-305F-49C2-978C-F6675D4D6EAD}
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: UE4Editor-Legend-6987.lib (0:01.04 at +0:00)
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6987.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6987.exp
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: UE4Editor-Legend-6987.dll (0:01.64 at +0:01)
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6987.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6987.suppressed.exp
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: LegendEditor.target (0:01.00 at +0:02)
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 1 build system warning(s):
+[2022.06.03-20.50.24:802][886]CompilerResultsLog:    - License is invalid
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: 
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: Total time in XGE executor: 4.83 seconds
+[2022.06.03-20.50.24:802][886]CompilerResultsLog: Total execution time: 7.45 seconds
+[2022.06.03-20.50.24:802][886]LogMainFrame: MainFrame: Module compiling took 8.508 seconds
+[2022.06.03-20.50.25:672][886]LogClass: EVaultOntoType HotReload.
+[2022.06.03-20.50.25:672][886]LogClass: EVaultOverType HotReload.
+[2022.06.03-20.50.25:679][886]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0005 seconds. Added 10 classes and 3 folders.
+[2022.06.03-20.50.25:684][886]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.03-20.50.25:810][886]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0095 seconds. Added 3612 classes and 864 folders.
+[2022.06.03-20.50.25:810][886]Display: HotReload took  9.6s.

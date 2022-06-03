@@ -27,6 +27,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Vaulting")
 		class UVaultComponent* VaultComp;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat")
+		class UCombatComponent* CombatComp;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		float RunSpeed = 450;
@@ -69,7 +72,7 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 private:
-	// Basic Locomotion Input
+	// Locomotion Input
 	void OnMoveForwardInput(float Axis);
 	void OnMoveRightInput(float Axis);
 	void OnLookUpInput(float Axis);

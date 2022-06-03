@@ -6,9 +6,11 @@
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/ClimbComponent.h"
 #include "Legend/Hero/VaultComponent.h"
+#include "Legend/Hero/CombatComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Hero.h"
 
+#pragma region General
 AHero::AHero()
 {
 	PrimaryActorTick.bCanEverTick = true;
@@ -23,6 +25,9 @@ AHero::AHero()
 
 	VaultComp = CreateDefaultSubobject<UVaultComponent>("Vault Component");
 	this->AddOwnedComponent(VaultComp);
+
+	CombatComp = CreateDefaultSubobject<UCombatComponent>("Combat Component");
+	this->AddOwnedComponent(CombatComp);
 }
 
 void AHero::BeginPlay()
@@ -59,6 +64,9 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 }
 
+#pragma endregion
+
+
 
 #pragma region Camera
 void AHero::SetupCamera() {
@@ -85,7 +93,8 @@ void AHero::SetupCamera() {
 #pragma endregion
 
 
-#pragma region Basic Locomotion
+
+#pragma region Locomotion
 void AHero::OnMoveForwardInput(float Axis) {
 	bIsMoveForwardInput = Axis != 0;
 	MoveInput.X = Axis;
@@ -149,6 +158,8 @@ void AHero::OnStopSprintInput() {
 #pragma endregion
 
 
+
+#pragma region Jumping
 void AHero::OnJumpInput() {
 	// Jump not allowed while in the air
 	if (MovementComp->IsFalling())
@@ -176,6 +187,8 @@ void AHero::OnJumpStopInput() {
 void AHero::ResetJumpTrigger() {
 	bJumpTrigger = false;
 }
+#pragma endregion
+
 
 
 FVector AHero::GetMoveInput() {
