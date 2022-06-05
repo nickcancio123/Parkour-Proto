@@ -1,6 +1,7 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
+#include "Legend/Hero/Hero.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/CombatComponent.h"
 
 UCombatComponent::UCombatComponent()
@@ -13,6 +14,9 @@ UCombatComponent::UCombatComponent()
 void UCombatComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	Hero = Cast<AHero>(GetOwner());
+	MovementComp = Hero->FindComponentByClass<UCharacterMovementComponent>();
 }
 
 
@@ -42,11 +46,21 @@ void UCombatComponent::ToggleEquipped() {
 
 void UCombatComponent::EquipWeapon() {
 	UE_LOG(LogTemp, Warning, TEXT("Equipped"));
+
 	bWeaponEquipped = true;
+	Hero->UpdateMaxWalkSpeed();
+
+	MovementComp->bOrientRotationToMovement = false;
+	Hero->bUseControllerRotationYaw = true;
 }
 
 void UCombatComponent::UnequipWeapon() {
 	UE_LOG(LogTemp, Warning, TEXT("Unequipped"));
+
 	bWeaponEquipped = false;
+	Hero->UpdateMaxWalkSpeed();
+
+	MovementComp->bOrientRotationToMovement = true;
+	Hero->bUseControllerRotationYaw = false;
 }
 

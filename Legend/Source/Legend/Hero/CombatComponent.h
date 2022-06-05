@@ -24,6 +24,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		float SprintSpeed = 450;
 
+private:
+	class AHero* Hero;
+	class UCharacterMovementComponent* MovementComp;
+
+
 // Methods
 protected:
 	virtual void BeginPlay() override;

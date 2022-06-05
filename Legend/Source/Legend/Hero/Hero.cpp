@@ -21,6 +21,10 @@ AHero::AHero()
 	MovementComp = GetCharacterMovement();
 	MovementComp->bOrientRotationToMovement = true;
 
+	bUseControllerRotationPitch = false;
+	bUseControllerRotationYaw = false;
+	bUseControllerRotationRoll = false;
+
 	ClimbComp = CreateDefaultSubobject<UClimbComponent>("Climb Component");
 	this->AddOwnedComponent(ClimbComp);
 
@@ -150,7 +154,7 @@ void AHero::OnSprintInput() {
 		return;
 
 	bIsSprinting = true;
-	MovementComp->MaxWalkSpeed = SprintSpeed;
+	UpdateMaxWalkSpeed();
 }
 
 void AHero::OnStopSprintInput() {
@@ -158,7 +162,7 @@ void AHero::OnStopSprintInput() {
 		return;
 
 	bIsSprinting = false;
-	MovementComp->MaxWalkSpeed = RunSpeed;
+	UpdateMaxWalkSpeed();
 }
 
 #pragma endregion
@@ -208,4 +212,21 @@ void AHero::OnToggleEquippedInput() {
 
 FVector AHero::GetMoveInput() {
 	return MoveInput;
+}
+
+void AHero::UpdateMaxWalkSpeed() {
+	if (bIsSprinting) {
+
+		if (CombatComp->bWeaponEquipped)
+			MovementComp->MaxWalkSpeed = CombatComp->SprintSpeed;
+		else
+			MovementComp->MaxWalkSpeed = SprintSpeed;
+
+	} else {
+
+		if (CombatComp->bWeaponEquipped)
+			MovementComp->MaxWalkSpeed = CombatComp->WalkSpeed;
+		else
+			MovementComp->MaxWalkSpeed = RunSpeed;
+	}
 }

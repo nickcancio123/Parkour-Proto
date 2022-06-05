@@ -96,4 +96,6 @@ public:
 	void ResetJumpTrigger();
 
 	FVector GetMoveInput();
+
+	void UpdateMaxWalkSpeed();
 };
