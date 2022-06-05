@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/ClimbComponent.h"
+#include "Legend/Hero/Components/ClimbComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -82,28 +82,28 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
-		{ "IncludePath", "Hero/ClimbComponent.h" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "IncludePath", "Hero/Components/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight = { "ActorHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, ActorHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_ActorHeight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight = { "RootHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, RootHeight), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_RootHeight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 	};
 #endif
 	void Z_Construct_UClass_UClimbComponent_Statics::NewProp_bUseDebug_SetBit(void* Obj)
@@ -115,7 +115,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClimbTraceRange_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "//Variables:\n// The trace range for low, mid, and high forward traces\n" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 		{ "ToolTip", "Variables:\n The trace range for low, mid, and high forward traces" },
 	};
 #endif
@@ -124,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_WallTraceHeight_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "// Wall Trace: looking for wall at just below where hands would go\n" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 		{ "ToolTip", "Wall Trace: looking for wall at just below where hands would go" },
 	};
 #endif
@@ -133,7 +133,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_ClearanceTraceHeight_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "// Clearance Trace: looking for wall at just above where hands would go\n" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 		{ "ToolTip", "Clearance Trace: looking for wall at just above where hands would go" },
 	};
 #endif
@@ -141,7 +141,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_FallingTraceHeightOffset_MetaData[] = {
 		{ "Category", "Climbing" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UClimbComponent_Statics::NewProp_FallingTraceHeightOffset = { "FallingTraceHeightOffset", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UClimbComponent, FallingTraceHeightOffset), METADATA_PARAMS(Z_Construct_UClass_UClimbComponent_Statics::NewProp_FallingTraceHeightOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UClimbComponent_Statics::NewProp_FallingTraceHeightOffset_MetaData)) };
@@ -149,7 +149,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_HeroLedgeOffset_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "// The offset from the ledge that the hero is snapped to prior to climbing\n" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 		{ "ToolTip", "The offset from the ledge that the hero is snapped to prior to climbing" },
 	};
 #endif
@@ -158,7 +158,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UClimbComponent_Statics::NewProp_bClimbTrigger_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "// Used to trigger climb animation\n" },
-		{ "ModuleRelativePath", "Hero/ClimbComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/ClimbComponent.h" },
 		{ "ToolTip", "Used to trigger climb animation" },
 	};
 #endif
@@ -205,7 +205,7 @@ void EmptyLinkFunctionForGeneratedCodeClimbComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UClimbComponent, 3668417392);
+	IMPLEMENT_CLASS(UClimbComponent, 2912124040);
 	template<> LEGEND_API UClass* StaticClass<UClimbComponent>()
 	{
 		return UClimbComponent::StaticClass();

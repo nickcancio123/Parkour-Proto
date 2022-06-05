@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/EnableMovementNotify.h"
+#include "Legend/Hero/AnimNotifies/EnableMovementNotify.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -48,14 +48,14 @@ void EmptyLinkFunctionForGeneratedCodeEnableMovementNotify() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UEnableMovementNotify_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Object" },
-		{ "IncludePath", "Hero/EnableMovementNotify.h" },
-		{ "ModuleRelativePath", "Hero/EnableMovementNotify.h" },
+		{ "IncludePath", "Hero/AnimNotifies/EnableMovementNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/EnableMovementNotify.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UEnableMovementNotify_Statics::NewProp_bEnableMovement_MetaData[] = {
 		{ "Category", "EnableMovementNotify" },
-		{ "ModuleRelativePath", "Hero/EnableMovementNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/EnableMovementNotify.h" },
 	};
 #endif
 	void Z_Construct_UClass_UEnableMovementNotify_Statics::NewProp_bEnableMovement_SetBit(void* Obj)
@@ -93,7 +93,7 @@ void EmptyLinkFunctionForGeneratedCodeEnableMovementNotify() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UEnableMovementNotify, 4020538057);
+	IMPLEMENT_CLASS(UEnableMovementNotify, 810061827);
 	template<> LEGEND_API UClass* StaticClass<UEnableMovementNotify>()
 	{
 		return UEnableMovementNotify::StaticClass();

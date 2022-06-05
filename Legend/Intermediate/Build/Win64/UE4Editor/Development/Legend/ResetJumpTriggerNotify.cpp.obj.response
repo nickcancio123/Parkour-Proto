@@ -264,7 +264,7 @@
 /FI"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\ResetJumpTriggerNotify.cpp"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetJumpTriggerNotify.cpp"
 /FI"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Definitions.Legend.h"
 /Fo"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetJumpTriggerNotify.cpp.obj"
 /TP

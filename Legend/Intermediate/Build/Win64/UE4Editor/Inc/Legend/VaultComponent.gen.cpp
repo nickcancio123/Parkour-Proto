@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/VaultComponent.h"
+#include "Legend/Hero/Components/VaultComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -35,7 +35,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		return EVaultOntoType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EVaultOntoType(EVaultOntoType_StaticEnum, TEXT("/Script/Legend"), TEXT("EVaultOntoType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Legend_EVaultOntoType_Hash() { return 3506891027U; }
+	uint32 Get_Z_Construct_UEnum_Legend_EVaultOntoType_Hash() { return 3915732393U; }
 	UEnum* Z_Construct_UEnum_Legend_EVaultOntoType()
 	{
 #if WITH_HOT_RELOAD
@@ -54,7 +54,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "// Enum type used to determine which vault-onto animation to play\n" },
-				{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+				{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 				{ "Onto_Mid.DisplayName", "Mid" },
 				{ "Onto_Mid.Name", "Onto_Mid" },
 				{ "Onto_Short.DisplayName", "Short" },
@@ -95,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		return EVaultOverType_StaticEnum();
 	}
 	static FCompiledInDeferEnum Z_CompiledInDeferEnum_UEnum_EVaultOverType(EVaultOverType_StaticEnum, TEXT("/Script/Legend"), TEXT("EVaultOverType"), false, nullptr, nullptr);
-	uint32 Get_Z_Construct_UEnum_Legend_EVaultOverType_Hash() { return 1864308424U; }
+	uint32 Get_Z_Construct_UEnum_Legend_EVaultOverType_Hash() { return 3013920108U; }
 	UEnum* Z_Construct_UEnum_Legend_EVaultOverType()
 	{
 #if WITH_HOT_RELOAD
@@ -113,7 +113,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #if WITH_METADATA
 			const UE4CodeGen_Private::FMetaDataPairParam Enum_MetaDataParams[] = {
 				{ "Comment", "// Enum type used to determine which vault-over animation to play\n" },
-				{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+				{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 				{ "Over_Short.DisplayName", "Short" },
 				{ "Over_Short.Name", "Over_Short" },
 				{ "Over_Tall.DisplayName", "Tall" },
@@ -243,29 +243,29 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
 		{ "Comment", "// The vault component handles character traversal of short objects.\n// This means allowing the character to jump over or on top of shorter objects.\n" },
-		{ "IncludePath", "Hero/VaultComponent.h" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "IncludePath", "Hero/Components/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "The vault component handles character traversal of short objects.\nThis means allowing the character to jump over or on top of shorter objects." },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight = { "ActorHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, ActorHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_ActorHeight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight = { "RootHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, RootHeight), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_RootHeight_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_MetaData[] = {
 		{ "Category", "General" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bUseDebug_SetBit(void* Obj)
@@ -277,7 +277,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultTraceRange_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// The trace range for low and mid forward traces\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "The trace range for low and mid forward traces" },
 	};
 #endif
@@ -286,7 +286,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_MinVaultHeight_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// Low Trace: searches for obstacles present ahead at waist height\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "Low Trace: searches for obstacles present ahead at waist height" },
 	};
 #endif
@@ -295,7 +295,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_MaxVaultHeight_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// Mid Trace: searches for obstacles present ahead at face height\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "Mid Trace: searches for obstacles present ahead at face height" },
 	};
 #endif
@@ -304,7 +304,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceHeight_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// Depth Trace: checks the depth of the object ahead of actor (goes downward)\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "Depth Trace: checks the depth of the object ahead of actor (goes downward)" },
 	};
 #endif
@@ -313,7 +313,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceRange_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// How far down the trace should go from starting point\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "How far down the trace should go from starting point" },
 	};
 #endif
@@ -322,7 +322,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_DepthTraceDistance_MetaData[] = {
 		{ "Category", "Traces" },
 		{ "Comment", "// How far from obstacle impact point should the traced start from\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "How far from obstacle impact point should the traced start from" },
 	};
 #endif
@@ -331,7 +331,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_OVER_SHORT_MAX_HEIGHT_MetaData[] = {
 		{ "Category", "Vault Over" },
 		{ "Comment", "// For when vaulting over short object. Should be above low trace height\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "For when vaulting over short object. Should be above low trace height" },
 	};
 #endif
@@ -340,7 +340,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_OVER_TALL_MAX_HEIGHT_MetaData[] = {
 		{ "Category", "Vault Over" },
 		{ "Comment", "// For when vaulting over taller object. Should be above low trace height\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "For when vaulting over taller object. Should be above low trace height" },
 	};
 #endif
@@ -348,7 +348,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOverType_MetaData[] = {
 		{ "Category", "Vault Over" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOverType = { "VaultOverType", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VaultOverType), Z_Construct_UEnum_Legend_EVaultOverType, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOverType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOverType_MetaData)) };
@@ -356,7 +356,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultOverTrigger_MetaData[] = {
 		{ "Category", "Vault Over" },
 		{ "Comment", "// Used to trigger vault animation\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "Used to trigger vault animation" },
 	};
 #endif
@@ -369,7 +369,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_SHORT_MAX_HEIGHT_MetaData[] = {
 		{ "Category", "Vault Onto" },
 		{ "Comment", "// The thresholds for various vault-onto heights, which dictate animations\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "The thresholds for various vault-onto heights, which dictate animations" },
 	};
 #endif
@@ -377,14 +377,14 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_MID_MAX_HEIGHT_MetaData[] = {
 		{ "Category", "Vault Onto" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_MID_MAX_HEIGHT = { "VAULT_ONTO_MID_MAX_HEIGHT", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VAULT_ONTO_MID_MAX_HEIGHT), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_MID_MAX_HEIGHT_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_MID_MAX_HEIGHT_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT_MetaData[] = {
 		{ "Category", "Vault Onto" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT = { "VAULT_ONTO_TALL_MAX_HEIGHT", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VAULT_ONTO_TALL_MAX_HEIGHT), METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VAULT_ONTO_TALL_MAX_HEIGHT_MetaData)) };
@@ -392,7 +392,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_HeroLedgeOffset_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "Comment", "// The offset from the ledge that the hero is snapped to prior to vaulting onto\n" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 		{ "ToolTip", "The offset from the ledge that the hero is snapped to prior to vaulting onto" },
 	};
 #endif
@@ -400,14 +400,14 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType_MetaData[] = {
 		{ "Category", "Vault Onto" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType = { "VaultOntoType", nullptr, (EPropertyFlags)0x0010000000000014, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UVaultComponent, VaultOntoType), Z_Construct_UEnum_Legend_EVaultOntoType, METADATA_PARAMS(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UVaultComponent_Statics::NewProp_VaultOntoType_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultOntoTrigger_MetaData[] = {
 		{ "Category", "Vault Onto" },
-		{ "ModuleRelativePath", "Hero/VaultComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/VaultComponent.h" },
 	};
 #endif
 	void Z_Construct_UClass_UVaultComponent_Statics::NewProp_bVaultOntoTrigger_SetBit(void* Obj)
@@ -463,7 +463,7 @@ void EmptyLinkFunctionForGeneratedCodeVaultComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UVaultComponent, 1643479240);
+	IMPLEMENT_CLASS(UVaultComponent, 3835815181);
 	template<> LEGEND_API UClass* StaticClass<UVaultComponent>()
 	{
 		return UVaultComponent::StaticClass();

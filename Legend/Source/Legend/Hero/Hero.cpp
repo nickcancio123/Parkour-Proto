@@ -4,9 +4,9 @@
 #include "Camera/CameraComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/Hero.h"
-#include "Legend/Hero/ClimbComponent.h"
-#include "Legend/Hero/VaultComponent.h"
-#include "Legend/Hero/CombatComponent.h"
+#include "Legend/Hero/Components/ClimbComponent.h"
+#include "Legend/Hero/Components/VaultComponent.h"
+#include "Legend/Hero/Components/CombatComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Hero.h"
 

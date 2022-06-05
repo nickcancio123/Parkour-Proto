@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/CombatComponent.h"
+#include "Legend/Hero/Components/CombatComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -65,14 +65,14 @@ void EmptyLinkFunctionForGeneratedCodeCombatComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::Class_MetaDataParams[] = {
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
-		{ "IncludePath", "Hero/CombatComponent.h" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "IncludePath", "Hero/Components/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::NewProp_bWeaponEquipped_MetaData[] = {
 		{ "Category", "Combat" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 	void Z_Construct_UClass_UCombatComponent_Statics::NewProp_bWeaponEquipped_SetBit(void* Obj)
@@ -83,28 +83,28 @@ void EmptyLinkFunctionForGeneratedCodeCombatComponent() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::NewProp_WalkSpeed_MetaData[] = {
 		{ "Category", "Locomotion" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCombatComponent_Statics::NewProp_WalkSpeed = { "WalkSpeed", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCombatComponent, WalkSpeed), METADATA_PARAMS(Z_Construct_UClass_UCombatComponent_Statics::NewProp_WalkSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCombatComponent_Statics::NewProp_WalkSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::NewProp_SprintSpeed_MetaData[] = {
 		{ "Category", "Locomotion" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UCombatComponent_Statics::NewProp_SprintSpeed = { "SprintSpeed", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCombatComponent, SprintSpeed), METADATA_PARAMS(Z_Construct_UClass_UCombatComponent_Statics::NewProp_SprintSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCombatComponent_Statics::NewProp_SprintSpeed_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::NewProp_EquipMontage_MetaData[] = {
 		{ "Category", "Combat" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCombatComponent_Statics::NewProp_EquipMontage = { "EquipMontage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCombatComponent, EquipMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCombatComponent_Statics::NewProp_EquipMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCombatComponent_Statics::NewProp_EquipMontage_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCombatComponent_Statics::NewProp_UnequipMontage_MetaData[] = {
 		{ "Category", "Combat" },
-		{ "ModuleRelativePath", "Hero/CombatComponent.h" },
+		{ "ModuleRelativePath", "Hero/Components/CombatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCombatComponent_Statics::NewProp_UnequipMontage = { "UnequipMontage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCombatComponent, UnequipMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCombatComponent_Statics::NewProp_UnequipMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCombatComponent_Statics::NewProp_UnequipMontage_MetaData)) };
@@ -142,7 +142,7 @@ void EmptyLinkFunctionForGeneratedCodeCombatComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCombatComponent, 111573841);
+	IMPLEMENT_CLASS(UCombatComponent, 4237290230);
 	template<> LEGEND_API UClass* StaticClass<UCombatComponent>()
 	{
 		return UCombatComponent::StaticClass();

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/ResetJumpTriggerNotify.h"
+#include "Legend/Hero/AnimNotifies/ResetJumpTriggerNotify.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeResetJumpTriggerNotify() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UResetJumpTriggerNotify_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Object" },
-		{ "IncludePath", "Hero/ResetJumpTriggerNotify.h" },
-		{ "ModuleRelativePath", "Hero/ResetJumpTriggerNotify.h" },
+		{ "IncludePath", "Hero/AnimNotifies/ResetJumpTriggerNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/ResetJumpTriggerNotify.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UResetJumpTriggerNotify_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeResetJumpTriggerNotify() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UResetJumpTriggerNotify, 1646495482);
+	IMPLEMENT_CLASS(UResetJumpTriggerNotify, 1227745662);
 	template<> LEGEND_API UClass* StaticClass<UResetJumpTriggerNotify>()
 	{
 		return UResetJumpTriggerNotify::StaticClass();

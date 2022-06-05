@@ -7,5 +7,5 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFra
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Inc\Legend\Hero.generated.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend/Hero/ResetJumpTriggerNotify.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend/Hero/AnimNotifies/ResetJumpTriggerNotify.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Inc\Legend\ResetJumpTriggerNotify.generated.h

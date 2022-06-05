@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/ResetVaultNotify.h"
+#include "Legend/Hero/AnimNotifies/ResetVaultNotify.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -48,15 +48,15 @@ void EmptyLinkFunctionForGeneratedCodeResetVaultNotify() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UResetVaultNotify_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Object" },
-		{ "IncludePath", "Hero/ResetVaultNotify.h" },
-		{ "ModuleRelativePath", "Hero/ResetVaultNotify.h" },
+		{ "IncludePath", "Hero/AnimNotifies/ResetVaultNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/ResetVaultNotify.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UResetVaultNotify_Statics::NewProp_bIsVaultOver_MetaData[] = {
 		{ "Category", "Vaulting" },
 		{ "Comment", "// If true, vault type is \"over\". If false, vault type is \"onto\"\n" },
-		{ "ModuleRelativePath", "Hero/ResetVaultNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/ResetVaultNotify.h" },
 		{ "ToolTip", "If true, vault type is \"over\". If false, vault type is \"onto\"" },
 	};
 #endif
@@ -95,7 +95,7 @@ void EmptyLinkFunctionForGeneratedCodeResetVaultNotify() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UResetVaultNotify, 126478259);
+	IMPLEMENT_CLASS(UResetVaultNotify, 3298706967);
 	template<> LEGEND_API UClass* StaticClass<UResetVaultNotify>()
 	{
 		return UResetVaultNotify::StaticClass();

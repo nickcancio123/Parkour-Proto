@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Legend/Hero/ResetClimbNotify.h"
+#include "Legend/Hero/AnimNotifies/ResetClimbNotify.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,8 +42,8 @@ void EmptyLinkFunctionForGeneratedCodeResetClimbNotify() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UResetClimbNotify_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Object" },
-		{ "IncludePath", "Hero/ResetClimbNotify.h" },
-		{ "ModuleRelativePath", "Hero/ResetClimbNotify.h" },
+		{ "IncludePath", "Hero/AnimNotifies/ResetClimbNotify.h" },
+		{ "ModuleRelativePath", "Hero/AnimNotifies/ResetClimbNotify.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UResetClimbNotify_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeResetClimbNotify() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UResetClimbNotify, 1448431211);
+	IMPLEMENT_CLASS(UResetClimbNotify, 106828590);
 	template<> LEGEND_API UClass* StaticClass<UResetClimbNotify>()
 	{
 		return UResetClimbNotify::StaticClass();
