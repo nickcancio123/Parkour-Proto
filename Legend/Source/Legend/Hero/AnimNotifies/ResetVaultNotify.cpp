@@ -5,13 +5,13 @@
 #include "Legend/Hero/AnimNotifies/ResetVaultNotify.h"
 
 void UResetVaultNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) {
-	AHero* HeroChar = Cast<AHero>(MeshComp->GetOwner());
+	AHero* Hero = Cast<AHero>(MeshComp->GetOwner());
 
 	// Protects against running in the editor
-	if (!HeroChar)
+	if (!Hero)
 		return;
 
-	UVaultComponent* VaultComp = HeroChar->FindComponentByClass<UVaultComponent>();
+	UVaultComponent* VaultComp = Hero->FindComponentByClass<UVaultComponent>();
 
 	if (!VaultComp)
 		return;

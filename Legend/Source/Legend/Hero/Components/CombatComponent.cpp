@@ -2,6 +2,7 @@
 
 #include "Legend/Hero/Hero.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "Legend/Hero/Components/CombatComponent.h"
 
 UCombatComponent::UCombatComponent()
@@ -68,5 +69,13 @@ void UCombatComponent::UnequipWeapon() {
 	Hero->bUseControllerRotationYaw = false;
 
 	Hero->PlayAnimMontage(UnequipMontage);
+}
+
+void UCombatComponent::EquipWeaponCallback(USkeletalMeshComponent* Mesh) {
+
+}
+
+void UCombatComponent::UnequipWeaponCallback(USkeletalMeshComponent* Mesh) {
+
 }
 

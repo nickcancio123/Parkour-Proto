@@ -51,4 +51,8 @@ public:
 
 	void EquipWeapon();
 	void UnequipWeapon();
+
+	// Called by notifies
+	void EquipWeaponCallback(class USkeletalMeshComponent* Mesh);
+	void UnequipWeaponCallback(class USkeletalMeshComponent* Mesh);
 };
