@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{4797B40A-4D14-4A1B-A5EF-658EAC2D3576}</UniqueIdentifier>
+      <UniqueIdentifier>{89093EC6-7274-43D9-8D7A-B99B22968F00}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{05F69FF4-4282-4381-AF91-CDC858D65524}</UniqueIdentifier>
+      <UniqueIdentifier>{A0AB6F11-727A-4749-8373-8FFC8DC48CE8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{89E8F11D-441E-42C0-9F7D-14E21B298C2B}</UniqueIdentifier>
+      <UniqueIdentifier>{CF92E3BF-5309-4D47-9DE4-AAA82B50ADA4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{32E91A24-751B-4BF6-9F56-BBE5D87B3C18}</UniqueIdentifier>
+      <UniqueIdentifier>{26D663CE-A017-4FA4-ADD1-15F66274B7BB}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\ClimbComponent.cpp">
       <Filter>Source\Legend\Hero</Filter>
@@ -57,6 +57,12 @@
       <Filter>Source\Legend\Hero</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Legend\Hero\CombatComponent.h">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Legend\Hero\EnableMovementNotify.cpp">
+      <Filter>Source\Legend\Hero</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Legend\Hero\EnableMovementNotify.h">
       <Filter>Source\Legend\Hero</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Legend\Hero\Hero.cpp">

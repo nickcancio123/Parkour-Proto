@@ -24,6 +24,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Locomotion")
 		float SprintSpeed = 450;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
+		UAnimMontage* EquipMontage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
+		UAnimMontage* UnequipMontage;
+
 private:
 	class AHero* Hero;
 	class UCharacterMovementComponent* MovementComp;

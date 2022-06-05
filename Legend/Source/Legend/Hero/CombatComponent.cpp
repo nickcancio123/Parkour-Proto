@@ -27,8 +27,6 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 bool UCombatComponent::TryAttack() {
 
-	UE_LOG(LogTemp, Warning, TEXT("Try attack"));
-
 	if (!bWeaponEquipped) {
 		EquipWeapon();
 		return false;
@@ -45,22 +43,30 @@ void UCombatComponent::ToggleEquipped() {
 }
 
 void UCombatComponent::EquipWeapon() {
-	UE_LOG(LogTemp, Warning, TEXT("Equipped"));
+
+	if (MovementComp->IsFalling())
+		return;
 
 	bWeaponEquipped = true;
 	Hero->UpdateMaxWalkSpeed();
 
 	MovementComp->bOrientRotationToMovement = false;
 	Hero->bUseControllerRotationYaw = true;
+
+	Hero->PlayAnimMontage(EquipMontage);
 }
 
 void UCombatComponent::UnequipWeapon() {
-	UE_LOG(LogTemp, Warning, TEXT("Unequipped"));
+
+	if (MovementComp->IsFalling())
+		return;
 
 	bWeaponEquipped = false;
 	Hero->UpdateMaxWalkSpeed();
 
 	MovementComp->bOrientRotationToMovement = true;
 	Hero->bUseControllerRotationYaw = false;
+
+	Hero->PlayAnimMontage(UnequipMontage);
 }
 
