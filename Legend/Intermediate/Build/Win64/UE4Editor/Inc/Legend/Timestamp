@@ -1,11 +1,12 @@
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\EnableMovementNotify.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetClimbNotify.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\ClimbComponent.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\VaultComponent.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetJumpTriggerNotify.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\HeroController.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\LegendGameModeBase.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetVaultNotify.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\VaultComponent.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.h
-C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\CombatComponent.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\HeroController.h
 C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\EquipWeaponNotify.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\LegendGameModeBase.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\ClimbComponent.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\CombatComponent.h
+C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Weapons\Weapon.h

@@ -30,9 +30,13 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
 		UAnimMontage* UnequipMontage;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Combat")
+		TSubclassOf<class AWeapon> WeaponClass;
+
 private:
 	class AHero* Hero;
 	class UCharacterMovementComponent* MovementComp;
+	class AWeapon* Weapon;
 
 
 // Methods
@@ -47,12 +51,15 @@ public:
 	// Hero interface for attacking. Returns true if attacked, false if did not attack
 	bool TryAttack();
 
-	void ToggleEquipped();
 
+#pragma region Equip / Unequip
+	void ToggleEquipped();
 	void EquipWeapon();
 	void UnequipWeapon();
 
 	// Called by notifies
 	void EquipWeaponCallback(class USkeletalMeshComponent* Mesh);
 	void UnequipWeaponCallback(class USkeletalMeshComponent* Mesh);
+#pragma endregion
+
 };

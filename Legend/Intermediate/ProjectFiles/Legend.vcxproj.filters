@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Legend.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DFBDACE5-50C9-419E-BF04-48A09B7DF9FA}</UniqueIdentifier>
+      <UniqueIdentifier>{F0D73435-0B81-4611-A3E5-266B734E43FF}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{4D2A8AAE-0932-4C3F-BDA0-85272A22520D}</UniqueIdentifier>
+      <UniqueIdentifier>{10343B71-91E2-4585-974E-4F439E0D90C8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -27,7 +27,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Legend">
-      <UniqueIdentifier>{849729CC-6EE2-4F55-9284-6D5F0C391039}</UniqueIdentifier>
+      <UniqueIdentifier>{4D93B8AB-AC01-46DD-B376-17507854B346}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Legend\Legend.Build.cs">
       <Filter>Source\Legend</Filter>
@@ -45,7 +45,7 @@
       <Filter>Source\Legend</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero">
-      <UniqueIdentifier>{AEA1630C-CD7E-4302-8233-0345CB3E4FF4}</UniqueIdentifier>
+      <UniqueIdentifier>{C29E40DB-91E4-497B-A897-286ED0FAC5F0}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\Hero.cpp">
       <Filter>Source\Legend\Hero</Filter>
@@ -60,7 +60,7 @@
       <Filter>Source\Legend\Hero</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero\AnimNotifies">
-      <UniqueIdentifier>{8C4389FE-6EE5-43D7-994C-EF730D0A39F9}</UniqueIdentifier>
+      <UniqueIdentifier>{762E0732-7953-4348-BF41-14EAE5B28873}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\AnimNotifies\EnableMovementNotify.cpp">
       <Filter>Source\Legend\Hero\AnimNotifies</Filter>
@@ -93,7 +93,7 @@
       <Filter>Source\Legend\Hero\AnimNotifies</Filter>
     </ClInclude>
     <Filter Include="Source\Legend\Hero\Components">
-      <UniqueIdentifier>{1386521D-BAD4-4FC0-8335-B07329AD5E99}</UniqueIdentifier>
+      <UniqueIdentifier>{5706EF0B-5DC5-4F52-B433-11DA637644E5}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Legend\Hero\Components\ClimbComponent.cpp">
       <Filter>Source\Legend\Hero\Components</Filter>
@@ -112,6 +112,15 @@
     </ClCompile>
     <ClInclude Include="..\..\Source\Legend\Hero\Components\VaultComponent.h">
       <Filter>Source\Legend\Hero\Components</Filter>
+    </ClInclude>
+    <Filter Include="Source\Legend\Weapons">
+      <UniqueIdentifier>{6DB34A83-3A82-415E-B0D1-8D13C94F220F}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Legend\Weapons\Weapon.cpp">
+      <Filter>Source\Legend\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Legend\Weapons\Weapon.h">
+      <Filter>Source\Legend\Weapons</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
