@@ -26,6 +26,8 @@ void UVaultComponent::BeginPlay() {
 }
 
 bool UVaultComponent::QueryVaultSystem() {
+	if (!bComponentEnabled)
+		return false;
 
 	if (bIsBusy)
 		return false;

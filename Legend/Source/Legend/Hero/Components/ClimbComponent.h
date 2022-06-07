@@ -15,6 +15,9 @@ class LEGEND_API UClimbComponent : public UActorComponent
 #pragma region General
 // Variables
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "General")
+		bool bComponentEnabled = true;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 170;
 

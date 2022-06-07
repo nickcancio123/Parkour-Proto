@@ -12,6 +12,7 @@
 #include "Hero.h"
 
 
+
 #pragma region General
 AHero::AHero()
 {
@@ -54,6 +55,9 @@ void AHero::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 	bIsMoveInput = bIsMoveForwardInput || bIsMoveRightInput;
+
+	//if (MovementComp->IsFalling())
+	//	ParkourComp->TryParkour(true);
 }
 
 void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
@@ -180,13 +184,10 @@ void AHero::OnJumpInput() {
 	if (MovementComp->IsFalling())
 		return;
 
-	bool bCanClimb = ClimbComp->QueryClimbSystem();
-	if (bCanClimb)
+	bool bCanParkour = ParkourComp->TryParkour(false);
+	if (bCanParkour)
 		return;
 	
-	bool bCanVault = VaultComp->QueryVaultSystem();
-	if (bCanVault)
-		return;
 
 	bJumpTrigger = true;
 	Jump();
@@ -203,6 +204,7 @@ void AHero::ResetJumpTrigger() {
 	bJumpTrigger = false;
 }
 #pragma endregion
+
 
 
 #pragma region Combat

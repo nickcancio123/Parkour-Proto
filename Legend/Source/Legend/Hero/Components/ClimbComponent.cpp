@@ -35,6 +35,9 @@ void UClimbComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 
 #pragma region Climbing
 bool UClimbComponent::QueryClimbSystem() {
+	if (!bComponentEnabled)
+		return false;
+
 	if (bIsBusy)
 		return false;
 

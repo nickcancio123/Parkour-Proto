@@ -1,0 +1,40 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Legend-9721.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\EnableMovementNotify.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\EquipWeaponNotify.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetClimbNotify.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetJumpTriggerNotify.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetVaultNotify.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ClimbComponent.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\CombatComponent.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ParkourComponent.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\VaultComponent.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Hero.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\HeroController.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Weapon.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Legend.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\LegendGameModeBase.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ClimbComponent.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\CombatComponent.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\EnableMovementNotify.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\EquipWeaponNotify.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Hero.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\HeroController.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Legend.init.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\LegendGameModeBase.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ParkourComponent.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetClimbNotify.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetJumpTriggerNotify.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\ResetVaultNotify.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\VaultComponent.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Weapon.gen.cpp.obj"
+"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\Default.rc2.res"
+/OUT:"C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9721.lib"
+/INCLUDE:IMPLEMENT_MODULE_Legend

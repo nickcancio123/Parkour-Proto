@@ -25,6 +25,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "General")
 		bool bUseDebug = true;
 
+	bool bIsBusy = false;
+
 #pragma region Traces
 	//===OBSTACLE TRACES===
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Obstacle Traces")
@@ -34,11 +36,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Obstacle Traces")
 		float MinObstacleHeightToParkour = 40;
 
-	// Used to detect objects at around head height
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Obstacle Traces")
-		float ObstacleTraceHeightHigh = 220;
-
-	// Used for the clearance trace
+	// Used for the obstacle trace high
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Obstacle Traces")
 		float MaxObstacleHeightToParkour = 230;
 
@@ -46,13 +44,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Height Trace")
 		float HeightTraceDepth = 15;
 
-	// Used for height trace when obstacle is hit by low obstacle trace
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Height Trace")
-		float LowHeightTraceHeight = 180;
-
 	//===Depth Trace===
+	// Used for depth trace: if obstacle depth is greater than -> climb, less than -> vault
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Depth Trace")
-		float DepthTraceDepth = 15;
+		float MaxObstacleDepthToVault = 60;
 #pragma endregion
 
 private:
@@ -64,11 +59,15 @@ private:
 	FVector ActorFeet;
 
 	FHitResult LowObstacleTraceResult;
+	FHitResult MidObstacleTraceResult;
 	FHitResult HighObstacleTraceResult;
-	FHitResult ClearanceTraceResult;
 	FHitResult HeightTraceResult;
 	FHitResult DepthTraceResult;
 
+	// Height at which height trace starts
+	float HeightTraceStartHeight;
+
+	// Discerned height of obstacle hit by traces
 	float ObstacleHeight;
 
 
@@ -81,9 +80,16 @@ public:
 
 	// Public interfaces that congregates vaulting and climbing. Returns true if successfully parkoured
 	// False if not. bIsAuto specifies if function is being called on user input or every tick
-	bool TryParkour(bool bIsAuto);
+	bool TryParkour(bool bIsAutoCall);
 
+private:
 	void RunObstacleTraces();
+
+	// Height determines which animations to play
+	void RunHeightTrace();
+
+	// Depth determines whether vault or climb
+	void RunDepthTrace();
 
 #pragma endregion
 
@@ -91,22 +97,51 @@ public:
 
 #pragma region Climbing
 // Variables
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		bool bCanAutoClimb = true;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float MaxObstacleHeightToAutoClimb = 80;
 
 // Methods
+private:
+	// Does obstacle fit climb parameters
+	bool CanClimb();
+	
+	// Do climb settings permit circumstances
+	bool ShouldClimb(bool bCanClimb, bool bIsAutoCall);
 #pragma endregion
 
 
 
 #pragma region Vaulting
 // Variables
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		bool bCanAutoVault = false;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		float MaxObstacleHeightToAutoVault = 80;
 
 // Methods
+private:
+	// Does obstacle fit vault parameters
+	bool CanVault();
+
+	// Do vault settings permit circumstances
+	bool ShouldVault(bool bCanVault, bool bIsAutoCall);
+
 #pragma endregion
 
 
 #pragma region Utility	
+	// Traces along the actor forward vector from actor at specified height
 	void TraceForwardFromActor(FHitResult& TraceResult, float TraceHeight, float TraceRange);
+
+	// Traces downward, in front of the actor, at specified start height and depth
+	void TraceDownAheadOfActor(FHitResult& TraceResult, float TraceHeight, float TraceDepth, float TraceRange);
+
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
 #pragma endregion 
-		
 };

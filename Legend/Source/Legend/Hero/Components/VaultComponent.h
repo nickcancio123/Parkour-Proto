@@ -36,6 +36,9 @@ class LEGEND_API UVaultComponent : public UActorComponent
 
 // Variables
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "General")
+		bool bComponentEnabled = true;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "General")
 		float ActorHeight = 150;
 
