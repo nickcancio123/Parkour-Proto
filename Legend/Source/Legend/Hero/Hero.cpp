@@ -6,6 +6,7 @@
 #include "Legend/Hero/Hero.h"
 #include "Legend/Hero/Components/ClimbComponent.h"
 #include "Legend/Hero/Components/VaultComponent.h"
+#include "Legend/Hero/Components/ParkourComponent.h"
 #include "Legend/Hero/Components/CombatComponent.h"
 #include "DrawDebugHelpers.h"
 #include "Hero.h"
@@ -31,6 +32,9 @@ AHero::AHero()
 	VaultComp = CreateDefaultSubobject<UVaultComponent>("Vault Component");
 	this->AddOwnedComponent(VaultComp);
 
+	ParkourComp = CreateDefaultSubobject<UParkourComponent>("Parkour Component");
+	this->AddOwnedComponent(ParkourComp);
+
 	CombatComp = CreateDefaultSubobject<UCombatComponent>("Combat Component");
 	this->AddOwnedComponent(CombatComp);
 }
@@ -41,6 +45,7 @@ void AHero::BeginPlay()
 	
 	ClimbComp = FindComponentByClass<UClimbComponent>();	
 	VaultComp = FindComponentByClass<UVaultComponent>();	
+	ParkourComp = FindComponentByClass<UParkourComponent>();
 	CombatComp = FindComponentByClass<UCombatComponent>();	
 }
 

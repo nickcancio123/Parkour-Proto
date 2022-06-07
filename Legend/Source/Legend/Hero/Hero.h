@@ -27,6 +27,9 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Vaulting")
 		class UVaultComponent* VaultComp;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Parkour")
+		class UParkourComponent* ParkourComp;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Combat")
 		class UCombatComponent* CombatComp;
 
