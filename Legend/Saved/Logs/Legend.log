@@ -3228,3 +3228,837 @@ Script Stack (0 frames):
 [2022.06.09-20.41.59:986][476]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
 [2022.06.09-20.42.00:026][476]LogUObjectHash: Compacting FUObjectHashTables data took   5.76ms
 [2022.06.09-20.42.00:089][477]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2022.06.09-21.12.43:189][ 10]LogContentBrowser: Deferred new asset folder creation: NewFolder
+[2022.06.09-21.12.43:221][ 10]LogContentBrowser: Creating deferred item: NewFolder
+[2022.06.09-21.12.45:381][ 88]LogContentBrowser: Attempting asset rename: NewFolder -> Parkour
+[2022.06.09-21.12.45:392][ 88]LogContentBrowser: End creating deferred item NewFolder
+[2022.06.09-21.12.50:413][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_OntoBB6B056147EA09DFAF99B49BD2D99CCD.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Onto.uasset'
+[2022.06.09-21.12.50:608][224]LogUObjectHash: Compacting FUObjectHashTables data took   3.40ms
+[2022.06.09-21.12.50:660][224]LogUObjectHash: Compacting FUObjectHashTables data took   2.71ms
+[2022.06.09-21.12.50:689][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2022.06.09-21.12.50:731][224]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.12.50:924][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_Hero9CFA084E41ECF4BAA17B0188CE8F5B1A.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.12.51:116][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_MidFB56E84C4B5F6C488D2B9596375A7C03.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Mid.uasset'
+[2022.06.09-21.12.51:141][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_ShortF27EB96549ECC7664066DC8B1F7C6995.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Short.uasset'
+[2022.06.09-21.12.51:167][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_TallEBE331E4404F5465C462CBB4A077D349.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Tall.uasset'
+[2022.06.09-21.12.51:189][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOnto0FEBFF54464F54D12479BCB4C26DD7C7.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Onto/BS_VaultOnto.uasset'
+[2022.06.09-21.12.51:225][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOver_ShortB4BC898F4A357F27CFA935B746E5465C.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Over/VaultOver_Short.uasset'
+[2022.06.09-21.12.51:258][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOver_TallE55D6E1E41396606F51AC4B7E1389605.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Over/VaultOver_Tall.uasset'
+[2022.06.09-21.12.51:281][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOver809E7B3D4B221B74C0D643BD97BC8208.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Over/BS_VaultOver.uasset'
+[2022.06.09-21.12.51:489][224]LogUObjectHash: Compacting FUObjectHashTables data took   2.62ms
+[2022.06.09-21.12.51:518][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2022.06.09-21.12.51:548][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2022.06.09-21.12.51:578][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2022.06.09-21.12.51:605][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2022.06.09-21.12.51:634][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.89ms
+[2022.06.09-21.12.51:660][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2022.06.09-21.12.51:701][224]LogUObjectHash: Compacting FUObjectHashTables data took   3.30ms
+[2022.06.09-21.12.51:730][224]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2022.06.09-21.12.51:828][224]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.12.51:974][224]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_Hero492D1CAE434D3EE38E4394BDE030DBB5.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.12.52:085][224]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/Climb_Onto.Climb_Onto
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Mid.VaultOnto_Mid
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Short.VaultOnto_Short
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Onto/VaultOnto_Tall.VaultOnto_Tall
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/Onto/BS_VaultOnto.BS_VaultOnto
+[2022.06.09-21.12.52:085][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Over/VaultOver_Short.VaultOver_Short
+[2022.06.09-21.12.52:086][224]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Over/VaultOver_Tall.VaultOver_Tall
+[2022.06.09-21.12.52:086][224]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/Over/BS_VaultOver.BS_VaultOver
+[2022.06.09-21.12.52:086][224]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.13.13:726][790]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOver23E852A545B69FD428288C8914069A3F.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOver.uasset'
+[2022.06.09-21.13.13:751][790]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOver_Short26CC28654D5F19F2C2885280D6BB6570.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/VaultOver_Short.uasset'
+[2022.06.09-21.13.13:775][790]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOver_Tall8F2842404C5D55228627C99D7B1E115F.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/VaultOver_Tall.uasset'
+[2022.06.09-21.13.13:949][790]LogUObjectHash: Compacting FUObjectHashTables data took   3.54ms
+[2022.06.09-21.13.13:980][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2022.06.09-21.13.14:011][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2022.06.09-21.13.14:053][790]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2022.06.09-21.13.14:084][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2022.06.09-21.13.14:118][790]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.13.14:277][790]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_HeroFD5537D348D75FEFB6CAA89C62512C10.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.13.14:361][790]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.13.14:361][790]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/VaultOver_Short.VaultOver_Short
+[2022.06.09-21.13.14:361][790]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/VaultOver_Tall.VaultOver_Tall
+[2022.06.09-21.13.14:361][790]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOver.BS_VaultOver
+[2022.06.09-21.13.14:361][790]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.13.22:107][973]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOntoA94E395C43C1E1735591699BC3D8BBD9.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOnto.uasset'
+[2022.06.09-21.13.22:135][973]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_Mid02BA45F546070814244EE7BFBF7CDF4B.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/VaultOnto_Mid.uasset'
+[2022.06.09-21.13.22:162][973]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_Short97F2D0E242353DA160590CBDF614B375.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/VaultOnto_Short.uasset'
+[2022.06.09-21.13.22:188][973]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_Tall2009C2A64E0BA22D6BBA07A3AFABC47A.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/VaultOnto_Tall.uasset'
+[2022.06.09-21.13.22:376][973]LogUObjectHash: Compacting FUObjectHashTables data took   3.26ms
+[2022.06.09-21.13.22:411][973]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2022.06.09-21.13.22:442][973]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2022.06.09-21.13.22:470][973]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2022.06.09-21.13.22:508][973]LogUObjectHash: Compacting FUObjectHashTables data took   2.58ms
+[2022.06.09-21.13.22:536][973]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2022.06.09-21.13.22:578][973]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.13.22:721][973]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_Hero680AE44A46082BC6406B7CA7A462C20E.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.13.22:827][973]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.13.22:827][973]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/VaultOnto_Mid.VaultOnto_Mid
+[2022.06.09-21.13.22:827][973]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/VaultOnto_Short.VaultOnto_Short
+[2022.06.09-21.13.22:827][973]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/VaultOnto_Tall.VaultOnto_Tall
+[2022.06.09-21.13.22:827][973]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOnto.BS_VaultOnto
+[2022.06.09-21.13.22:827][973]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.14.10:626][209]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_Tall84C614254BC830F0FE67038BDC68AF42.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Tall.uasset'
+[2022.06.09-21.14.10:650][209]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_Short973DF3D04F1658570A46B6AB38132CE8.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Short.uasset'
+[2022.06.09-21.14.10:679][209]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_MidD6398A3B414DEA9C8721AC803CF5A8E6.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Mid.uasset'
+[2022.06.09-21.14.10:702][209]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOnto9CBF78B44440053946301B8FF5DD6792.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/BS_VaultOnto.uasset'
+[2022.06.09-21.14.10:897][209]LogUObjectHash: Compacting FUObjectHashTables data took   3.60ms
+[2022.06.09-21.14.10:926][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.75ms
+[2022.06.09-21.14.10:956][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2022.06.09-21.14.10:983][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2022.06.09-21.14.11:021][209]LogUObjectHash: Compacting FUObjectHashTables data took   2.62ms
+[2022.06.09-21.14.11:048][209]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2022.06.09-21.14.11:080][209]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.14.11:211][209]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_Hero2015D854494C87DDC33BE3A1CA2D41DD.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.14.11:303][209]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.14.11:303][209]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Mid.VaultOnto_Mid
+[2022.06.09-21.14.11:303][209]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Short.VaultOnto_Short
+[2022.06.09-21.14.11:303][209]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Tall.VaultOnto_Tall
+[2022.06.09-21.14.11:303][209]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_VaultOnto.BS_VaultOnto
+[2022.06.09-21.14.11:303][209]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.14.21:527][481]LogContentBrowser: Attempting asset rename: VaultOver_Tall -> Vault_Tall
+[2022.06.09-21.14.21:717][481]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault_TallB4E33C2243D73DF26B6FA38A2CC6C2C0.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault_Tall.uasset'
+[2022.06.09-21.14.21:876][481]LogUObjectHash: Compacting FUObjectHashTables data took   4.18ms
+[2022.06.09-21.14.21:923][481]LogUObjectHash: Compacting FUObjectHashTables data took   3.26ms
+[2022.06.09-21.14.21:954][481]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2022.06.09-21.14.21:975][481]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOverDC8B1E5741C58EBC107EDF95C06C8D50.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOver.uasset'
+[2022.06.09-21.14.22:051][481]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.14.22:051][481]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Vault_Tall.Vault_Tall
+[2022.06.09-21.14.22:052][481]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOver.BS_VaultOver
+[2022.06.09-21.14.30:060][662]LogContentBrowser: Attempting asset rename: VaultOver_Short -> Vault_Short
+[2022.06.09-21.14.30:192][662]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault_Short505B98B44B80B079D940DE866C3960DD.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault_Short.uasset'
+[2022.06.09-21.14.30:317][662]LogUObjectHash: Compacting FUObjectHashTables data took   3.62ms
+[2022.06.09-21.14.30:361][662]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2022.06.09-21.14.30:397][662]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2022.06.09-21.14.30:417][662]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOver46B938794F77072B8A5E0799C3A49387.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOver.uasset'
+[2022.06.09-21.14.30:491][662]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.14.30:491][662]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Vault_Short.Vault_Short
+[2022.06.09-21.14.30:491][662]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOver.BS_VaultOver
+[2022.06.09-21.14.41:869][910]LogContentBrowser: Attempting asset rename: BS_VaultOver -> BS_Vault
+[2022.06.09-21.14.42:001][910]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultFB2A3F3349BEF4A07D668B9238B6BD7E.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_Vault.uasset'
+[2022.06.09-21.14.42:157][910]LogUObjectHash: Compacting FUObjectHashTables data took   3.39ms
+[2022.06.09-21.14.42:205][910]LogUObjectHash: Compacting FUObjectHashTables data took   3.02ms
+[2022.06.09-21.14.42:233][910]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.06.09-21.14.42:269][910]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.14.42:398][910]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_Hero95A3117044A99555A5CDB3847CB26A80.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.14.42:470][910]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.14.42:470][910]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_Vault.BS_Vault
+[2022.06.09-21.14.42:471][910]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.15.07:217][684]LogContentBrowser: Attempting asset rename: BS_VaultOnto -> BS_VaultOnto
+[2022.06.09-21.15.12:279][799]Cmd: TRANSACTION UNDO
+[2022.06.09-21.15.12:279][799]LogEditorTransaction: Undo Edit Z
+[2022.06.09-21.15.12:664][799]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_7:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2022.06.09-21.15.20:268][ 11]LogContentBrowser: Attempting asset rename: BS_Vault -> BS_VaultOnto
+[2022.06.09-21.15.20:488][ 11]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOnto96D6F8CA4876FCD3FA6929A60CF12E2A.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOnto.uasset'
+[2022.06.09-21.15.20:642][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   4.16ms
+[2022.06.09-21.15.20:690][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   2.88ms
+[2022.06.09-21.15.20:720][ 11]LogUObjectHash: Compacting FUObjectHashTables data took   0.81ms
+[2022.06.09-21.15.20:751][ 11]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.15.20:875][ 11]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_HeroE6C17AE647CFAF32F0E1DD84CB0F0112.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.15.20:949][ 11]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.15.20:950][ 11]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOnto.BS_VaultOnto
+[2022.06.09-21.15.20:950][ 11]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.15.27:864][201]LogContentBrowser: Attempting asset rename: BS_VaultOnto -> BS_VaultOver
+[2022.06.09-21.15.28:012][201]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultOverB0186813449F6F22BBAE929A1FF955FC.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_VaultOver.uasset'
+[2022.06.09-21.15.28:135][201]LogUObjectHash: Compacting FUObjectHashTables data took   4.66ms
+[2022.06.09-21.15.28:189][201]LogUObjectHash: Compacting FUObjectHashTables data took   3.28ms
+[2022.06.09-21.15.28:222][201]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2022.06.09-21.15.28:300][201]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/ABP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset" SILENT=true
+[2022.06.09-21.15.28:469][201]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/ABP_HeroD69429854398B64A82CE31A939385A1B.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/ABP_Hero.uasset'
+[2022.06.09-21.15.28:546][201]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.15.28:546][201]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_VaultOver.BS_VaultOver
+[2022.06.09-21.15.28:546][201]LogContentValidation: Display: Validating AnimBlueprint /Game/Hero/ABP_Hero.ABP_Hero
+[2022.06.09-21.15.40:691][493]LogSlate: Window 'Pick Skeleton' being destroyed
+[2022.06.09-21.15.40:718][493]LogContentBrowser: Deferred new asset file creation: NewBlendSpace1D
+[2022.06.09-21.15.40:733][493]LogContentBrowser: Creating deferred item: NewBlendSpace1D
+[2022.06.09-21.15.42:973][572]LogContentBrowser: Attempting asset rename: NewBlendSpace1D -> BS_Vault
+[2022.06.09-21.15.42:997][572]LogContentBrowser: End creating deferred item NewBlendSpace1D
+[2022.06.09-21.15.53:927][821]LogSlate: Window 'Pick Skeleton' being destroyed
+[2022.06.09-21.15.53:953][821]LogContentBrowser: Deferred new asset file creation: NewBlendSpace1D
+[2022.06.09-21.15.53:970][821]LogContentBrowser: Creating deferred item: NewBlendSpace1D
+[2022.06.09-21.15.56:374][901]LogContentBrowser: Attempting asset rename: NewBlendSpace1D -> BS_Climb
+[2022.06.09-21.15.56:396][901]LogContentBrowser: End creating deferred item NewBlendSpace1D
+[2022.06.09-21.15.58:141][947]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb
+[2022.06.09-21.15.59:355][981]LogUObjectHash: Compacting FUObjectHashTables data took   8.44ms
+[2022.06.09-21.15.59:428][981]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_VaultAE32DC88423D4D26B4928D87DC7F257C.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/BS_Vault.uasset'
+[2022.06.09-21.15.59:455][981]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_Climb8C99FE084767D85C13658ABA4B0175B7.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/BS_Climb.uasset'
+[2022.06.09-21.15.59:481][981]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.15.59:481][981]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb
+[2022.06.09-21.15.59:481][981]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Vaulting/BS_Vault.BS_Vault
+[2022.06.09-21.16.33:975][776]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Tall.VaultOnto_Tall
+[2022.06.09-21.16.38:664][882]LogAssetEditorSubsystem: Opening Asset editor for AnimSequence /Game/Hero/Animation/Parkour/Climbing/Climb_Onto.Climb_Onto
+[2022.06.09-21.16.38:819][882]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.16.38:819][882]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.17.13:609][219]LogUObjectHash: Compacting FUObjectHashTables data took  33.18ms
+[2022.06.09-21.17.13:615][219]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/Demo' took 0.936
+[2022.06.09-21.27.14:172][ 10]LogUObjectHash: Compacting FUObjectHashTables data took   5.76ms
+[2022.06.09-21.27.14:174][ 10]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/Demo' took 0.165
+[2022.06.09-21.29.42:489][498]LogAssetEditorSubsystem: Opening Asset editor for BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb
+[2022.06.09-21.29.42:644][498]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.29.42:644][498]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.30.28:523][637]LogContentBrowser: Verbose: The majority of assets in the view are of type: None
+[2022.06.09-21.30.30:074][683]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2022.06.09-21.30.35:176][803]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.30.35:176][803]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.30.37:607][846]LogWorld: UWorld::CleanupWorld for World_14, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.30.37:607][846]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.30.40:296][895]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.30.40:296][895]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.30.46:327][ 40]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.30.46:327][ 40]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.33.32:536][720]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_ClimbC147189C40342B2808DEFF8E401D6567.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/BS_Climb.uasset'
+[2022.06.09-21.33.32:605][720]AssetCheck: New page: Asset Save: BS_Climb
+[2022.06.09-21.33.32:606][720]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb
+[2022.06.09-21.33.53:602][221]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.33.53:602][221]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.33.56:109][266]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.33.56:109][266]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.33.58:406][312]LogWorld: UWorld::CleanupWorld for World_19, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.33.58:406][312]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.34.00:364][352]LogUObjectHash: Compacting FUObjectHashTables data took   8.11ms
+[2022.06.09-21.34.00:478][352]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_Onto61DEB1CC41BAF829C48B228489B5BC59.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Onto.uasset'
+[2022.06.09-21.34.00:567][352]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_TallD59854D448AC9D3E3875FE98F701D5AE.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Tall.uasset'
+[2022.06.09-21.34.00:634][352]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_ShortF955A7434E92F54F7A4CF993237EEBE0.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Short.uasset'
+[2022.06.09-21.34.00:701][352]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/VaultOnto_MidAA766FCE4295CD3CEFBFCAA6CC9AB8C1.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/VaultOnto_Mid.uasset'
+[2022.06.09-21.34.00:748][352]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-21.34.00:748][352]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/Climb_Onto.Climb_Onto
+[2022.06.09-21.34.00:748][352]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Mid.VaultOnto_Mid
+[2022.06.09-21.34.00:748][352]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Short.VaultOnto_Short
+[2022.06.09-21.34.00:749][352]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/VaultOnto_Tall.VaultOnto_Tall
+[2022.06.09-21.34.03:722][426]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.34.03:722][426]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.34.03:935][426]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.34.03:935][426]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.34.04:289][426]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.34.04:289][426]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.37.15:257][ 39]LogUObjectHash: Compacting FUObjectHashTables data took  27.99ms
+[2022.06.09-21.37.15:373][ 39]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/Demo' took 0.395
+[2022.06.09-21.39.22:148][ 67]Candidate modules for hot reload:
+[2022.06.09-21.39.22:148][ 67]  Legend
+[2022.06.09-21.39.22:151][ 67]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,6128 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-21.39.22:208][ 67]Warning: Starting HotReload took  0.1s.
+[2022.06.09-21.39.32:140][228]LogSlate: Window 'Pick Skeleton' being destroyed
+[2022.06.09-21.39.32:163][228]LogContentBrowser: Deferred new asset file creation: NewAnimMontage
+[2022.06.09-21.39.32:193][228]LogContentBrowser: Creating deferred item: NewAnimMontage
+[2022.06.09-21.39.34:839][289]LogContentBrowser: Attempting asset rename: NewAnimMontage -> Climb_Montage
+[2022.06.09-21.39.34:875][289]LogContentBrowser: End creating deferred item NewAnimMontage
+[2022.06.09-21.39.46:688][482]LogSlate: Window 'Pick Skeleton' being destroyed
+[2022.06.09-21.39.46:712][482]LogContentBrowser: Deferred new asset file creation: NewAnimMontage
+[2022.06.09-21.39.46:743][482]LogContentBrowser: Creating deferred item: NewAnimMontage
+[2022.06.09-21.39.52:197][621]LogContentBrowser: Attempting asset rename: NewAnimMontage -> Vault_Montage
+[2022.06.09-21.39.52:198][621]LogContentBrowser: End creating deferred item NewAnimMontage
+[2022.06.09-21.39.57:047][723]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_MontageA9289E1A4C7DF19330D4BA9E516CEE07.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Montage.uasset'
+[2022.06.09-21.39.57:077][723]AssetCheck: New page: Asset Save: Climb_Montage
+[2022.06.09-21.39.57:078][723]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-21.39.58:249][744]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-21.39.58:391][744]LogActorComponent: RegisterComponentWithWorld: (/Engine/Transient.World_21:PersistentLevel.AnimationEditorPreviewActor_0.DebugSkelMeshComponent_0) Already registered. Aborting.
+[2022.06.09-21.40.01:479][773]LogSlate: Window 'Climb_Montage' being destroyed
+[2022.06.09-21.40.03:386][823]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2022.06.09-21.40.24:824][165]LogSlate: Window 'Message' being destroyed
+[2022.06.09-21.40.24:839][165]Message dialog closed, result: Ok, title: Message, text: Make sure the target animation is valid. Check to make sure if it's same additive type if additive.
+[2022.06.09-21.40.30:843][324]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 1:40:30 PM
+[2022.06.09-21.40.30:855][324]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-21.40.30:855][324]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Reflection code generated for LegendEditor in 13.4715754 seconds
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: License is invalid:
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Build ID: {F761F3D0-6DEC-4129-A72E-62A9C8D8801A}
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: ParkourComponent.cpp (0:20.29 at +0:00)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: Hero.cpp (0:15.87 at +0:20)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: ParkourComponent.gen.cpp (0:04.53 at +0:36)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: UE4Editor-Legend-6128.lib (0:01.01 at +0:40)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6128.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6128.exp
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: UE4Editor-Legend-6128.dll (0:03.59 at +0:41)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6128.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6128.suppressed.exp
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: LegendEditor.target (0:02.31 at +0:45)
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-21.40.30:856][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:856][324]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-21.40.30:857][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:857][324]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-21.40.30:857][324]CompilerResultsLog:    - License is invalid
+[2022.06.09-21.40.30:857][324]CompilerResultsLog: 
+[2022.06.09-21.40.30:857][324]CompilerResultsLog: Total time in XGE executor: 49.74 seconds
+[2022.06.09-21.40.30:857][324]CompilerResultsLog: Total execution time: 67.47 seconds
+[2022.06.09-21.40.30:858][324]LogMainFrame: MainFrame: Module compiling took 68.729 seconds
+[2022.06.09-21.40.31:944][324]LogClass: EVaultOntoType HotReload.
+[2022.06.09-21.40.31:945][324]LogClass: EVaultOverType HotReload.
+[2022.06.09-21.40.32:028][324]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0076 seconds. Added 13 classes and 6 folders.
+[2022.06.09-21.40.32:034][324]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-21.40.32:454][324]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0621 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-21.40.32:456][324]Display: HotReload took 70.4s.
+[2022.06.09-21.40.57:586][  0]LogSlate: Window 'Message' being destroyed
+[2022.06.09-21.40.57:598][  0]Message dialog closed, result: Ok, title: Message, text: Make sure the target animation is valid. Check to make sure if it's same additive type if additive.
+[2022.06.09-21.41.42:472][412]LogSlate: Took 0.003192 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Black.ttf' (162K)
+[2022.06.09-21.42.14:916][333]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.42.14:919][333]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.44.10:646][ 18]LogAnimation: Warning: Remove Empty Sequence (AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage)
+[2022.06.09-21.44.20:237][ 18]LogSlate: Window 'Message' being destroyed
+[2022.06.09-21.44.20:256][ 18]Message dialog closed, result: Cancel, title: Message, text: Make sure the target animation is valid. Check to make sure if it's same additive type if additive.
+[2022.06.09-21.44.51:277][948]LogWorld: UWorld::CleanupWorld for World_25, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.44.51:278][948]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.44.52:064][967]LogWorld: UWorld::CleanupWorld for World_26, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.44.52:064][967]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.44.57:005][119]LogWorld: UWorld::CleanupWorld for World_27, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.44.57:005][119]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.47.03:821][932]LogContentBrowser: Verbose: The majority of assets in the view are of type: None
+[2022.06.09-21.47.04:213][945]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimSequence
+[2022.06.09-21.47.07:306][ 38]LogWorld: UWorld::CleanupWorld for World_28, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-21.47.07:306][ 38]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-21.47.44:023][484]LogUObjectHash: Compacting FUObjectHashTables data took   9.61ms
+[2022.06.09-21.47.44:038][484]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Maps/Demo' took 0.633
+[2022.06.09-21.47.44:045][484]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Hero/Animation/Parkour/Climbing/BS_Climb] ([1] browsable assets)...
+[2022.06.09-21.47.44:066][484]OBJ SavePackage:     Rendered thumbnail for [BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb]
+[2022.06.09-21.47.44:066][484]OBJ SavePackage: Finished generating thumbnails for package [/Game/Hero/Animation/Parkour/Climbing/BS_Climb]
+[2022.06.09-21.47.44:072][484]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_Climb_Auto1523FF961429CFC37D980E6AF17ECE0CA.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Autosaves/Game/Hero/Animation/Parkour/Climbing/BS_Climb_Auto1.uasset'
+[2022.06.09-21.47.44:073][484]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Hero/Animation/Parkour/Climbing/Climb_Montage] ([1] browsable assets)...
+[2022.06.09-21.47.44:091][484]OBJ SavePackage:     Rendered thumbnail for [AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage]
+[2022.06.09-21.47.44:091][484]OBJ SavePackage: Finished generating thumbnails for package [/Game/Hero/Animation/Parkour/Climbing/Climb_Montage]
+[2022.06.09-21.47.44:096][484]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_Montage_Auto178843F4946DD0401A424BA80C9F52F3A.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Autosaves/Game/Hero/Animation/Parkour/Climbing/Climb_Montage_Auto1.uasset'
+[2022.06.09-21.47.44:097][484]LogFileHelpers: Auto-saving content packages took 0.055
+[2022.06.09-21.56.47:709][425]Candidate modules for hot reload:
+[2022.06.09-21.56.47:709][425]  Legend
+[2022.06.09-21.56.47:710][425]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,2065 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-21.56.47:766][425]Warning: Starting HotReload took  0.1s.
+[2022.06.09-21.57.41:503][622]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 1:57:41 PM
+[2022.06.09-21.57.41:511][622]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-21.57.41:512][622]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-21.57.41:512][622]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-21.57.41:512][622]CompilerResultsLog: Reflection code generated for LegendEditor in 8.2833043 seconds
+[2022.06.09-21.57.41:512][622]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-21.57.41:512][622]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-21.57.41:512][622]CompilerResultsLog: Distributing 7 actions to XGE
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: License is invalid:
+[2022.06.09-21.57.41:513][622]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-21.57.41:513][622]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: Build ID: {C0BF5C21-09BD-4BF4-AC54-CA6360E94BBC}
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: ParkourComponent.cpp (0:12.82 at +0:00)
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: Hero.cpp (0:14.51 at +0:12)
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: Legend.init.gen.cpp (0:04.32 at +0:27)
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: ParkourComponent.gen.cpp (0:02.93 at +0:31)
+[2022.06.09-21.57.41:513][622]CompilerResultsLog: UE4Editor-Legend-2065.lib (0:01.07 at +0:34)
+[2022.06.09-21.57.41:513][622]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2065.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2065.exp
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: UE4Editor-Legend-2065.dll (0:02.11 at +0:35)
+[2022.06.09-21.57.41:514][622]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2065.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2065.suppressed.exp
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: LegendEditor.target (0:01.75 at +0:37)
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:514][622]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-21.57.41:514][622]CompilerResultsLog:    - License is invalid
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: 
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: Total time in XGE executor: 40.62 seconds
+[2022.06.09-21.57.41:514][622]CompilerResultsLog: Total execution time: 52.02 seconds
+[2022.06.09-21.57.41:516][622]LogMainFrame: MainFrame: Module compiling took 53.818 seconds
+[2022.06.09-21.57.42:479][622]LogClass: Could not find existing class ParkourComponent in package /Script/Legend for HotReload, assuming new class
+[2022.06.09-21.57.42:658][622]LogClass: EVaultOntoType HotReload.
+[2022.06.09-21.57.42:659][622]LogClass: EVaultOverType HotReload.
+[2022.06.09-21.57.42:803][622]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.06.09-21.57.42:969][622]LogProperty: Warning: Serialized Class /Script/Legend.ParkourComponent for a property of Class /Engine/Transient.HOTRELOADED_ParkourComponent_0. Reference will be nullptred.
+    Property = ObjectProperty /Script/Legend.Hero:ParkourComp
+    Item = ParkourComponent /Game/Hero/BP_Hero.Default__BP_Hero_C:Parkour Component
+[2022.06.09-21.57.42:991][622]LogProperty: Warning: Serialized Class /Script/Legend.ParkourComponent for a property of Class /Engine/Transient.HOTRELOADED_ParkourComponent_0. Reference will be nullptred.
+    Property = ObjectProperty /Script/Legend.Hero:ParkourComp
+    Item = ParkourComponent /Game/Hero/BP_Hero.Default__SKEL_BP_Hero_C:Parkour Component
+[2022.06.09-21.57.43:074][622]LogProperty: Warning: Serialized Class /Script/Legend.ParkourComponent for a property of Class /Engine/Transient.HOTRELOADED_ParkourComponent_0. Reference will be nullptred.
+    Property = ObjectProperty /Script/Legend.Hero:ParkourComp
+    Item = ParkourComponent /Engine/Transient.World_4:PersistentLevel.BP_Hero_C_0.Parkour Component
+[2022.06.09-21.57.43:082][622]LogProperty: Warning: Serialized Class /Script/Legend.ParkourComponent for a property of Class /Engine/Transient.HOTRELOADED_ParkourComponent_0. Reference will be nullptred.
+    Property = ObjectProperty /Script/Legend.Hero:ParkourComp
+    Item = ParkourComponent /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_1.Parkour Component
+[2022.06.09-21.57.43:495][622]LogHotReload: Re-instancing ParkourComponent after hot-reload.
+[2022.06.09-21.57.43:542][622]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0032 seconds. Added 13 classes and 6 folders.
+[2022.06.09-21.57.43:550][622]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-21.57.44:206][622]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0365 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-21.57.44:208][622]Display: HotReload took 56.6s.
+[2022.06.09-22.00.10:471][ 56]Candidate modules for hot reload:
+[2022.06.09-22.00.10:472][ 56]  Legend
+[2022.06.09-22.00.10:472][ 56]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,9130 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.00.10:531][ 56]Warning: Starting HotReload took  0.1s.
+[2022.06.09-22.00.50:388][229]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 2:00:50 PM
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-22.00.50:390][229]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Reflection code generated for LegendEditor in 7.677703 seconds
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-22.00.50:390][229]CompilerResultsLog: Distributing 7 actions to XGE
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: License is invalid:
+[2022.06.09-22.00.50:391][229]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-22.00.50:391][229]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: Build ID: {F7F4079D-3D96-431C-932F-F19E50E377C2}
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: ParkourComponent.cpp (0:13.90 at +0:00)
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: Hero.cpp (0:05.23 at +0:14)
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: Legend.init.gen.cpp (0:02.78 at +0:19)
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: ParkourComponent.gen.cpp (0:02.03 at +0:22)
+[2022.06.09-22.00.50:391][229]CompilerResultsLog: UE4Editor-Legend-9130.lib (0:00.81 at +0:24)
+[2022.06.09-22.00.50:391][229]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9130.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9130.exp
+[2022.06.09-22.00.50:392][229]CompilerResultsLog: UE4Editor-Legend-9130.dll (0:01.56 at +0:24)
+[2022.06.09-22.00.50:393][229]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9130.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-9130.suppressed.exp
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: LegendEditor.target (0:01.34 at +0:26)
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:393][229]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-22.00.50:393][229]CompilerResultsLog:    - License is invalid
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: 
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: Total time in XGE executor: 28.68 seconds
+[2022.06.09-22.00.50:393][229]CompilerResultsLog: Total execution time: 38.90 seconds
+[2022.06.09-22.00.50:394][229]LogMainFrame: MainFrame: Module compiling took 39.931 seconds
+[2022.06.09-22.00.51:527][229]LogClass: Could not find existing class ParkourComponent in package /Script/Legend for HotReload, assuming new class
+[2022.06.09-22.00.51:542][229]LogClass: EVaultOntoType HotReload.
+[2022.06.09-22.00.51:542][229]LogClass: EVaultOverType HotReload.
+[2022.06.09-22.00.51:561][229]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.06.09-22.00.51:921][229]LogHotReload: Re-instancing ParkourComponent after hot-reload.
+[2022.06.09-22.00.51:952][229]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0012 seconds. Added 13 classes and 6 folders.
+[2022.06.09-22.00.51:959][229]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-22.00.52:282][229]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0231 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-22.00.52:283][229]Display: HotReload took 41.9s.
+[2022.06.09-22.05.52:825][177]Candidate modules for hot reload:
+[2022.06.09-22.05.52:825][177]  Legend
+[2022.06.09-22.05.52:825][177]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,7660 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.05.52:842][177]Warning: Starting HotReload took  0.1s.
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 2:06:37 PM
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-22.06.37:027][332]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: Reflection code generated for LegendEditor in 6.0618359 seconds
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-22.06.37:027][332]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: Distributing 7 actions to XGE
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: License is invalid:
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: Build ID: {26FB8C1F-E5D6-42E9-AD40-E8AC261AB3C3}
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: ParkourComponent.cpp (0:13.28 at +0:00)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: Hero.cpp (0:08.59 at +0:13)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: Legend.init.gen.cpp (0:04.04 at +0:21)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: ParkourComponent.gen.cpp (0:03.01 at +0:26)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: UE4Editor-Legend-7660.lib (0:01.28 at +0:29)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-7660.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-7660.exp
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: UE4Editor-Legend-7660.dll (0:02.39 at +0:30)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-7660.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-7660.suppressed.exp
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: LegendEditor.target (0:01.21 at +0:32)
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-22.06.37:032][332]CompilerResultsLog:    - License is invalid
+[2022.06.09-22.06.37:032][332]CompilerResultsLog: 
+[2022.06.09-22.06.37:033][332]CompilerResultsLog: Total time in XGE executor: 34.56 seconds
+[2022.06.09-22.06.37:033][332]CompilerResultsLog: Total execution time: 42.63 seconds
+[2022.06.09-22.06.37:033][332]LogMainFrame: MainFrame: Module compiling took 44.216 seconds
+[2022.06.09-22.06.38:106][332]LogClass: Could not find existing class ParkourComponent in package /Script/Legend for HotReload, assuming new class
+[2022.06.09-22.06.38:145][332]LogClass: EVaultOntoType HotReload.
+[2022.06.09-22.06.38:145][332]LogClass: EVaultOverType HotReload.
+[2022.06.09-22.06.38:164][332]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.06.09-22.06.38:301][332]LogHotReload: Re-instancing ParkourComponent after hot-reload.
+[2022.06.09-22.06.38:379][332]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0005 seconds. Added 13 classes and 6 folders.
+[2022.06.09-22.06.38:392][332]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-22.06.38:644][332]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0132 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-22.06.38:644][332]Display: HotReload took 45.9s.
+[2022.06.09-22.06.39:393][333]LogAudioMixer: Display: Audio Buffer Underrun (starvation) detected.
+[2022.06.09-22.07.31:070][620]LogTemp: Repeating last play command: Selected Viewport
+[2022.06.09-22.07.31:149][620]BlueprintLog: New page: Pre-Play auto-recompile
+[2022.06.09-22.07.31:153][620]LogPlayLevel: [PlayLevel] Compiling ABP_Hero before play...
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08CD
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0900
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property Character Movement
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:092A
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property Character Movement
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:09E7
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property Character Movement
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AA2
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AE6
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0883
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:082D
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0858
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0B1A
+[2022.06.09-22.07.31:335][620]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0B45
+[2022.06.09-22.07.31:341][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:07D7
+[2022.06.09-22.07.31:341][620]LogScript: Warning: Accessed None trying to read property ClimbComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:044D
+[2022.06.09-22.07.31:341][620]LogScript: Warning: Accessed None trying to read property As BP Hero
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:06AD
+[2022.06.09-22.07.31:341][620]LogScript: Warning: Accessed None trying to read property CombatComponent
+	ABP_Hero_C /Engine/Transient.World_2:PersistentLevel.SkeletalMeshActor_0.SkeletalMeshComponent0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0421
+[2022.06.09-22.07.32:611][620]LogUObjectHash: Compacting FUObjectHashTables data took  11.82ms
+[2022.06.09-22.07.32:641][620]LogPlayLevel: PlayLevel: Blueprint regeneration took 1493 ms (1 blueprints)
+[2022.06.09-22.07.32:641][620]PIE: New page: PIE session: Demo (Jun 9, 2022, 2:07:32 PM)
+[2022.06.09-22.07.32:650][620]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.06.09-22.07.32:733][620]LogPlayLevel: PIE: StaticDuplicateObject took: (0.080311s)
+[2022.06.09-22.07.32:788][620]LogAIModule: Creating AISystem for world Demo
+[2022.06.09-22.07.32:810][620]LogPlayLevel: PIE: World Init took: (0.076169s)
+[2022.06.09-22.07.32:810][620]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.160034s)
+[2022.06.09-22.07.33:046][620]LogUObjectHash: Compacting FUObjectHashTables data took  11.21ms
+[2022.06.09-22.07.33:055][620]LogAudio: Display: Creating Audio Device:                 Id: 29, Scope: Unique, Realtime: True
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.06.09-22.07.33:059][620]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.06.09-22.07.33:060][620]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.06.09-22.07.33:063][620]LogAudio: Display: Using built-in audio occlusion.
+[2022.06.09-22.07.33:063][620]LogAudioMixer: Display: Initializing audio mixer.
+[2022.06.09-22.07.33:090][620]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-22.07.33:090][620]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-22.07.33:120][620]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.06.09-22.07.33:123][620]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.06.09-22.07.33:123][620]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.06.09-22.07.33:124][620]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.06.09-22.07.33:131][620]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.06.09-22.07.33:131][620]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.06.09-22.07.33:131][620]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.06.09-22.07.33:150][620]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.06.09-22.07.33:150][620]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.06.09-22.07.33:150][620]LogInit: FAudioDevice initialized.
+[2022.06.09-22.07.33:152][620]LogAudio: Display: Audio Device (ID: 29) registered with world 'Demo'.
+[2022.06.09-22.07.33:259][620]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.06.09-22.07.33:279][620]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.06.09-18.07.33
+[2022.06.09-22.07.33:283][620]LogWorld: Bringing up level for play took: 0.013383
+[2022.06.09-22.07.33:292][620]LogOnline: OSS: Creating online subsystem instance for: :Context_58
+[2022.06.09-22.07.33:341][620]LogActor: Warning: BP_Weapon_C /Game/Maps/UEDPIE_0_Demo.Demo:PersistentLevel.BP_Weapon_C_0 has natively added scene component(s), but none of them were set as the actor's RootComponent - picking one arbitrarily
+[2022.06.09-22.07.33:343][620]PIE: Server logged in
+[2022.06.09-22.07.33:345][620]PIE: Play in editor total start time 2.234 seconds.
+[2022.06.09-22.07.38:229][838]LogTemp: Warning: Climb
+[2022.06.09-22.07.40:657][957]LogTemp: Warning: Climb
+[2022.06.09-22.07.44:361][151]LogTemp: Warning: Climb
+[2022.06.09-22.07.56:172][754]LogTemp: Warning: Vault
+[2022.06.09-22.07.59:795][953]LogTemp: Warning: Vault
+[2022.06.09-22.08.10:505][553]LogTemp: Warning: Vault
+[2022.06.09-22.08.12:235][651]LogTemp: Warning: Vault
+[2022.06.09-22.08.13:737][738]LogTemp: Warning: Vault
+[2022.06.09-22.08.15:914][858]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.09-22.08.15:914][858]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.06.09-22.08.15:921][858]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.08.15:923][858]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.08.15:944][858]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.06.09-22.08.16:043][858]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.08.16:092][858]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2022.06.09-22.08.16:097][858]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.09-22.08.16:099][858]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.09-22.08.16:128][858]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.09-22.08.16:146][858]LogUObjectHash: Compacting FUObjectHashTables data took   4.57ms
+[2022.06.09-22.08.16:320][859]LogPlayLevel: Display: Destroying online subsystem :Context_58
+[2022.06.09-22.09.21:427][767]LogRenderer: Reallocating scene render targets to support 1224x576 Format 9 NumSamples 1 (Frame:23362).
+[2022.06.09-22.44.30:808][211]Candidate modules for hot reload:
+[2022.06.09-22.44.30:808][211]  Legend
+[2022.06.09-22.44.30:813][211]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,6685 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.44.30:877][211]Warning: Starting HotReload took  0.2s.
+[2022.06.09-22.45.14:093][349]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 2:45:14 PM
+[2022.06.09-22.45.14:101][349]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-22.45.14:101][349]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-22.45.14:102][349]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: Reflection code generated for LegendEditor in 6.9890778 seconds
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: Distributing 7 actions to XGE
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: License is invalid:
+[2022.06.09-22.45.14:102][349]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-22.45.14:102][349]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:102][349]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: Build ID: {90DE54EA-52B6-4A04-B2DF-E75639DB00F4}
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: ParkourComponent.cpp (0:16.06 at +0:00)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: Hero.cpp (0:05.51 at +0:16)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: Legend.init.gen.cpp (0:03.21 at +0:21)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: ParkourComponent.gen.cpp (0:02.62 at +0:24)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: UE4Editor-Legend-6685.lib (0:00.87 at +0:27)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6685.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6685.exp
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: UE4Editor-Legend-6685.dll (0:02.31 at +0:28)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6685.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-6685.suppressed.exp
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: LegendEditor.target (0:01.01 at +0:30)
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:103][349]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-22.45.14:103][349]CompilerResultsLog:    - License is invalid
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: 
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: Total time in XGE executor: 32.91 seconds
+[2022.06.09-22.45.14:103][349]CompilerResultsLog: Total execution time: 42.03 seconds
+[2022.06.09-22.45.14:104][349]LogMainFrame: MainFrame: Module compiling took 43.379 seconds
+[2022.06.09-22.45.15:949][349]LogClass: Could not find existing class ParkourComponent in package /Script/Legend for HotReload, assuming new class
+[2022.06.09-22.45.15:985][349]LogClass: EVaultOntoType HotReload.
+[2022.06.09-22.45.15:985][349]LogClass: EVaultOverType HotReload.
+[2022.06.09-22.45.16:087][349]LogHotReload: Re-instancing Hero after hot-reload.
+[2022.06.09-22.45.16:960][349]LogHotReload: Re-instancing ParkourComponent after hot-reload.
+[2022.06.09-22.45.17:000][349]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0066 seconds. Added 13 classes and 6 folders.
+[2022.06.09-22.45.17:008][349]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-22.45.17:420][349]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0366 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-22.45.17:424][349]Display: HotReload took 46.8s.
+[2022.06.09-22.47.11:776][117]LogUObjectHash: Compacting FUObjectHashTables data took  10.84ms
+[2022.06.09-22.47.11:918][117]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BS_ClimbF4C320BF444999FB5077E1BE7447DBE8.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/BS_Climb.uasset'
+[2022.06.09-22.47.11:931][117]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_Montage0208EE904CB754A6722068A6AE77AF11.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Montage.uasset'
+[2022.06.09-22.47.12:022][117]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault_Montage0D0DE19949635DF25664319DFB413523.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault_Montage.uasset'
+[2022.06.09-22.47.12:092][117]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-22.47.12:092][117]LogContentValidation: Display: Validating BlendSpace1D /Game/Hero/Animation/Parkour/Climbing/BS_Climb.BS_Climb
+[2022.06.09-22.47.12:094][117]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Vaulting/Vault_Montage.Vault_Montage
+[2022.06.09-22.47.12:094][117]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-22.47.37:561][694]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.47.37:565][694]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.47.39:875][743]Candidate modules for hot reload:
+[2022.06.09-22.47.39:875][743]  Legend
+[2022.06.09-22.47.39:876][743]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,2318 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.47.39:906][743]Warning: Starting HotReload took  0.1s.
+[2022.06.09-22.47.52:359][793]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 2:47:52 PM
+[2022.06.09-22.47.52:359][793]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: Distributing 3 actions to XGE
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: License is invalid:
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: Build ID: {CD104C51-A7D0-4FC8-9A81-935387BC78D5}
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: UE4Editor-Legend-2318.lib (0:01.04 at +0:00)
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2318.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2318.exp
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: UE4Editor-Legend-2318.dll (0:03.54 at +0:01)
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2318.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-2318.suppressed.exp
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: LegendEditor.target (0:01.81 at +0:04)
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-22.47.52:360][793]CompilerResultsLog:    - License is invalid
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: 
+[2022.06.09-22.47.52:360][793]CompilerResultsLog: Total time in XGE executor: 7.40 seconds
+[2022.06.09-22.47.52:361][793]CompilerResultsLog: Total execution time: 10.91 seconds
+[2022.06.09-22.47.52:361][793]LogMainFrame: MainFrame: Module compiling took 12.493 seconds
+[2022.06.09-22.47.53:287][793]LogClass: EVaultOntoType HotReload.
+[2022.06.09-22.47.53:288][793]LogClass: EVaultOverType HotReload.
+[2022.06.09-22.47.53:323][793]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0072 seconds. Added 13 classes and 6 folders.
+[2022.06.09-22.47.53:330][793]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-22.47.53:689][793]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0247 seconds. Added 3615 classes and 867 folders.
+[2022.06.09-22.47.53:689][793]Display: HotReload took 13.9s.
+[2022.06.09-22.48.42:824][ 31]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.06.09-22.49.16:710][239]LogSlate: Window 'Reparent Blueprint' being destroyed
+[2022.06.09-22.49.16:717][239]LogBlueprint: Warning: Reparenting blueprint Blueprint /Game/Hero/BP_Hero.BP_Hero from Hero to Character...
+[2022.06.09-22.49.16:733][239]BlueprintLog: New page: Compile BP_Hero
+[2022.06.09-22.49.16:747][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.16:747][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.16:747][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.16:748][239]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:082D
+[2022.06.09-22.49.16:752][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.16:752][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.16:752][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.16:752][239]LogScript: Warning: Accessed None trying to read property VaultComponent
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:082D
+[2022.06.09-22.49.16:756][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.16:756][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.16:756][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.16:758][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.16:758][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.16:758][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:447][239]LogUObjectHash: Compacting FUObjectHashTables data took  24.05ms
+[2022.06.09-22.49.17:484][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:484][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:484][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_5.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:484][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:484][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:485][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:485][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:485][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:485][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:489][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:489][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:490][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:490][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:491][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:491][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:597][239]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.17:597][239]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.17:598][239]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.17:625][240]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_30:PersistentLevel.BP_Hero_C_0.CharacterMesh0.ABP_Hero_C_1
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.20:245][369]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.06.09-22.49.26:964][629]LogBlueprint: Warning: Reparenting blueprint Blueprint /Game/Hero/BP_Hero.BP_Hero from Character to Hero...
+[2022.06.09-22.49.26:972][629]LogScript: Warning: Attempted to access missing property 'bIsMoveInput'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:08E2
+[2022.06.09-22.49.26:972][629]LogScript: Warning: Attempted to access missing property 'RunSpeed'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0915
+[2022.06.09-22.49.26:972][629]LogScript: Warning: Attempted to access missing property 'bJumpTrigger'. If this is a packaged/cooked build, are you attempting to use an editor-only property?
+	ABP_Hero_C /Engine/Transient.World_3:PersistentLevel.BP_Hero_C_6.CharacterMesh0.ABP_Hero_C_0
+	Function /Game/Hero/ABP_Hero.ABP_Hero_C:ExecuteUbergraph_ABP_Hero:0AFB
+[2022.06.09-22.49.26:978][629]BlueprintLog: New page: Compile BP_Hero
+[2022.06.09-22.49.27:280][629]LogUObjectHash: Compacting FUObjectHashTables data took   4.38ms
+[2022.06.09-22.49.50:701][639]LogUObjectHash: Compacting FUObjectHashTables data took   3.58ms
+[2022.06.09-22.49.50:808][639]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.06.09-22.49.50:871][639]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero97AA5DCB40ADFA00D11A86A390E557FE.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.06.09-22.49.50:897][639]AssetCheck: New page: Asset Save: BP_Hero
+[2022.06.09-22.49.50:897][639]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.06.09-22.50.02:827][129]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2022.06.09-22.50.02:899][129]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Hero/BP_Hero" FILE="../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset" SILENT=true
+[2022.06.09-22.50.02:927][129]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/BP_Hero390BC52C448B2C9A5D6A3F95EDCF1A5D.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/BP_Hero.uasset'
+[2022.06.09-22.50.02:944][129]AssetCheck: New page: Asset Save: BP_Hero
+[2022.06.09-22.50.02:944][129]LogContentValidation: Display: Validating Blueprint /Game/Hero/BP_Hero.BP_Hero
+[2022.06.09-22.50.22:177][565]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-22.50.22:578][565]LogWorld: UWorld::CleanupWorld for World_29, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.50.22:578][565]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.50.41:849][  9]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.06.09-22.50.47:841][130]LogWorld: UWorld::CleanupWorld for World_23, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.50.47:841][130]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.50.55:154][262]LogContentBrowser: Deferred new asset file creation: Climb_Onto1
+[2022.06.09-22.50.55:190][262]LogContentBrowser: Creating deferred item: Climb_Onto1
+[2022.06.09-22.50.58:558][323]LogContentBrowser: Attempting asset rename: Climb_Onto1 -> Climb
+[2022.06.09-22.50.58:594][323]LogContentBrowser: End creating deferred item Climb_Onto1
+[2022.06.09-22.51.06:168][473]LogWorld: UWorld::CleanupWorld for World_31, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.51.06:168][473]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.51.08:711][526]LogWorld: UWorld::CleanupWorld for World_32, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.51.08:711][526]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.51.10:716][579]LogUObjectHash: Compacting FUObjectHashTables data took   3.18ms
+[2022.06.09-22.51.10:791][579]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_Montage393B89C24FC050B125BBE5BB69F182D3.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Montage.uasset'
+[2022.06.09-22.51.10:819][579]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb76D434BA4887FD1A599D51BD33994EDE.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb.uasset'
+[2022.06.09-22.51.10:836][579]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-22.51.10:836][579]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Climbing/Climb.Climb
+[2022.06.09-22.51.10:837][579]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-22.51.18:644][769]LogUObjectHash: Compacting FUObjectHashTables data took   3.72ms
+[2022.06.09-22.51.29:023][ 13]LogContentBrowser: Deferred new asset file creation: Vault_Tall1
+[2022.06.09-22.51.29:075][ 13]LogContentBrowser: Creating deferred item: Vault_Tall1
+[2022.06.09-22.51.30:752][ 49]LogContentBrowser: Attempting asset rename: Vault_Tall1 -> Vault
+[2022.06.09-22.51.30:766][ 49]LogContentBrowser: End creating deferred item Vault_Tall1
+[2022.06.09-22.51.32:145][ 74]LogAssetEditorSubsystem: Opening Asset editor for AnimMontage /Game/Hero/Animation/Parkour/Vaulting/Vault_Montage.Vault_Montage
+[2022.06.09-22.51.32:203][ 74]LogWorld: UWorld::CleanupWorld for World_33, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-22.51.32:204][ 74]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-22.51.41:375][315]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault_Montage2B72713B489867A9FC19A4A10FC4B837.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault_Montage.uasset'
+[2022.06.09-22.51.41:390][315]AssetCheck: New page: Asset Save: Vault_Montage
+[2022.06.09-22.51.41:390][315]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Vaulting/Vault_Montage.Vault_Montage
+[2022.06.09-22.51.44:072][388]LogUObjectHash: Compacting FUObjectHashTables data took   3.22ms
+[2022.06.09-22.51.44:144][388]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault2C8B721B449EED574207F4867706FA17.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault.uasset'
+[2022.06.09-22.51.44:160][388]AssetCheck: New page: Asset Save: Vault
+[2022.06.09-22.51.44:160][388]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Vault.Vault

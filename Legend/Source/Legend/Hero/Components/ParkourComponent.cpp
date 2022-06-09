@@ -3,7 +3,10 @@
 #include "DrawDebugHelpers.h"
 #include "Components/CapsuleComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
+#include "GameFramework/Character.h"
 #include "Legend/Hero/Components/ParkourComponent.h"
+
+
 
 #pragma region General
 UParkourComponent::UParkourComponent()
@@ -15,22 +18,23 @@ void UParkourComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Actor = GetOwner();
-	if (!Actor) {
+	Character = Cast<ACharacter>(GetOwner());
+	if (!Character) {
 		UE_LOG(LogTemp, Error, TEXT("No owner ref"));
 		return;
 	}
 
-	TraceCollisionParams.AddIgnoredActor(Actor);
-	Collider = Actor->FindComponentByClass<UCapsuleComponent>();
-	CharacterMovement = Actor->FindComponentByClass<UCharacterMovementComponent>();
+	TraceCollisionParams.AddIgnoredActor(Character);
+	Collider = Character->FindComponentByClass<UCapsuleComponent>();
+	CharacterMovement = Character->FindComponentByClass<UCharacterMovementComponent>();
 }
+
 
 bool UParkourComponent::TryParkour(bool bIsAutoCall) {
 	if (bIsBusy)
 		return false;
 
-	ActorFeet = Actor->GetActorLocation() + FVector::DownVector * RootHeight;
+	ActorFeet = Character->GetActorLocation() + FVector::DownVector * RootHeight;
 
 	// Obstacle traces
 	RunObstacleTraces();
@@ -60,26 +64,24 @@ bool UParkourComponent::TryParkour(bool bIsAutoCall) {
 	bool bShouldVault = ShouldVault(CanVault(), bIsAutoCall);
 
 	if (bShouldClimb) {
-		UE_LOG(LogTemp, Warning, TEXT("Climb"));
-	}
-	
-	if (bShouldVault) {
-		UE_LOG(LogTemp, Warning, TEXT("Vault"));
+		StartClimb();
+	} else if (bShouldVault) {
+		StartVault();
 	}
 
 	return false;
 }
 
 void UParkourComponent::RunObstacleTraces() {
-	float MidObstacleTraceHeight = (MaxObstacleHeightToParkour + MinObstacleHeightToParkour) / 2;
+	float MidObstacleTraceHeight = (MaxObstacleTraceHeight + MinObstacleTraceHeight) / 2;
 
-	TraceForwardFromActor(LowObstacleTraceResult, MinObstacleHeightToParkour, ObstacleTraceRange);
+	TraceForwardFromActor(LowObstacleTraceResult, MinObstacleTraceHeight, ObstacleTraceRange);
 	TraceForwardFromActor(MidObstacleTraceResult, MidObstacleTraceHeight, ObstacleTraceRange);
-	TraceForwardFromActor(HighObstacleTraceResult, MaxObstacleHeightToParkour, ObstacleTraceRange);
+	TraceForwardFromActor(HighObstacleTraceResult, MaxObstacleTraceHeight, ObstacleTraceRange);
 }
 
 void UParkourComponent::GetObstacleHeight() {
-	float TraceStartHeight = MaxObstacleHeightToParkour + 10;
+	float TraceStartHeight = MaxObstacleTraceHeight + 10;
 	float HeightTraceRange = TraceStartHeight;
 	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
 	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
@@ -106,7 +108,7 @@ void UParkourComponent::GetObstacleHeight() {
 }
 
 void UParkourComponent::GetObstacleDepth() {
-	float TraceStartHeight = MaxObstacleHeightToParkour + 10;
+	float TraceStartHeight = MaxObstacleTraceHeight + 10;
 	float DepthTraceRange = TraceStartHeight;
 	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
 	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
@@ -127,14 +129,54 @@ void UParkourComponent::GetObstacleDepth() {
 	);
 }
 
+void UParkourComponent::StartParkour(FVector LedgeOffset) {
+	bIsBusy = true;
+
+	// Disable collision and enable flying
+	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);
+
+	// Snap to rotation
+	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
+	FQuat TargetRotation = (-ObstacleTraceResult.ImpactNormal).ToOrientationQuat();
+	Character->SetActorRotation(TargetRotation);
+
+	// Snap to position
+	FVector TargetPosition = GetLedgePosition() +
+		Character->GetActorForwardVector() * LedgeOffset.X +
+		Character->GetActorRightVector() * LedgeOffset.Y +
+		Character->GetActorUpVector() * LedgeOffset.Z;
+	Character->SetActorLocation(TargetPosition, false, nullptr, ETeleportType::ResetPhysics);
+}
+
+void UParkourComponent::StopParkourCallback() {
+	bIsBusy = false;
+
+	// Reset movement and collision
+	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+	CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
+}
+
+FVector UParkourComponent::GetLedgePosition() {
+	FVector ObstacleTraceImpactPoint = GetObstacleTraceResult().ImpactPoint;
+	return FVector(ObstacleTraceImpactPoint.X, ObstacleTraceImpactPoint.Y, HeightTraceResult.ImpactPoint.Z);
+}
+
 
 #pragma endregion
+
 
 
 #pragma region Climbing
 bool UParkourComponent::CanClimb() {
 	// Obstacle must be within height parameters
-	if (ObstacleHeight > MaxObstacleHeightToParkour)
+	float TrueMaxClimbHeight = 
+		(MaxObstacleTraceHeight > MaxClimbHeight) ? MaxClimbHeight : MaxObstacleTraceHeight;
+
+	float TrueMinClimbHeight =
+		(MinObstacleTraceHeight < MinClimbHeight) ? MinClimbHeight : MinObstacleTraceHeight;
+
+	if (ObstacleHeight > TrueMaxClimbHeight || ObstacleHeight < TrueMinClimbHeight)
 		return false;
 
 	// Obstacle must have enough depth
@@ -159,6 +201,13 @@ bool UParkourComponent::ShouldClimb(bool bCanClimb, bool bIsAutoCall) {
 
 	return true;
 }
+
+void UParkourComponent::StartClimb() {
+	UE_LOG(LogTemp, Warning, TEXT("Climb"));
+
+	StartParkour(ClimbLedgeOffset);
+	Character->PlayAnimMontage(ClimbMontage);
+}
 #pragma endregion
 
 
@@ -166,7 +215,13 @@ bool UParkourComponent::ShouldClimb(bool bCanClimb, bool bIsAutoCall) {
 #pragma region Vaulting
 bool UParkourComponent::CanVault() {
 	// Obstacle must be within height parameters
-	if (ObstacleHeight > MaxObstacleHeightToParkour)
+	float TrueMaxVaultHeight =
+		(MaxObstacleTraceHeight > MaxVaultHeight) ? MaxVaultHeight : MaxObstacleTraceHeight;
+
+	float TrueMinVaultHeight =
+		(MinObstacleTraceHeight < MinVaultHeight) ? MinVaultHeight : MinObstacleTraceHeight;
+
+	if (ObstacleHeight > TrueMaxVaultHeight || ObstacleHeight < TrueMinVaultHeight)
 		return false;
 
 	// Obstacle must be short in depth
@@ -193,6 +248,13 @@ bool UParkourComponent::ShouldVault(bool bCanVault, bool bIsAutoCall) {
 
 	return true;
 }
+
+void UParkourComponent::StartVault() {
+	UE_LOG(LogTemp, Warning, TEXT("Vault"));
+
+	StartParkour(ClimbLedgeOffset);
+	Character->PlayAnimMontage(VaultMontage);
+}
 #pragma endregion
 
 
@@ -200,21 +262,7 @@ bool UParkourComponent::ShouldVault(bool bCanVault, bool bIsAutoCall) {
 #pragma region Utility
 void UParkourComponent::TraceForwardFromActor(FHitResult& TraceResult, float TraceHeight, float TraceRange) {
 	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
-	FVector TraceEnd = TraceStart + Actor->GetActorForwardVector() * TraceRange;
-
-	GetWorld()->LineTraceSingleByChannel(
-		TraceResult,
-		TraceStart,
-		TraceEnd,
-		ECollisionChannel::ECC_WorldStatic,
-		TraceCollisionParams
-	);
-}
-
-void UParkourComponent::TraceDownAheadOfActor(FHitResult& TraceResult, float TraceHeight, float TraceDepth, float TraceRange) {
-	FVector ActorForward = Actor->GetActorForwardVector();
-	FVector TraceStart = ActorFeet + (FVector::UpVector * TraceHeight) + (ActorForward * TraceDepth);
-	FVector TraceEnd = TraceStart + FVector::DownVector * TraceRange;
+	FVector TraceEnd = TraceStart + Character->GetActorForwardVector() * TraceRange;
 
 	GetWorld()->LineTraceSingleByChannel(
 		TraceResult,
@@ -243,7 +291,6 @@ void UParkourComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float 
 	if (bHit)
 		DrawDebugSphere(GetWorld(), TraceEnd, 10, 10, Color, bPersist, LifeTime);
 }
-
 
 FHitResult UParkourComponent::GetObstacleTraceResult() {
 	if (LowObstacleTraceResult.bBlockingHit)
