@@ -64,9 +64,6 @@ private:
 	FHitResult HeightTraceResult;
 	FHitResult DepthTraceResult;
 
-	// Height at which height trace starts
-	float HeightTraceStartHeight;
-
 	// Discerned height of obstacle hit by traces
 	float ObstacleHeight;
 
@@ -85,11 +82,11 @@ public:
 private:
 	void RunObstacleTraces();
 
-	// Height determines which animations to play
-	void RunHeightTrace();
+	// Obstacle height determines which animations to play
+	void GetObstacleHeight();
 
 	// Depth determines whether vault or climb
-	void RunDepthTrace();
+	void GetObstacleDepth();
 
 #pragma endregion
 
@@ -143,5 +140,8 @@ private:
 	void TraceDownAheadOfActor(FHitResult& TraceResult, float TraceHeight, float TraceDepth, float TraceRange);
 
 	void DebugTrace(FHitResult TraceResult, bool bPersist = false, float Lifetime = 2);
+
+	// Returns (one of) the trace result that hit obstacle
+	FHitResult GetObstacleTraceResult();
 #pragma endregion 
 };

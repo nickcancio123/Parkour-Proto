@@ -48,23 +48,22 @@ bool UParkourComponent::TryParkour(bool bIsAutoCall) {
 		return false;
 
 	// Height trace
-	RunHeightTrace();
-
-	if (HeightTraceResult.bBlockingHit)
-		ObstacleHeight = HeightTraceResult.ImpactPoint.Z - ActorFeet.Z;
-
+	GetObstacleHeight();
 	DebugTrace(HeightTraceResult);
 
 	// Depth trace
-	RunDepthTrace();
+	GetObstacleDepth();
 	DebugTrace(DepthTraceResult);
 
+	// Check results
 	bool bShouldClimb = ShouldClimb(CanClimb(), bIsAutoCall);
 	bool bShouldVault = ShouldVault(CanVault(), bIsAutoCall);
 
 	if (bShouldClimb) {
 		UE_LOG(LogTemp, Warning, TEXT("Climb"));
-	} else if (bShouldVault) {
+	}
+	
+	if (bShouldVault) {
 		UE_LOG(LogTemp, Warning, TEXT("Vault"));
 	}
 
@@ -79,21 +78,53 @@ void UParkourComponent::RunObstacleTraces() {
 	TraceForwardFromActor(HighObstacleTraceResult, MaxObstacleHeightToParkour, ObstacleTraceRange);
 }
 
-void UParkourComponent::RunHeightTrace() {
-	// Set height at which to start trace
-	HeightTraceStartHeight = MaxObstacleHeightToParkour + 10;
-	if (LowObstacleTraceResult.bBlockingHit || MidObstacleTraceResult.bBlockingHit)
-		HeightTraceStartHeight = ActorHeight;
+void UParkourComponent::GetObstacleHeight() {
+	float TraceStartHeight = MaxObstacleHeightToParkour + 10;
+	float HeightTraceRange = TraceStartHeight;
+	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
+	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
 
-	float HeightTraceRange = HeightTraceStartHeight - ActorHeight;
+	FVector TraceStart = 
+		ActorFeet + // start here
+		DirectionToObstacle + // go to impact point but on floor
+		(FVector::UpVector * TraceStartHeight) + // go up
+		(-ObstacleTraceResult.ImpactNormal * HeightTraceDepth); // go over obstacle
+	FVector TraceEnd = TraceStart + FVector::DownVector * HeightTraceRange;
 
-	TraceDownAheadOfActor(HeightTraceResult, HeightTraceStartHeight, HeightTraceDepth, HeightTraceRange);
+	GetWorld()->LineTraceSingleByChannel(
+		HeightTraceResult,
+		TraceStart,
+		TraceEnd,
+		ECollisionChannel::ECC_WorldStatic,
+		TraceCollisionParams
+	);
+
+	if (HeightTraceResult.bBlockingHit)
+		ObstacleHeight = HeightTraceResult.ImpactPoint.Z - ActorFeet.Z;
+	else
+		ObstacleHeight = 9999999;
 }
 
-void UParkourComponent::RunDepthTrace() {
-	float DepthTraceRange = HeightTraceStartHeight - ActorHeight + 20; // +20 to not hit ground
+void UParkourComponent::GetObstacleDepth() {
+	float TraceStartHeight = MaxObstacleHeightToParkour + 10;
+	float DepthTraceRange = TraceStartHeight;
+	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
+	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
 
-	TraceDownAheadOfActor(DepthTraceResult, HeightTraceStartHeight, MaxObstacleDepthToVault, DepthTraceRange);
+	FVector TraceStart =
+		ActorFeet +	// start here
+		DirectionToObstacle + // go to impact point (but at foot height)
+		(FVector::UpVector * TraceStartHeight) + // go up
+		(-ObstacleTraceResult.ImpactNormal * MaxObstacleDepthToVault); // forward above obstacle
+	FVector TraceEnd = TraceStart + FVector::DownVector * DepthTraceRange;
+
+	GetWorld()->LineTraceSingleByChannel(
+		DepthTraceResult,
+		TraceStart,
+		TraceEnd,
+		ECollisionChannel::ECC_WorldStatic,
+		TraceCollisionParams
+	);
 }
 
 
@@ -211,5 +242,15 @@ void UParkourComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float 
 
 	if (bHit)
 		DrawDebugSphere(GetWorld(), TraceEnd, 10, 10, Color, bPersist, LifeTime);
+}
+
+
+FHitResult UParkourComponent::GetObstacleTraceResult() {
+	if (LowObstacleTraceResult.bBlockingHit)
+		return LowObstacleTraceResult;
+	else if (MidObstacleTraceResult.bBlockingHit)
+		return MidObstacleTraceResult;
+	else
+		return HighObstacleTraceResult;
 }
 #pragma endregion
