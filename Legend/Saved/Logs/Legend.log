@@ -4062,3 +4062,179 @@ Script Stack (0 frames):
 [2022.06.09-22.51.44:144][388]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault2C8B721B449EED574207F4867706FA17.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault.uasset'
 [2022.06.09-22.51.44:160][388]AssetCheck: New page: Asset Save: Vault
 [2022.06.09-22.51.44:160][388]LogContentValidation: Display: Validating AnimSequence /Game/Hero/Animation/Parkour/Vaulting/Vault.Vault
+[2022.06.09-22.53.49:959][623]Running C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" -game -rocket -progress
+[2022.06.09-22.53.51:635][623]Discovering modules, targets and source code for project...
+[2022.06.09-22.53.54:855][623]Binding IntelliSense data...
+[2022.06.09-22.53.56:670][623]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatching\DistanceMatching.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatching\Public' does not exist.
+[2022.06.09-22.53.56:670][623]C:\Program Files\Epic Games\UE_4.26\Engine\Plugins\Marketplace\DistanceMatching\Source\DistanceMatchingEditor\DistanceMatchingEditor.Build.cs: warning: Referenced directory 'C:\Program Files\Epic Games\UE_4.26\Engine\Source\DistanceMatchingEditor\Public' does not exist.
+[2022.06.09-22.53.58:602][623]Binding IntelliSense data... 100%
+[2022.06.09-22.53.58:602][623]Writing project files...
+[2022.06.09-22.54.06:577][623]Writing project files... 100%
+[2022.06.09-22.54.06:712][623]Candidate modules for hot reload:
+[2022.06.09-22.54.06:712][623]  Legend
+[2022.06.09-22.54.06:712][623]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,5575 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.54.38:304][623]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 2:54:38 PM
+[2022.06.09-22.54.38:306][623]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-22.54.38:307][623]CompilerResultsLog: Creating makefile for LegendEditor (no existing makefile)
+[2022.06.09-22.54.38:307][623]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-22.54.38:308][623]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Reflection code generated for LegendEditor in 7.8121904 seconds
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\EnableMovementNotify.cpp(1) : error: Expected EnableMovementNotify.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\EquipWeaponNotify.cpp(1) : error: Expected EquipWeaponNotify.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetClimbNotify.cpp(1) : error: Expected ResetClimbNotify.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetJumpTriggerNotify.cpp(1) : error: Expected ResetJumpTriggerNotify.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetVaultNotify.cpp(1) : error: Expected ResetVaultNotify.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\ClimbComponent.cpp(1) : error: Expected ClimbComponent.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\CombatComponent.cpp(1) : error: Expected CombatComponent.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\ParkourComponent.cpp(1) : error: Expected ParkourComponent.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Components\VaultComponent.cpp(1) : error: Expected VaultComponent.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\Hero.cpp(1) : error: Expected Hero.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Error: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Weapons\Weapon.cpp(1) : error: Expected Weapon.h to be first header included.
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: Distributing 6 actions to XGE
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-22.54.38:308][623]CompilerResultsLog: License is invalid:
+[2022.06.09-22.54.38:308][623]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-22.54.38:309][623]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: Build ID: {39B103CC-45D2-436B-9A63-0D248BC9CAC1}
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: ResetParkourNotify.cpp (0:01.92 at +0:00)
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Source\Legend\Hero\AnimNotifies\ResetParkourNotify.cpp(4): fatal error C1083: Cannot open include file: 'Hero/AnimNotifies/ResetParkourNotify.h': No such file or directory
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: Error executing C:\Program Files\Epic Games\UE_4.26\Engine\Build\Windows\cl-filter\cl-filter.exe (tool returned code: 2)
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: Legend.init.gen.cpp (0:11.96 at +0:02)
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: ResetParkourNotify.gen.cpp (0:02.64 at +0:13)
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog:     Rebuild All: 0 succeeded, 1 failed, 0 skipped
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-22.54.38:309][623]CompilerResultsLog:    - License is invalid
+[2022.06.09-22.54.38:309][623]CompilerResultsLog: 
+[2022.06.09-22.54.38:309][623]LogMainFrame: MainFrame: Module compiling took 31.602 seconds
+[2022.06.09-22.54.38:310][623]Warning: HotReload failed, recompile failed
+[2022.06.09-22.54.38:310][623]Warning: RebindPackages failed because compilation failed.
+[2022.06.09-22.55.40:690][623]LogSlate: Window 'Message' being destroyed
+[2022.06.09-22.55.40:710][623]Message dialog closed, result: No, title: Message, text: Successfully added class 'ResetParkourNotify', however you must recompile the 'Legend' module before it will appear in the Content Browser. Failed to automatically hot reload the 'Legend' module.
+
+Would you like to open the Output Log to see more details?
+[2022.06.09-22.55.40:710][623]LogSlate: Window 'Add C++ Class' being destroyed
+[2022.06.09-22.59.30:605][365]Candidate modules for hot reload:
+[2022.06.09-22.59.30:605][365]  Legend
+[2022.06.09-22.59.30:605][365]Launching UnrealBuildTool... [C:/Program Files/Epic Games/UE_4.26/Engine/Binaries/DotNET/UnrealBuildTool.exe  -ModuleWithSuffix=Legend,5590 LegendEditor Win64 Development -Project="C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject" "C:/Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Legend.uproject"  -IgnoreJunk]
+[2022.06.09-22.59.30:652][365]Warning: Starting HotReload took  0.1s.
+[2022.06.09-23.00.02:085][481]CompilerResultsLog: New page: Compilation - Jun 9, 2022, 3:00:02 PM
+[2022.06.09-23.00.02:089][481]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (C:\Users\Owner\Documents\Unreal Projects\Legend-Repo).
+[2022.06.09-23.00.02:089][481]CompilerResultsLog: Parsing headers for LegendEditor
+[2022.06.09-23.00.02:089][481]CompilerResultsLog:   Running UnrealHeaderTool "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Legend.uproject" "C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\LegendEditor\Development\LegendEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Owner\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: Reflection code generated for LegendEditor in 7.2098124 seconds
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: Building LegendEditor...
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: Using Visual Studio 2019 14.30.30706 toolchain (C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.30.30705) and Windows 10.0.22000.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: Distributing 5 actions to XGE
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: --------------------Build System Warning---------------------------------------
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: License is invalid:
+[2022.06.09-23.00.02:090][481]CompilerResultsLog:     License information is invalid. Please try reloading your license file using the Coordinator Monitor application on the Coordinator machine, or reinstall IncrediBuild.
+[2022.06.09-23.00.02:090][481]CompilerResultsLog:     This build will run in standalone mode.
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: -------------------------------------------------------------------------------
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: Build ID: {579BE9A7-97C1-484E-8261-1428ABF29D6D}
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: --------------------Project: Default-------------------------------------------
+[2022.06.09-23.00.02:090][481]CompilerResultsLog: ResetParkourNotify.cpp (0:11.70 at +0:00)
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: ResetParkourNotify.gen.cpp (0:03.93 at +0:11)
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: UE4Editor-Legend-5590.lib (0:00.90 at +0:15)
+[2022.06.09-23.00.02:091][481]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5590.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5590.exp
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: UE4Editor-Legend-5590.dll (0:01.84 at +0:16)
+[2022.06.09-23.00.02:091][481]CompilerResultsLog:    Creating library C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5590.suppressed.lib and object C:\Users\Owner\Documents\Unreal Projects\Legend-Repo\Legend\Intermediate\Build\Win64\UE4Editor\Development\Legend\UE4Editor-Legend-5590.suppressed.exp
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: LegendEditor.target (0:01.31 at +0:18)
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: ---------------------- Done ----------------------
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:091][481]CompilerResultsLog:     Rebuild All: 1 succeeded, 0 failed, 0 skipped
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: 1 build system warning(s):
+[2022.06.09-23.00.02:091][481]CompilerResultsLog:    - License is invalid
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: 
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: Total time in XGE executor: 20.48 seconds
+[2022.06.09-23.00.02:091][481]CompilerResultsLog: Total execution time: 30.02 seconds
+[2022.06.09-23.00.02:092][481]LogMainFrame: MainFrame: Module compiling took 31.492 seconds
+[2022.06.09-23.00.03:228][481]LogClass: Could not find existing class ResetParkourNotify in package /Script/Legend for HotReload, assuming new class
+[2022.06.09-23.00.03:240][481]LogClass: EVaultOntoType HotReload.
+[2022.06.09-23.00.03:240][481]LogClass: EVaultOverType HotReload.
+[2022.06.09-23.00.03:282][481]LogNativeClassHierarchy: Verbose: Native class hierarchy updated for 'Legend' in 0.0009 seconds. Added 14 classes and 6 folders.
+[2022.06.09-23.00.03:288][481]Display: HotReload successful (0 functions remapped  0 scriptstructs remapped)
+[2022.06.09-23.00.03:787][481]LogNativeClassHierarchy: Verbose: Native class hierarchy populated in 0.0853 seconds. Added 3616 classes and 867 folders.
+[2022.06.09-23.00.03:787][481]Display: HotReload took 33.3s.
+[2022.06.09-23.00.16:489][723]LogSlate: Prevented a slow task dialog from being summoned while a context menu was open
+[2022.06.09-23.00.23:370][881]LogContentBrowser: Verbose: The majority of assets in the view are of type: BlendSpace1D
+[2022.06.09-23.00.23:628][886]LogContentBrowser: Verbose: The majority of assets in the view are of type: None
+[2022.06.09-23.00.24:920][920]LogContentBrowser: Verbose: The majority of assets in the view are of type: AnimMontage
+[2022.06.09-23.00.33:504][105]LogUObjectHash: Compacting FUObjectHashTables data took  12.04ms
+[2022.06.09-23.00.33:607][105]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_MontageE308017C4AA3206A523B4FBE12C718D0.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Montage.uasset'
+[2022.06.09-23.00.33:633][105]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Vault_Montage4C9D3F5B43337CC4BA23EE9682685785.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Vaulting/Vault_Montage.uasset'
+[2022.06.09-23.00.33:651][105]AssetCheck: New page: Asset Save: multiple assets
+[2022.06.09-23.00.33:652][105]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Vaulting/Vault_Montage.Vault_Montage
+[2022.06.09-23.00.33:652][105]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-23.00.35:508][148]LogSavePackage: Moving '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Saved/Climb_Montage51ACA32D4BCA8047B54D069820D3F165.tmp' to '../../../../../../Users/Owner/Documents/Unreal Projects/Legend-Repo/Legend/Content/Hero/Animation/Parkour/Climbing/Climb_Montage.uasset'
+[2022.06.09-23.00.35:525][148]AssetCheck: New page: Asset Save: Climb_Montage
+[2022.06.09-23.00.35:526][148]LogContentValidation: Display: Validating AnimMontage /Game/Hero/Animation/Parkour/Climbing/Climb_Montage.Climb_Montage
+[2022.06.09-23.00.49:499][490]LogUObjectHash: Compacting FUObjectHashTables data took   3.78ms
+[2022.06.09-23.00.51:157][526]LogUObjectHash: Compacting FUObjectHashTables data took   2.86ms
+[2022.06.09-23.00.53:505][579]LogTemp: Repeating last play command: Selected Viewport
+[2022.06.09-23.00.53:559][579]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2022.06.09-23.00.53:560][579]PIE: New page: PIE session: Demo (Jun 9, 2022, 3:00:53 PM)
+[2022.06.09-23.00.53:567][579]LogPlayLevel: Creating play world package: /Game/Maps/UEDPIE_0_Demo
+[2022.06.09-23.00.53:639][579]LogPlayLevel: PIE: StaticDuplicateObject took: (0.070986s)
+[2022.06.09-23.00.53:652][579]LogAIModule: Creating AISystem for world Demo
+[2022.06.09-23.00.53:660][579]LogPlayLevel: PIE: World Init took: (0.021338s)
+[2022.06.09-23.00.53:661][579]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Maps/Demo.Demo to /Game/Maps/UEDPIE_0_Demo.Demo (0.093848s)
+[2022.06.09-23.00.53:699][579]LogUObjectHash: Compacting FUObjectHashTables data took   3.95ms
+[2022.06.09-23.00.53:704][579]LogAudio: Display: Creating Audio Device:                 Id: 30, Scope: Unique, Realtime: True
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Number of buffers to queue:			  2
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2022.06.09-23.00.53:708][579]LogAudioMixer: Display: 	Number of Async Source Workers:		  0
+[2022.06.09-23.00.53:709][579]LogAudio: Display: AudioDevice MaxSources: 32
+[2022.06.09-23.00.53:714][579]LogAudio: Display: Using built-in audio occlusion.
+[2022.06.09-23.00.53:714][579]LogAudioMixer: Display: Initializing audio mixer.
+[2022.06.09-23.00.53:737][579]LogAudioMixer: Display: 0: FrontLeft
+[2022.06.09-23.00.53:737][579]LogAudioMixer: Display: 1: FrontRight
+[2022.06.09-23.00.53:775][579]LogAudioMixer: Display: Using Audio Device Speaker / Headphone (Realtek(R) Audio)
+[2022.06.09-23.00.53:779][579]LogAudioMixer: Display: Initializing Sound Submixes...
+[2022.06.09-23.00.53:779][579]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2022.06.09-23.00.53:780][579]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2022.06.09-23.00.53:784][579]LogAudioMixer: Display: Creating Master Submix 'MasterEQSubmixDefault'
+[2022.06.09-23.00.53:784][579]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called
+[2022.06.09-23.00.53:784][579]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048
+[2022.06.09-23.00.53:787][579]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal()
+[2022.06.09-23.00.53:787][579]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time
+[2022.06.09-23.00.53:787][579]LogInit: FAudioDevice initialized.
+[2022.06.09-23.00.53:787][579]LogAudio: Display: Audio Device (ID: 30) registered with world 'Demo'.
+[2022.06.09-23.00.53:867][579]LogLoad: Game class is 'BP_LegendGameModeBase_C'
+[2022.06.09-23.00.53:890][579]LogWorld: Bringing World /Game/Maps/UEDPIE_0_Demo.Demo up for play (max tick rate 60) at 2022.06.09-19.00.53
+[2022.06.09-23.00.53:893][579]LogWorld: Bringing up level for play took: 0.019104
+[2022.06.09-23.00.53:902][579]LogOnline: OSS: Creating online subsystem instance for: :Context_64
+[2022.06.09-23.00.53:955][579]LogSpawn: Warning: SpawnActor failed because no class was specified
+[2022.06.09-23.00.53:957][579]PIE: Server logged in
+[2022.06.09-23.00.53:958][579]PIE: Play in editor total start time 0.424 seconds.
+[2022.06.09-23.00.56:352][681]LogTemp: Warning: Climb
+[2022.06.09-23.01.07:356][271]LogTemp: Warning: Climb
+[2022.06.09-23.01.08:057][303]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.09-23.01.08:057][303]LogWorld: BeginTearingDown for /Game/Maps/UEDPIE_0_Demo
+[2022.06.09-23.01.08:059][303]LogWorld: UWorld::CleanupWorld for Demo, bSessionEnded=true, bCleanupResources=true
+[2022.06.09-23.01.08:060][303]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-23.01.08:075][303]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2022.06.09-23.01.08:167][303]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2022.06.09-23.01.08:211][303]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2022.06.09-23.01.08:217][303]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.09-23.01.08:219][303]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called
+[2022.06.09-23.01.08:265][303]LogUObjectHash: Compacting FUObjectHashTables data took   4.04ms
+[2022.06.09-23.01.08:446][304]LogPlayLevel: Display: Destroying online subsystem :Context_64
