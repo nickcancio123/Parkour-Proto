@@ -151,6 +151,8 @@ void UParkourComponent::StartParkour(bool bClimbing) {
 	TArray<FParkourVariant>* ParkourVariants = bClimbing ? &ClimbVariants : &VaultVariants;
 	FParkourVariant ParkourVariant = GetParkourVariant(ParkourVariants);
 
+	UE_LOG(LogTemp, Warning, TEXT("Obstacle: %f,   Variant Max: %f"), ObstacleHeight, ParkourVariant.ObstacleHeight);
+
 	// Disable collision and enable flying
 	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	CharacterMovement->SetMovementMode(EMovementMode::MOVE_Flying);

@@ -1,11 +1,9 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "GameFramework/SpringArmComponent.h"
-#include "Camera/CameraComponent.h"
-#include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/Hero.h"
-#include "Legend/Hero/Components/ClimbComponent.h"
-#include "Legend/Hero/Components/VaultComponent.h"
+#include "Camera/CameraComponent.h"
+#include "GameFramework/SpringArmComponent.h"
+#include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/Components/ParkourComponent.h"
 #include "Legend/Hero/Components/CombatComponent.h"
 #include "DrawDebugHelpers.h"
@@ -27,12 +25,6 @@ AHero::AHero()
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
-	ClimbComp = CreateDefaultSubobject<UClimbComponent>("Climb Component");
-	this->AddOwnedComponent(ClimbComp);
-
-	VaultComp = CreateDefaultSubobject<UVaultComponent>("Vault Component");
-	this->AddOwnedComponent(VaultComp);
-
 	ParkourComp = CreateDefaultSubobject<UParkourComponent>("Parkour Component");
 	this->AddOwnedComponent(ParkourComp);
 
@@ -44,8 +36,6 @@ void AHero::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	ClimbComp = FindComponentByClass<UClimbComponent>();	
-	VaultComp = FindComponentByClass<UVaultComponent>();	
 	ParkourComp = FindComponentByClass<UParkourComponent>();
 	CombatComp = FindComponentByClass<UCombatComponent>();	
 }
@@ -81,7 +71,6 @@ void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 	PlayerInputComponent->BindAction("ToggleEquipped", IE_Pressed, this, &AHero::OnToggleEquippedInput);
 	
 }
-
 #pragma endregion
 
 
@@ -187,7 +176,6 @@ void AHero::OnJumpInput() {
 	if (bCanParkour)
 		return;
 	
-
 	bJumpTrigger = true;
 	Jump();
 }

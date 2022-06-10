@@ -15,7 +15,7 @@ struct FParkourVariant
 		float ObstacleHeight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-		bool bUseLedgeOffset;
+		bool bUseLedgeOffset = true;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		FVector LedgeOffset;
