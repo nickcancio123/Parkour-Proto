@@ -13,13 +13,139 @@
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 // Cross Module References
-	LEGEND_API UClass* Z_Construct_UClass_UParkourComponent_NoRegister();
-	LEGEND_API UClass* Z_Construct_UClass_UParkourComponent();
-	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
+	LEGEND_API UScriptStruct* Z_Construct_UScriptStruct_FParkourVariant();
 	UPackage* Z_Construct_UPackage__Script_Legend();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+	LEGEND_API UClass* Z_Construct_UClass_UParkourComponent_NoRegister();
+	LEGEND_API UClass* Z_Construct_UClass_UParkourComponent();
+	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 // End Cross Module References
+class UScriptStruct* FParkourVariant::StaticStruct()
+{
+	static class UScriptStruct* Singleton = NULL;
+	if (!Singleton)
+	{
+		extern LEGEND_API uint32 Get_Z_Construct_UScriptStruct_FParkourVariant_Hash();
+		Singleton = GetStaticStruct(Z_Construct_UScriptStruct_FParkourVariant, Z_Construct_UPackage__Script_Legend(), TEXT("ParkourVariant"), sizeof(FParkourVariant), Get_Z_Construct_UScriptStruct_FParkourVariant_Hash());
+	}
+	return Singleton;
+}
+template<> LEGEND_API UScriptStruct* StaticStruct<FParkourVariant>()
+{
+	return FParkourVariant::StaticStruct();
+}
+static FCompiledInDeferStruct Z_CompiledInDeferStruct_UScriptStruct_FParkourVariant(FParkourVariant::StaticStruct, TEXT("/Script/Legend"), TEXT("ParkourVariant"), false, nullptr, nullptr);
+static struct FScriptStruct_Legend_StaticRegisterNativesFParkourVariant
+{
+	FScriptStruct_Legend_StaticRegisterNativesFParkourVariant()
+	{
+		UScriptStruct::DeferCppStructOps(FName(TEXT("ParkourVariant")),new UScriptStruct::TCppStructOps<FParkourVariant>);
+	}
+} ScriptStruct_Legend_StaticRegisterNativesFParkourVariant;
+	struct Z_Construct_UScriptStruct_FParkourVariant_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Struct_MetaDataParams[];
+#endif
+		static void* NewStructOps();
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ObstacleHeight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ObstacleHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bUseLedgeOffset_MetaData[];
+#endif
+		static void NewProp_bUseLedgeOffset_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bUseLedgeOffset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_LedgeOffset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_LedgeOffset;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Montage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Montage;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FStructParams ReturnStructParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FParkourVariant_Statics::Struct_MetaDataParams[] = {
+		{ "BlueprintType", "true" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	void* Z_Construct_UScriptStruct_FParkourVariant_Statics::NewStructOps()
+	{
+		return (UScriptStruct::ICppStructOps*)new UScriptStruct::TCppStructOps<FParkourVariant>();
+	}
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_ObstacleHeight_MetaData[] = {
+		{ "Category", "ParkourVariant" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_ObstacleHeight = { "ObstacleHeight", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FParkourVariant, ObstacleHeight), METADATA_PARAMS(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_ObstacleHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_ObstacleHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset_MetaData[] = {
+		{ "Category", "ParkourVariant" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	void Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset_SetBit(void* Obj)
+	{
+		((FParkourVariant*)Obj)->bUseLedgeOffset = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset = { "bUseLedgeOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(FParkourVariant), &Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset_SetBit, METADATA_PARAMS(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_LedgeOffset_MetaData[] = {
+		{ "Category", "ParkourVariant" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_LedgeOffset = { "LedgeOffset", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FParkourVariant, LedgeOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_LedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_LedgeOffset_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_Montage_MetaData[] = {
+		{ "Category", "ParkourVariant" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_Montage = { "Montage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FParkourVariant, Montage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_Montage_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_Montage_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UScriptStruct_FParkourVariant_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_ObstacleHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_bUseLedgeOffset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_LedgeOffset,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UScriptStruct_FParkourVariant_Statics::NewProp_Montage,
+	};
+	const UE4CodeGen_Private::FStructParams Z_Construct_UScriptStruct_FParkourVariant_Statics::ReturnStructParams = {
+		(UObject* (*)())Z_Construct_UPackage__Script_Legend,
+		nullptr,
+		&NewStructOps,
+		"ParkourVariant",
+		sizeof(FParkourVariant),
+		alignof(FParkourVariant),
+		Z_Construct_UScriptStruct_FParkourVariant_Statics::PropPointers,
+		UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::PropPointers),
+		RF_Public|RF_Transient|RF_MarkAsNative,
+		EStructFlags(0x00000001),
+		METADATA_PARAMS(Z_Construct_UScriptStruct_FParkourVariant_Statics::Struct_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FParkourVariant_Statics::Struct_MetaDataParams))
+	};
+	UScriptStruct* Z_Construct_UScriptStruct_FParkourVariant()
+	{
+#if WITH_HOT_RELOAD
+		extern uint32 Get_Z_Construct_UScriptStruct_FParkourVariant_Hash();
+		UPackage* Outer = Z_Construct_UPackage__Script_Legend();
+		static UScriptStruct* ReturnStruct = FindExistingStructIfHotReloadOrDynamic(Outer, TEXT("ParkourVariant"), sizeof(FParkourVariant), Get_Z_Construct_UScriptStruct_FParkourVariant_Hash(), false);
+#else
+		static UScriptStruct* ReturnStruct = nullptr;
+#endif
+		if (!ReturnStruct)
+		{
+			UE4CodeGen_Private::ConstructUScriptStruct(ReturnStruct, Z_Construct_UScriptStruct_FParkourVariant_Statics::ReturnStructParams);
+		}
+		return ReturnStruct;
+	}
+	uint32 Get_Z_Construct_UScriptStruct_FParkourVariant_Hash() { return 1532335113U; }
 	void UParkourComponent::StaticRegisterNativesUParkourComponent()
 	{
 	}
@@ -67,11 +193,6 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxObstacleDepthToVault;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanAutoClimb_MetaData[];
-#endif
-		static void NewProp_bCanAutoClimb_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCanAutoClimb;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinClimbHeight_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinClimbHeight;
@@ -80,22 +201,28 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxClimbHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxObstacleHeightToAutoClimb_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanAutoClimb_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxObstacleHeightToAutoClimb;
+		static void NewProp_bCanAutoClimb_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCanAutoClimb;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbLedgeOffset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bAutoClimbWhileFalling_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ClimbLedgeOffset;
+		static void NewProp_bAutoClimbWhileFalling_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bAutoClimbWhileFalling;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbMontage_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAutoClimbHeight_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ClimbMontage;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAutoClimbHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanAutoVault_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAutoClimbHeight_MetaData[];
 #endif
-		static void NewProp_bCanAutoVault_SetBit(void* Obj);
-		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCanAutoVault;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAutoClimbHeight;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_ClimbVariants_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbVariants_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_ClimbVariants;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinVaultHeight_MetaData[];
 #endif
@@ -105,17 +232,28 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxVaultHeight;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxObstacleHeightToAutoVault_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bCanAutoVault_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxObstacleHeightToAutoVault;
+		static void NewProp_bCanAutoVault_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bCanAutoVault;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultLedgeOffset_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bAutoVaultWhileFalling_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FStructPropertyParams NewProp_VaultLedgeOffset;
+		static void NewProp_bAutoVaultWhileFalling_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bAutoVaultWhileFalling;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultMontage_MetaData[];
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MinAutoVaultHeight_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_VaultMontage;
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MinAutoVaultHeight;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAutoVaultHeight_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_MaxAutoVaultHeight;
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_VaultVariants_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultVariants_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_VaultVariants;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -203,17 +341,6 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleDepthToVault = { "MaxObstacleDepthToVault", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxObstacleDepthToVault), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleDepthToVault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleDepthToVault_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData[] = {
-		{ "Category", "Climbing" },
-		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
-	};
-#endif
-	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_SetBit(void* Obj)
-	{
-		((UParkourComponent*)Obj)->bCanAutoClimb = 1;
-	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb = { "bCanAutoClimb", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinClimbHeight_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
@@ -228,37 +355,49 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxClimbHeight = { "MaxClimbHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxClimbHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxClimbHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxClimbHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoClimb_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData[] = {
 		{ "Category", "Climbing" },
 		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoClimb = { "MaxObstacleHeightToAutoClimb", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxObstacleHeightToAutoClimb), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoClimb_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoClimb_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbLedgeOffset_MetaData[] = {
-		{ "Category", "Climbing" },
-		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbLedgeOffset = { "ClimbLedgeOffset", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, ClimbLedgeOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbLedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbLedgeOffset_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbMontage_MetaData[] = {
-		{ "Category", "Climbing" },
-		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbMontage = { "ClimbMontage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, ClimbMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbMontage_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData[] = {
-		{ "Category", "Vaulting" },
-		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
-	};
-#endif
-	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_SetBit(void* Obj)
+	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_SetBit(void* Obj)
 	{
-		((UParkourComponent*)Obj)->bCanAutoVault = 1;
+		((UParkourComponent*)Obj)->bCanAutoClimb = 1;
 	}
-	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault = { "bCanAutoVault", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData)) };
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb = { "bCanAutoClimb", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling_MetaData[] = {
+		{ "Category", "Climbing" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling_SetBit(void* Obj)
+	{
+		((UParkourComponent*)Obj)->bAutoClimbWhileFalling = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling = { "bAutoClimbWhileFalling", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoClimbHeight_MetaData[] = {
+		{ "Category", "Climbing" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoClimbHeight = { "MinAutoClimbHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MinAutoClimbHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoClimbHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoClimbHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoClimbHeight_MetaData[] = {
+		{ "Category", "Climbing" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoClimbHeight = { "MaxAutoClimbHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxAutoClimbHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoClimbHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoClimbHeight_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants_Inner = { "ClimbVariants", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FParkourVariant, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants_MetaData[] = {
+		{ "Category", "Climbing" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants = { "ClimbVariants", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, ClimbVariants), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinVaultHeight_MetaData[] = {
 		{ "Category", "Vaulting" },
@@ -274,26 +413,49 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxVaultHeight = { "MaxVaultHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxVaultHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxVaultHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxVaultHeight_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoVault_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData[] = {
 		{ "Category", "Vaulting" },
 		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoVault = { "MaxObstacleHeightToAutoVault", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxObstacleHeightToAutoVault), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoVault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoVault_MetaData)) };
+	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_SetBit(void* Obj)
+	{
+		((UParkourComponent*)Obj)->bCanAutoVault = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault = { "bCanAutoVault", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultLedgeOffset_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling_MetaData[] = {
 		{ "Category", "Vaulting" },
 		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultLedgeOffset = { "VaultLedgeOffset", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, VaultLedgeOffset), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultLedgeOffset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultLedgeOffset_MetaData)) };
+	void Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling_SetBit(void* Obj)
+	{
+		((UParkourComponent*)Obj)->bAutoVaultWhileFalling = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling = { "bAutoVaultWhileFalling", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UParkourComponent), &Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling_SetBit, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultMontage_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoVaultHeight_MetaData[] = {
 		{ "Category", "Vaulting" },
 		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultMontage = { "VaultMontage", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, VaultMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultMontage_MetaData)) };
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoVaultHeight = { "MinAutoVaultHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MinAutoVaultHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoVaultHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoVaultHeight_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoVaultHeight_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoVaultHeight = { "MaxAutoVaultHeight", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, MaxAutoVaultHeight), METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoVaultHeight_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoVaultHeight_MetaData)) };
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants_Inner = { "VaultVariants", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UScriptStruct_FParkourVariant, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants_MetaData[] = {
+		{ "Category", "Vaulting" },
+		{ "ModuleRelativePath", "Hero/Components/ParkourComponent.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants = { "VaultVariants", nullptr, (EPropertyFlags)0x0010000000000015, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UParkourComponent, VaultVariants), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UParkourComponent_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_ActorHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_RootHeight,
@@ -303,18 +465,22 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleTraceHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_HeightTraceDepth,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleDepthToVault,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinClimbHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxClimbHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoClimb,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbLedgeOffset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbMontage,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoClimb,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoClimbWhileFalling,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoClimbHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoClimbHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_ClimbVariants,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinVaultHeight,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxVaultHeight,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxObstacleHeightToAutoVault,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultLedgeOffset,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultMontage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bCanAutoVault,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_bAutoVaultWhileFalling,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MinAutoVaultHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_MaxAutoVaultHeight,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UParkourComponent_Statics::NewProp_VaultVariants,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UParkourComponent_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UParkourComponent>::IsAbstract,
@@ -343,7 +509,7 @@ void EmptyLinkFunctionForGeneratedCodeParkourComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UParkourComponent, 1946483667);
+	IMPLEMENT_CLASS(UParkourComponent, 36689669);
 	template<> LEGEND_API UClass* StaticClass<UParkourComponent>()
 	{
 		return UParkourComponent::StaticClass();

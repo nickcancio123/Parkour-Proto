@@ -13,10 +13,17 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define LEGEND_ParkourComponent_generated_h
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_SPARSE_DATA
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_RPC_WRAPPERS
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_INCLASS_NO_PURE_DECLS \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_12_GENERATED_BODY \
+	friend struct Z_Construct_UScriptStruct_FParkourVariant_Statics; \
+	LEGEND_API static class UScriptStruct* StaticStruct();
+
+
+template<> LEGEND_API UScriptStruct* StaticStruct<struct FParkourVariant>();
+
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_SPARSE_DATA
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_RPC_WRAPPERS
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_RPC_WRAPPERS_NO_PURE_DECLS
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUParkourComponent(); \
 	friend struct Z_Construct_UClass_UParkourComponent_Statics; \
@@ -25,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(UParkourComponent)
 
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_INCLASS \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_INCLASS \
 private: \
 	static void StaticRegisterNativesUParkourComponent(); \
 	friend struct Z_Construct_UClass_UParkourComponent_Statics; \
@@ -34,7 +41,7 @@ public: \
 	DECLARE_SERIALIZER(UParkourComponent)
 
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_STANDARD_CONSTRUCTORS \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UParkourComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UParkourComponent) \
@@ -47,7 +54,7 @@ private: \
 public:
 
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_ENHANCED_CONSTRUCTORS \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UParkourComponent(UParkourComponent&&); \
@@ -58,28 +65,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UParkourComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UParkourComponent)
 
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_PRIVATE_PROPERTY_OFFSET
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_10_PROLOG
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_GENERATED_BODY_LEGACY \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_PRIVATE_PROPERTY_OFFSET
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_29_PROLOG
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_SPARSE_DATA \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_RPC_WRAPPERS \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_INCLASS \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_STANDARD_CONSTRUCTORS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_PRIVATE_PROPERTY_OFFSET \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_SPARSE_DATA \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_RPC_WRAPPERS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_INCLASS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_GENERATED_BODY \
+#define Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_SPARSE_DATA \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_INCLASS_NO_PURE_DECLS \
-	Legend_Source_Legend_Hero_Components_ParkourComponent_h_13_ENHANCED_CONSTRUCTORS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_PRIVATE_PROPERTY_OFFSET \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_SPARSE_DATA \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_RPC_WRAPPERS_NO_PURE_DECLS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_INCLASS_NO_PURE_DECLS \
+	Legend_Source_Legend_Hero_Components_ParkourComponent_h_32_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

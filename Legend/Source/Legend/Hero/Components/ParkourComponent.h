@@ -6,6 +6,25 @@
 #include "Components/ActorComponent.h"
 #include "ParkourComponent.generated.h"
 
+USTRUCT(BlueprintType) 
+struct FParkourVariant
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float ObstacleHeight;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		bool bUseLedgeOffset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FVector LedgeOffset;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UAnimMontage* Montage;
+};
+
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class LEGEND_API UParkourComponent : public UActorComponent
@@ -59,13 +78,22 @@ private:
 	FVector ActorFeet;
 
 	FHitResult LowObstacleTraceResult;
+	bool bLowObstacleHit;
+
 	FHitResult MidObstacleTraceResult;
+	bool bMidObstacleHit;
+
 	FHitResult HighObstacleTraceResult;
+	bool bHighObstacleHit;
+
+	FHitResult ClearanceTraceResult;
 	FHitResult HeightTraceResult;
 	FHitResult DepthTraceResult;
 
 	// Discerned height of obstacle hit by traces
 	float ObstacleHeight;
+
+	bool bWasUsingControllerYaw;
 
 
 // Methods
@@ -91,11 +119,14 @@ private:
 	// Depth determines whether vault or climb
 	void GetObstacleDepth();
 
+	void RunClearanceTrace();
+
 	// Snaps character to obstacle and prepares movement component
-	void StartParkour(FVector LedgeOffset);
+	void StartParkour(bool bClimbing);
 
 	FVector GetLedgePosition();
 
+	FParkourVariant GetParkourVariant(const TArray<FParkourVariant>* ParkourVariants);
 #pragma endregion
 
 
@@ -103,8 +134,6 @@ private:
 #pragma region Climbing
 // Variables
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		bool bCanAutoClimb = true;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
 		float MinClimbHeight = 100;
@@ -112,14 +141,22 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
 		float MaxClimbHeight = 230;
 
+#pragma region Auto Climbing
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		float MaxObstacleHeightToAutoClimb = 80;
+		bool bCanAutoClimb = true;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		FVector ClimbLedgeOffset = FVector(-15, 0, -150);
+		bool bAutoClimbWhileFalling = true;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
-		UAnimMontage* ClimbMontage;
+		float MinAutoClimbHeight = 80;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		float MaxAutoClimbHeight = 230;
+#pragma endregion
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Climbing")
+		TArray<FParkourVariant> ClimbVariants;
 
 // Methods
 private:
@@ -137,23 +174,29 @@ private:
 #pragma region Vaulting
 // Variables
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		bool bCanAutoVault = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
 		float MinVaultHeight = 50;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
 		float MaxVaultHeight = 160;
+	
+#pragma region Auto Vault
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		bool bCanAutoVault = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		float MaxObstacleHeightToAutoVault = 80;
+		bool bAutoVaultWhileFalling = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		FVector VaultLedgeOffset = FVector(-15, 0, -150);
+		float MinAutoVaultHeight = 80;					   
+														   
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
+		float MaxAutoVaultHeight = 230;
+#pragma endregion
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Vaulting")
-		UAnimMontage* VaultMontage;
+		TArray<FParkourVariant> VaultVariants;
 
 // Methods
 private:

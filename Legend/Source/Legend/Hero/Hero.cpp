@@ -56,8 +56,7 @@ void AHero::Tick(float DeltaTime)
 
 	bIsMoveInput = bIsMoveForwardInput || bIsMoveRightInput;
 
-	//if (MovementComp->IsFalling())
-	//	ParkourComp->TryParkour(true);
+	ParkourComp->TryParkour(true);
 }
 
 void AHero::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
