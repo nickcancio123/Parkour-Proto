@@ -36,59 +36,54 @@ bool UParkourComponent::TryParkour(bool bIsAutoCall) {
 
 	ActorFeet = Character->GetActorLocation() + FVector::DownVector * RootHeight;
 
-	// Obstacle traces
-	RunObstacleTraces();
-
-	bool bObstacleFound = bLowObstacleHit || bMidObstacleHit || bHighObstacleHit;
-	if (!bObstacleFound)
+	if (!ValidObstacleAhead())
 		return false;
 
-	DebugTrace(LowObstacleTraceResult);
-	DebugTrace(MidObstacleTraceResult);
-	DebugTrace(HighObstacleTraceResult);
-
-	// Height trace
 	GetObstacleHeight();
-	DebugTrace(HeightTraceResult);
-
-	// Clreance trace
-	RunClearanceTrace();
-
-	// Depth trace
 	GetObstacleDepth();
-	DebugTrace(DepthTraceResult);
 
-	// Check results
-	bool bShouldClimb = ShouldClimb(CanClimb(), bIsAutoCall);
-	bool bShouldVault = ShouldVault(CanVault(), bIsAutoCall);
+	bool bCanVault = CanVault(bIsAutoCall);
+	bool bCanClimb = CanClimb(bIsAutoCall);
 
-	// Start parkour
-	if (bShouldVault) {
-		StartVault();
-	} else if (bShouldClimb) {
-		StartClimb();
+	// Start parkour move
+	if (bCanVault) {
+		StartParkour(EParkourMoveType::Vault);
+	} else if (bCanClimb) {
+		StartParkour(EParkourMoveType::Climb);
 	}
 
-	return false;
+	return bCanClimb || bCanVault;
 }
 
-void UParkourComponent::RunObstacleTraces() {
-	float MidObstacleTraceHeight = (MaxObstacleTraceHeight + MinObstacleTraceHeight) / 2;
-
+bool UParkourComponent::ValidObstacleAhead() {
+	// Trace for obstacle at LOW height
 	TraceForwardFromActor(LowObstacleTraceResult, MinObstacleTraceHeight, ObstacleTraceRange);
 	bLowObstacleHit = LowObstacleTraceResult.bBlockingHit && !LowObstacleTraceResult.bStartPenetrating;
+	DebugTrace(LowObstacleTraceResult);
 
+	// Trace for obstacle at MID height
+	float MidObstacleTraceHeight = (MaxObstacleTraceHeight + MinObstacleTraceHeight) / 2;
 	TraceForwardFromActor(MidObstacleTraceResult, MidObstacleTraceHeight, ObstacleTraceRange);
 	bMidObstacleHit = MidObstacleTraceResult.bBlockingHit && !MidObstacleTraceResult.bStartPenetrating;
+	DebugTrace(MidObstacleTraceResult);
 
+	// Trace for obstacle at HIGH height
 	TraceForwardFromActor(HighObstacleTraceResult, MaxObstacleTraceHeight, ObstacleTraceRange);
 	bHighObstacleHit = HighObstacleTraceResult.bBlockingHit && !HighObstacleTraceResult.bStartPenetrating;
+	DebugTrace(HighObstacleTraceResult);
+
+	// Check for CLEARANCE above max parkour height
+	float ClearanceTraceHeight = MaxObstacleTraceHeight + 5;
+	TraceForwardFromActor(ClearanceTraceResult, ClearanceTraceHeight, ObstacleTraceRange);
+	bool bIsClearance = !ClearanceTraceResult.bBlockingHit;
+	DebugTrace(ClearanceTraceResult);
+
+	return (bLowObstacleHit || bMidObstacleHit || bHighObstacleHit) && bIsClearance;
 }
 
 void UParkourComponent::GetObstacleHeight() {
 	float TraceStartHeight = MaxObstacleTraceHeight + 10;
-
-	float HeightTraceRange = MaxObstacleTraceHeight;
+	float HeightTraceLength = MaxObstacleTraceHeight;
 
 	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
 	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
@@ -99,7 +94,7 @@ void UParkourComponent::GetObstacleHeight() {
 		(FVector::UpVector * TraceStartHeight) + // go up
 		(-ObstacleTraceResult.ImpactNormal * HeightTraceDepth); // go over obstacle
 
-	FVector TraceEnd = TraceStart + FVector::DownVector * HeightTraceRange;
+	FVector TraceEnd = TraceStart + FVector::DownVector * HeightTraceLength;
 
 	GetWorld()->LineTraceSingleByChannel(
 		HeightTraceResult,
@@ -108,16 +103,17 @@ void UParkourComponent::GetObstacleHeight() {
 		ECollisionChannel::ECC_WorldStatic,
 		TraceCollisionParams
 	);
+	DebugTrace(HeightTraceResult);
 
 	// Set obstacle height based on results
-	if (HeightTraceResult.bBlockingHit)
-		ObstacleHeight = HeightTraceResult.ImpactPoint.Z - ActorFeet.Z;
+	ObstacleHeight = (HeightTraceResult.bBlockingHit) ? 
+		HeightTraceResult.ImpactPoint.Z - ActorFeet.Z : 
+		999999;
 }
 
 void UParkourComponent::GetObstacleDepth() {
 	float TraceStartHeight = MaxObstacleTraceHeight + 10;
-
-	float DepthTraceRange = MaxObstacleTraceHeight;
+	float DepthTraceLength = MaxObstacleTraceHeight;
 
 	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
 	FVector DirectionToObstacle = (ObstacleTraceResult.ImpactPoint - ObstacleTraceResult.TraceStart);
@@ -128,7 +124,7 @@ void UParkourComponent::GetObstacleDepth() {
 		(FVector::UpVector * TraceStartHeight) + // go up
 		(-ObstacleTraceResult.ImpactNormal * MaxObstacleDepthToVault); // forward above obstacle
 
-	FVector TraceEnd = TraceStart + FVector::DownVector * DepthTraceRange;
+	FVector TraceEnd = TraceStart + FVector::DownVector * DepthTraceLength;
 
 	GetWorld()->LineTraceSingleByChannel(
 		DepthTraceResult,
@@ -137,21 +133,27 @@ void UParkourComponent::GetObstacleDepth() {
 		ECollisionChannel::ECC_WorldStatic,
 		TraceCollisionParams
 	);
-}
-
-void UParkourComponent::RunClearanceTrace() {
-	float ClearanceTraceHeight = MaxObstacleTraceHeight + 5;
-	TraceForwardFromActor(ClearanceTraceResult, ClearanceTraceHeight, ObstacleTraceRange);
+	DebugTrace(DepthTraceResult);
 }
 
 
-void UParkourComponent::StartParkour(bool bClimbing) {
+void UParkourComponent::StartParkour(EParkourMoveType MoveType) {
 	bIsBusy = true;
 
-	TArray<FParkourVariant>* ParkourVariants = bClimbing ? &ClimbVariants : &VaultVariants;
+	// Get parkour variant
+	TArray<FParkourVariant>* ParkourVariants;
+	switch (MoveType) {
+	case EParkourMoveType::Climb:
+		ParkourVariants = &ClimbVariants;
+		break;
+	case EParkourMoveType::Vault:
+		ParkourVariants = &VaultVariants;
+		break;
+	default:
+		ParkourVariants = &ClimbVariants;
+		break;
+	}
 	FParkourVariant ParkourVariant = GetParkourVariant(ParkourVariants);
-
-	UE_LOG(LogTemp, Warning, TEXT("Obstacle: %f,   Variant Max: %f"), ObstacleHeight, ParkourVariant.ObstacleHeight);
 
 	// Disable collision and enable flying
 	Collider->SetCollisionEnabled(ECollisionEnabled::NoCollision);
@@ -192,113 +194,91 @@ void UParkourComponent::StopParkourCallback() {
 	Collider->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
 	CharacterMovement->SetMovementMode(EMovementMode::MOVE_Walking);
 }
-
-FVector UParkourComponent::GetLedgePosition() {
-	FVector ObstacleTraceImpactPoint = GetObstacleTraceResult().ImpactPoint;
-	return FVector(ObstacleTraceImpactPoint.X, ObstacleTraceImpactPoint.Y, HeightTraceResult.ImpactPoint.Z);
-}
-
-FParkourVariant UParkourComponent::GetParkourVariant(const TArray<FParkourVariant>* Variants) {
-
-	for (FParkourVariant Variant : *Variants) {
-		if (ObstacleHeight < Variant.ObstacleHeight)
-			return Variant;
-	}
-	return Variants->Last();
-}
-
 #pragma endregion
 
 
 
 #pragma region Climbing
-bool UParkourComponent::CanClimb() {
-
-	// Obstacle must be within height parameters
-	if (ClearanceTraceResult.bBlockingHit)
-		return false;
-
-	if (ObstacleHeight > MaxClimbHeight || ObstacleHeight < MinClimbHeight)
-		return false;
+bool UParkourComponent::CanClimb(bool bIsAutoCall) {
 
 	// Obstacle must have enough depth
 	if (!DepthTraceResult.bBlockingHit)
 		return false;
 
-	return true;
-}
+	if (bIsAutoCall)
+		return CanAutoClimb();
 
-bool UParkourComponent::ShouldClimb(bool bCanClimb, bool bIsAutoCall) {
-	if (!bCanClimb)
+	if (ObstacleHeight > MaxClimbHeight || ObstacleHeight < MinClimbHeight)
 		return false;
 
-	// Check auto settings
-	if (bIsAutoCall) {
-		if (!bCanAutoClimb)
-			return false;
-
-		if (CharacterMovement->IsFalling() && !bAutoClimbWhileFalling)
-			return false;
-
-		if (ObstacleHeight > MaxAutoClimbHeight || ObstacleHeight < MinAutoClimbHeight)
-			return false;
-	}
-
 	return true;
 }
 
-void UParkourComponent::StartClimb() {
-	StartParkour(true);
+bool UParkourComponent::CanAutoClimb() {
+	if (!bCanAutoClimb)
+		return false;
+
+	if (CharacterMovement->IsFalling()) {
+		if (!bAutoClimbWhileFalling)
+			return false;
+
+		if (ObstacleHeight > MaxAutoClimbHeightFalling || ObstacleHeight < MinAutoClimbHeightFalling)
+			return false;
+
+		return true;
+	}
+
+	if (ObstacleHeight > MaxAutoClimbHeight || ObstacleHeight < MinAutoClimbHeight)
+		return false;
+
+	return true;
 }
 #pragma endregion
 
 
 
 #pragma region Vaulting
-bool UParkourComponent::CanVault() {
-	// Obstacle must be within height parameters
-	if (ObstacleHeight > MaxVaultHeight || ObstacleHeight < MinVaultHeight)
-		return false;
-
+bool UParkourComponent::CanVault(bool bIsAutoCall) {
 	// Obstacle must be short in depth
 	if (DepthTraceResult.bBlockingHit)
 		return false;
 
-	return true;
+	if (bIsAutoCall)
+		return CanAutoVault();
 
-	return false;
-}
-
-bool UParkourComponent::ShouldVault(bool bCanVault, bool bIsAutoCall) {
-	if (!bCanVault)
+	if (ObstacleHeight > MaxVaultHeight || ObstacleHeight < MinVaultHeight)
 		return false;
 
-	// Check auto settings
-	if (bIsAutoCall) {
-		if (!bCanAutoVault)
-			return false;
-
-		if (CharacterMovement->IsFalling() && !bAutoVaultWhileFalling)
-			return false;
-
-		if (ObstacleHeight > MaxAutoVaultHeight || ObstacleHeight < MinAutoVaultHeight)
-			return false;
-	}
-
 	return true;
 }
 
-void UParkourComponent::StartVault() {
-	StartParkour(false);
+bool UParkourComponent::CanAutoVault() {
+	if (!bCanAutoVault)
+		return false;
+
+	if (CharacterMovement->IsFalling()) {
+		if (!bAutoVaultWhileFalling)
+			return false;
+
+		if (ObstacleHeight > MaxAutoVaultHeightFalling || ObstacleHeight < MinAutoVaultHeightFalling)
+			return false;
+
+		return true;
+	}
+
+	if (ObstacleHeight > MaxAutoVaultHeight || ObstacleHeight < MinAutoVaultHeight)
+		return false;
+
+	return true;
 }
 #pragma endregion
 
 
 
 #pragma region Utility
-void UParkourComponent::TraceForwardFromActor(FHitResult& TraceResult, float TraceHeight, float TraceRange) {
+void UParkourComponent::TraceForwardFromActor(FHitResult& TraceResult, float TraceHeight, float TraceLength) {
 	FVector TraceStart = ActorFeet + FVector::UpVector * TraceHeight;
-	FVector TraceEnd = TraceStart + Character->GetActorForwardVector() * TraceRange;
+	FVector TraceEnd = TraceStart + Character->GetActorForwardVector() * TraceLength;
 
 	GetWorld()->LineTraceSingleByChannel(
 		TraceResult,
@@ -309,31 +289,38 @@ void UParkourComponent::TraceForwardFromActor(FHitResult& TraceResult, float Tra
 	);
 }
 
-void UParkourComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float LifeTime) {
+FHitResult UParkourComponent::GetObstacleTraceResult() {
+	if (bLowObstacleHit)
+		return LowObstacleTraceResult;
+	else if (bMidObstacleHit)
+		return MidObstacleTraceResult;
+	else
+		return HighObstacleTraceResult;
+}
 
+FVector UParkourComponent::GetLedgePosition() {
+	FVector ObstacleTraceImpactPoint = GetObstacleTraceResult().ImpactPoint;
+	return FVector(ObstacleTraceImpactPoint.X, ObstacleTraceImpactPoint.Y, HeightTraceResult.ImpactPoint.Z);
+}
+
+FParkourVariant UParkourComponent::GetParkourVariant(const TArray<FParkourVariant>* Variants) {
+	for (FParkourVariant Variant : *Variants) {
+		if (ObstacleHeight < Variant.ObstacleHeight)
+			return Variant;
+	}
+	return Variants->Last();
+}
+
+void UParkourComponent::DebugTrace(FHitResult TraceResult, bool bPersist, float LifeTime) {
 	if (!bUseDebug)
 		return;
 
 	bool bHit = TraceResult.bBlockingHit;
-
-	//if (!bHit)
-	//	return;
-
 	FColor Color = bHit ? FColor::Red : FColor::Blue;
 	FVector TraceEnd = bHit ? TraceResult.ImpactPoint : TraceResult.TraceEnd;
 
 	DrawDebugLine(GetWorld(), TraceResult.TraceStart, TraceEnd, Color, bPersist, LifeTime);
-
 	if (bHit)
 		DrawDebugSphere(GetWorld(), TraceEnd, 10, 10, Color, bPersist, LifeTime);
-}
-
-FHitResult UParkourComponent::GetObstacleTraceResult() {
-	if (LowObstacleTraceResult.bBlockingHit)
-		return LowObstacleTraceResult;
-	else if (MidObstacleTraceResult.bBlockingHit)
-		return MidObstacleTraceResult;
-	else
-		return HighObstacleTraceResult;
 }
 #pragma endregion
