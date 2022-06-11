@@ -164,7 +164,12 @@ void UParkourComponent::StartParkour(EParkourMoveType MoveType) {
 	Character->bUseControllerRotationYaw = false;
 
 	FHitResult ObstacleTraceResult = GetObstacleTraceResult();
-	FQuat TargetRotation = (-ObstacleTraceResult.ImpactNormal).ToOrientationQuat();
+	FQuat ObstacleImpactRotation = (-ObstacleTraceResult.ImpactNormal).ToOrientationQuat();
+	FQuat TargetRotation = FQuat::FastLerp(
+		Character->GetActorRotation().Quaternion(), 
+		ObstacleImpactRotation, 
+		0.6f
+	);
 	Character->SetActorRotation(TargetRotation);
 
 	// Snap to position
