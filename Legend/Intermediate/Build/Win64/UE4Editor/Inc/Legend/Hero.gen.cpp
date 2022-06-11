@@ -19,8 +19,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 	UPackage* Z_Construct_UPackage__Script_Legend();
 	ENGINE_API UClass* Z_Construct_UClass_USpringArmComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
-	LEGEND_API UClass* Z_Construct_UClass_UClimbComponent_NoRegister();
-	LEGEND_API UClass* Z_Construct_UClass_UVaultComponent_NoRegister();
 	LEGEND_API UClass* Z_Construct_UClass_UParkourComponent_NoRegister();
 	LEGEND_API UClass* Z_Construct_UClass_UCombatComponent_NoRegister();
 // End Cross Module References
@@ -45,14 +43,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FollowCamera_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_FollowCamera;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ClimbComp_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ClimbComp;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_VaultComp_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_VaultComp;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ParkourComp_MetaData[];
 #endif
@@ -115,22 +105,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_FollowCamera = { "FollowCamera", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHero, FollowCamera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_FollowCamera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_FollowCamera_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp_MetaData[] = {
-		{ "Category", "Climbing" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Hero/Hero.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp = { "ClimbComp", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHero, ClimbComp), Z_Construct_UClass_UClimbComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_VaultComp_MetaData[] = {
-		{ "Category", "Vaulting" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Hero/Hero.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHero_Statics::NewProp_VaultComp = { "VaultComp", nullptr, (EPropertyFlags)0x00100000000a001d, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHero, VaultComp), Z_Construct_UClass_UVaultComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHero_Statics::NewProp_VaultComp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHero_Statics::NewProp_VaultComp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHero_Statics::NewProp_ParkourComp_MetaData[] = {
 		{ "Category", "Parkour" },
@@ -197,8 +171,6 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHero_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_CameraBoom,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_FollowCamera,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_ClimbComp,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_VaultComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_ParkourComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_CombatComp,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHero_Statics::NewProp_RunSpeed,
@@ -234,7 +206,7 @@ void EmptyLinkFunctionForGeneratedCodeHero() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHero, 783504234);
+	IMPLEMENT_CLASS(AHero, 4115903141);
 	template<> LEGEND_API UClass* StaticClass<AHero>()
 	{
 		return AHero::StaticClass();

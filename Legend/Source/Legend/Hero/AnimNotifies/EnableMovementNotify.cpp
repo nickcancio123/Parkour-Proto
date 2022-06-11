@@ -1,17 +1,17 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-#include "Legend/Hero/Hero.h"
+#include "GameFramework/Character.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Legend/Hero/AnimNotifies/EnableMovementNotify.h"
 
 void UEnableMovementNotify::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation) {
-	AHero* Hero = Cast<AHero>(MeshComp->GetOwner());
+	ACharacter* Character = Cast<ACharacter>(MeshComp->GetOwner());
 
 	// Protects against running in the editor
-	if (!Hero)
+	if (!Character)
 		return;
 
-	UCharacterMovementComponent* MovementComp = Hero->GetCharacterMovement();
+	UCharacterMovementComponent* MovementComp = Character->GetCharacterMovement();
 
 	if (!MovementComp)
 		return;
